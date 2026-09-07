@@ -25,6 +25,19 @@
   --layout-radius-lg: 20px;
   --layout-radius-xl: 28px;
   --layout-radius-pill: 999px;
+  --layout-button-size-sm: 2rem;
+  --layout-button-size-md: 2.75rem;
+  --layout-button-size-lg: 3.25rem;
+  --layout-button-touch-lg: 3.5rem;
+  --layout-button-padding-sm: var(--layout-space-3);
+  --layout-button-padding-md: var(--layout-space-5);
+  --layout-button-padding-lg: var(--layout-space-6);
+  --layout-input-size-sm: var(--layout-button-size-sm);
+  --layout-input-size-md: var(--layout-button-size-md);
+  --layout-input-size-lg: var(--layout-button-size-lg);
+  --layout-input-padding-sm: var(--layout-button-padding-sm);
+  --layout-input-padding-md: var(--layout-button-padding-md);
+  --layout-input-padding-lg: var(--layout-button-padding-lg);
   --layout-nav-h: 57px;
   --layout-stick: calc(var(--layout-nav-h) + var(--layout-space-4));
   --layout-z-under: -1;
@@ -146,8 +159,74 @@ canvas {
 .layout-row-top {
   align-items: flex-start;
 }
+
+/* Button modifiers expose size and shape without coupling geometry to a tone. */
+.layout-button-sm {
+  --button-block-size: var(--layout-button-size-sm);
+  --button-padding-inline: var(--layout-button-padding-sm);
+}
+
+.layout-button-md {
+  --button-block-size: var(--layout-button-size-md);
+  --button-padding-inline: var(--layout-button-padding-md);
+}
+
+.layout-button-lg {
+  --button-block-size: var(--layout-button-size-lg);
+  --button-padding-inline: var(--layout-button-padding-lg);
+}
+
+.layout-button-shape-square {
+  --button-radius: var(--layout-radius-xs);
+}
+
+.layout-button-shape-rounded {
+  --button-radius: var(--layout-radius-sm);
+}
+
+.layout-button-shape-pill {
+  --button-radius: var(--layout-radius-pill);
+}
+
+.layout-button-block {
+  inline-size: 100%;
+}
+
+.layout-button-icon {
+  --button-padding-inline: 0;
+
+  inline-size: var(--button-block-size, var(--layout-button-size-md));
+}
+
 .layout-rail {
   position: static;
+}
+/* Field heights align with adjacent buttons; shape stays independent of state. */
+.layout-input-sm {
+  --input-block-size: var(--layout-input-size-sm);
+  --input-padding-inline: var(--layout-input-padding-sm);
+}
+
+.layout-input-md {
+  --input-block-size: var(--layout-input-size-md);
+  --input-padding-inline: var(--layout-input-padding-md);
+}
+
+.layout-input-lg {
+  --input-block-size: var(--layout-input-size-lg);
+  --input-padding-inline: var(--layout-input-padding-lg);
+}
+
+.layout-input-shape-square {
+  --input-radius: var(--layout-radius-xs);
+}
+
+.layout-input-shape-rounded {
+  --input-radius: var(--layout-radius-sm);
+}
+
+.layout-input-shape-pill {
+  --input-radius: var(--layout-radius-pill);
 }
 [id] {
   scroll-margin-block-start: var(--layout-stick);
@@ -157,6 +236,25 @@ canvas {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (pointer: coarse) {
+  .layout-input-sm {
+    --input-block-size: var(--layout-input-size-md);
+  }
+
+  .layout-input-lg {
+    --input-block-size: var(--layout-button-touch-lg);
+  }
+
+  .layout-button-sm {
+    --button-block-size: var(--layout-button-size-md);
+  }
+
+  .layout-button-lg {
+    --button-block-size: var(--layout-button-touch-lg);
+  }
+}
+
 @media (min-width: 700px) {
   .layout-grid-2 {
     grid-template-columns: repeat(2, 1fr);
