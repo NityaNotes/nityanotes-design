@@ -1,0 +1,4 @@
+/* Typography hero: route-specific accent color. */
+.typography-header__eyebrow {
+  color: var(--primary-color-strong);
+}
