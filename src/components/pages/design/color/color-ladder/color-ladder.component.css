@@ -1,0 +1,33 @@
+/* Value ladder for colour and reduced-colour review. */
+.color-ladder__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--layout-space-5);
+}
+
+.color-ladder__grid > div {
+  display: grid;
+  gap: var(--layout-space-3);
+  min-inline-size: 0;
+  color: var(--muted-color);
+  font-size: var(--type-compact-size);
+}
+
+.color-ladder__bar {
+  display: block;
+  border-radius: var(--layout-radius-xs);
+}
+
+.color-ladder__bar--1 { block-size: var(--layout-space-2); background: var(--rung-1-color); }
+.color-ladder__bar--2 { block-size: var(--layout-space-3); background: var(--rung-2-color); }
+.color-ladder__bar--3 { block-size: var(--layout-space-4); background: var(--rung-3-color); }
+.color-ladder__bar--4 { block-size: var(--layout-space-5); background: var(--rung-4-color); }
+
+.color-ladder__grid--grey {
+  margin-block-start: var(--layout-space-5);
+  filter: grayscale(1);
+}
+
+@media (max-width: 700px) {
+  .color-ladder__grid { grid-template-columns: 1fr; }
+}

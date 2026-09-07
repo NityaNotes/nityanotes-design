@@ -1,0 +1,16 @@
+/* Status chips retain visible labels in every colour mode. */
+.color-status__status {
+  min-inline-size: 0;
+}
+
+.color-status__chip {
+  padding: var(--layout-space-2) var(--layout-space-3);
+  border: 1px solid currentColor;
+  border-radius: var(--layout-radius-pill);
+  font-size: var(--type-compact-size);
+  font-weight: 600;
+}
+
+.color-status__chip--success { background: color-mix(in srgb, var(--success-color) 16%, transparent); color: var(--success-color); }
+.color-status__chip--warning { background: color-mix(in srgb, var(--warning-color) 16%, transparent); color: var(--warning-color); }
+.color-status__chip--danger { background: color-mix(in srgb, var(--danger-color) 16%, transparent); color: var(--danger-color); }
