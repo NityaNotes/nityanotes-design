@@ -1,0 +1,2 @@
+/** Authored copy and metadata for the English typography route. */
+export const designEnglishContent = { seo: { title: "English typography · Nitya Notes", description: "English reading and interface typography for Nitya Notes.", keywords: ["Nitya Notes", "English typography", "design grammar"], og: { title: "English typography · Nitya Notes", description: "English reading and interface typography for Nitya Notes." } } } as const;
