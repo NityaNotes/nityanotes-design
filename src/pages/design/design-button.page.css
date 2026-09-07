@@ -1,0 +1,238 @@
+/* Button grammar atlas: editorial hierarchy, compact specimens, and semantic surfaces. */
+.button-page {
+  overflow: clip;
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.button-page :is(code, .button-code) {
+  color: var(--primary-color-strong);
+  font-family: var(--font-data);
+  font-size: 0.6875rem;
+}
+
+.button-section {
+  position: relative;
+  display: block;
+  border-block-start: 1px solid var(--border-color);
+}
+
+.button-section::before {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: var(--layout-gutter);
+  inline-size: var(--layout-space-8);
+  block-size: 3px;
+  background: var(--primary-color);
+  content: "";
+}
+
+.button-section__eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.button-section__heading {
+  max-inline-size: var(--layout-reading-max);
+  text-wrap: balance;
+}
+
+.button-section__note,
+.button-section__caption {
+  max-inline-size: var(--layout-reading-max);
+  color: var(--muted-color);
+}
+
+.button-section__note {
+  line-height: var(--type-body-leading);
+}
+
+.button-section__content {
+  inline-size: 100%;
+}
+
+.button-specimen,
+.button-well,
+.button-card {
+  padding: var(--layout-space-6);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-lg);
+  box-shadow: 0 1px 2px var(--shadow-color);
+}
+
+.button-specimen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--layout-space-3);
+}
+
+.button-card {
+  display: grid;
+  align-content: center;
+  gap: var(--layout-space-3);
+  min-inline-size: 0;
+}
+
+.button-card > * {
+  margin: 0;
+}
+
+.button-card--accent {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color-on);
+}
+
+.button-card--subtle {
+  background: var(--primary-color-subtle);
+  color: var(--primary-color-strong);
+}
+
+.button-card--contrast {
+  background: var(--contrast-background-color);
+  border-color: var(--contrast-background-color);
+  color: var(--contrast-foreground-color);
+}
+
+.button-card--accent .type-eyebrow,
+.button-card--contrast .type-eyebrow {
+  color: inherit;
+  opacity: 0.72;
+}
+
+.button-card--accent .button,
+.button-card--contrast .button {
+  border-color: currentColor;
+}
+
+.button-grid {
+  display: grid;
+  gap: var(--layout-space-4);
+}
+
+.button-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.button-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.button-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.button-table th,
+.button-table td {
+  padding: var(--layout-space-4) 0;
+  border-block-end: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.button-table th {
+  inline-size: 10rem;
+  color: var(--foreground-color);
+  font-size: var(--type-compact-size);
+  font-weight: var(--type-card-title-weight);
+}
+
+.button-table td {
+  color: var(--muted-strong-color);
+  font-size: var(--type-compact-size);
+}
+
+.button-status {
+  padding: var(--layout-space-4);
+  border-inline-start: 3px solid var(--primary-color);
+  background: var(--primary-color-subtle);
+  color: var(--primary-color-strong);
+}
+
+.button-position__row {
+  display: flex;
+  align-items: center;
+  gap: var(--layout-space-3);
+  padding-block: var(--layout-space-3);
+  border-block-end: 1px solid var(--border-color);
+}
+
+.button-position__row .button-quiet {
+  margin-inline-start: auto;
+}
+
+.button-position__field {
+  min-inline-size: 0;
+  min-block-size: 3rem;
+  flex: 1 1 14rem;
+  padding: var(--layout-space-3) var(--layout-space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-sm);
+  background: var(--background-color);
+  color: var(--foreground-color);
+  font: inherit;
+}
+
+.button-selection__groups {
+  display: grid;
+  gap: var(--layout-space-6);
+}
+
+.button-selection fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.button-selection legend {
+  margin-block-end: var(--layout-space-3);
+}
+
+.button-position__bar .layout-row {
+  align-items: stretch;
+}
+
+.button-position__bar .layout-button-block {
+  flex: 1 1 12rem;
+}
+
+.button-platform__table {
+  max-inline-size: 52rem;
+}
+
+@media (min-width: 700px) {
+  .button-section__heading {
+    max-inline-size: 56rem;
+  }
+
+  .button-section__note {
+    max-inline-size: 50rem;
+  }
+
+  .button-section > :is(.button-section__content, .button-specimen, .button-well, .button-card, .button-status, .button-section__caption, .button-table) {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 699px) {
+  .button-grid--two,
+  .button-grid--three {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 519px) {
+  .button-position__attached .layout-row,
+  .button-position__bar .layout-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-page * {
+    scroll-behavior: auto;
+  }
+}
