@@ -1,0 +1,81 @@
+/* Spacing-token specimens for the layout reference. */
+.layout-spacing-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--layout-space-3);
+  margin-block-start: var(--layout-space-7);
+}
+
+.layout-spacing-section__token {
+  display: grid;
+  grid-template-columns: var(--layout-space-2) 1fr;
+  align-items: center;
+  column-gap: var(--layout-space-3);
+  padding: var(--layout-space-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-md);
+  background: var(--surface-color);
+}
+
+.layout-spacing-section__token code {
+  font-family: var(--font-mono);
+}
+
+.layout-spacing-section__token > span:last-child {
+  grid-column: 2;
+  color: var(--muted-color);
+  font-size: var(--type-compact-size);
+}
+
+.layout-spacing-section__swatch {
+  grid-row: span 2;
+  inline-size: var(--layout-space-2);
+  border-radius: var(--layout-radius-pill);
+  background: var(--primary-color);
+}
+
+.layout-spacing-section__swatch--1 {
+  block-size: var(--layout-space-1);
+}
+
+.layout-spacing-section__swatch--2 {
+  block-size: var(--layout-space-2);
+}
+
+.layout-spacing-section__swatch--3 {
+  block-size: var(--layout-space-3);
+}
+
+.layout-spacing-section__swatch--4 {
+  block-size: var(--layout-space-4);
+}
+
+.layout-spacing-section__swatch--5 {
+  block-size: var(--layout-space-5);
+}
+
+.layout-spacing-section__swatch--6 {
+  block-size: var(--layout-space-6);
+}
+
+.layout-spacing-section__swatch--7 {
+  block-size: var(--layout-space-7);
+}
+
+.layout-spacing-section__swatch--8 {
+  block-size: var(--layout-space-8);
+}
+
+.layout-spacing-section__swatch--9 {
+  block-size: var(--layout-space-9);
+}
+
+.layout-spacing-section__swatch--10 {
+  block-size: var(--layout-space-10);
+}
+
+@media (min-width: 700px) {
+  .layout-spacing-section__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

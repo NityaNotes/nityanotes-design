@@ -1,0 +1,52 @@
+/* Visual measure comparison for the layout reference. */
+.layout-measures-section__list {
+  display: grid;
+  gap: var(--layout-space-5);
+  margin-block-start: var(--layout-space-7);
+}
+
+.layout-measures-section__item {
+  display: grid;
+  gap: var(--layout-space-2);
+}
+
+.layout-measures-section__item > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-block-size: var(--layout-space-8);
+  padding-inline: var(--layout-space-4);
+  border-inline-start: var(--layout-space-1) solid var(--primary-color);
+  border-radius: var(--layout-radius-sm);
+  background: var(--primary-color-subtle);
+  color: var(--primary-color-strong);
+}
+
+.layout-measures-section__item code {
+  font-family: var(--font-mono);
+}
+
+.layout-measures-section__item span,
+.layout-measures-section__item p {
+  color: var(--muted-color);
+}
+
+.layout-measures-section__item span {
+  font-size: var(--type-compact-size);
+}
+
+.layout-measures-section__item--page {
+  max-inline-size: var(--layout-page-max);
+}
+
+.layout-measures-section__item--content {
+  max-inline-size: var(--layout-content-max);
+}
+
+.layout-measures-section__item--reading {
+  max-inline-size: var(--layout-reading-max);
+}
+
+.layout-measures-section__item--form {
+  max-inline-size: var(--layout-form-max);
+}
