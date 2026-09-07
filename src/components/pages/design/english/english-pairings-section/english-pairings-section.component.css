@@ -1,0 +1,6 @@
+/* Pairing specimen: the settings card sits on a surface with its own padding
+   so the label + field pairing reads as a composed product surface. */
+.english-pairings-section__specimen {
+  display: grid;
+  gap: var(--layout-space-4);
+}
