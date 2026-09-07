@@ -1,0 +1,140 @@
+/* Temple Flame is the active application palette. Semantic roles below consume
+   these aliases directly, so applying the theme never depends on an HTML attribute. */
+:root {
+  --primary-50: var(--color-temple-flame-50);
+  --primary-100: var(--color-temple-flame-100);
+  --primary-200: var(--color-temple-flame-200);
+  --primary-300: var(--color-temple-flame-300);
+  --primary-400: var(--color-temple-flame-400);
+  --primary-500: var(--color-temple-flame-500);
+  --primary-600: var(--color-temple-flame-600);
+  --primary-700: var(--color-temple-flame-700);
+  --primary-800: var(--color-temple-flame-800);
+  --primary-900: var(--color-temple-flame-900);
+  --primary-950: var(--color-temple-flame-950);
+
+  --light-50: var(--color-reading-white-50);
+  --light-100: var(--color-reading-white-100);
+  --light-200: var(--color-reading-white-200);
+  --light-300: var(--color-reading-white-300);
+  --light-400: var(--color-reading-white-400);
+  --light-500: var(--color-reading-white-500);
+  --light-600: var(--color-reading-white-600);
+  --light-700: var(--color-reading-white-700);
+  --light-800: var(--color-reading-white-800);
+  --light-900: var(--color-reading-white-900);
+  --light-950: var(--color-reading-white-950);
+
+  --dark-50: var(--color-reading-ink-50);
+  --dark-100: var(--color-reading-ink-100);
+  --dark-200: var(--color-reading-ink-200);
+  --dark-300: var(--color-reading-ink-300);
+  --dark-400: var(--color-reading-ink-400);
+  --dark-500: var(--color-reading-ink-500);
+  --dark-600: var(--color-reading-ink-600);
+  --dark-700: var(--color-reading-ink-700);
+  --dark-800: var(--color-reading-ink-800);
+  --dark-900: var(--color-reading-ink-900);
+  --dark-950: var(--color-reading-ink-950);
+
+  color-scheme: light;
+  --primary-color: var(--primary-700);
+  --primary-color-hover: var(--primary-800);
+  --primary-color-hover-on: var(--light-50);
+  --primary-color-strong: var(--primary-900);
+  --primary-color-subtle: var(--primary-50);
+  --primary-color-on: var(--light-50);
+  --background-color: var(--light-50);
+  --foreground-color: var(--dark-950);
+  --muted-color: var(--light-700);
+  --muted-strong-color: var(--light-800);
+  --border-color: var(--light-300);
+  --surface-color: var(--light-100);
+  --surface-hover-color: var(--light-200);
+  --contrast-background-color: var(--dark-950);
+  --contrast-foreground-color: var(--light-50);
+  --contrast-muted-color: var(--dark-400);
+  --contrast-border-color: var(--dark-700);
+  --success-color: var(--color-status-success-light);
+  --warning-color: var(--color-status-warning-light);
+  --danger-color: var(--color-status-danger-light);
+  --subtle-color: color-mix(in srgb, var(--foreground-color) 6%, transparent);
+  --border-strong-color: color-mix(in srgb, var(--foreground-color) 24%, transparent);
+  --primary-color-wash: color-mix(in srgb, var(--primary-color) 14%, transparent);
+  --primary-color-ring: color-mix(in srgb, var(--primary-color) 72%, transparent);
+  --scrim-color: color-mix(in srgb, var(--dark-950) 72%, transparent);
+  --rung-1-color: var(--primary-color-subtle);
+  --rung-2-color: var(--primary-color);
+  --rung-3-color: var(--primary-color-hover);
+  --rung-4-color: var(--primary-color-strong);
+  --focus-ring-color: color-mix(in srgb, var(--primary-color) 72%, transparent);
+  --shadow-color: color-mix(in srgb, var(--foreground-color) 12%, transparent);
+}
+
+html.dark {
+  color-scheme: dark;
+  --primary-color: var(--primary-400);
+  --primary-color-hover: var(--primary-300);
+  --primary-color-hover-on: var(--dark-950);
+  --primary-color-strong: var(--primary-200);
+  --primary-color-subtle: var(--primary-950);
+  --primary-color-on: var(--dark-950);
+  --background-color: var(--dark-950);
+  --foreground-color: var(--light-50);
+  --muted-color: var(--dark-400);
+  --muted-strong-color: var(--dark-300);
+  --border-color: var(--dark-700);
+  --surface-color: var(--dark-900);
+  --surface-hover-color: var(--dark-800);
+  --contrast-background-color: var(--light-50);
+  --contrast-foreground-color: var(--dark-950);
+  --contrast-muted-color: var(--light-700);
+  --contrast-border-color: var(--light-300);
+  --success-color: var(--color-status-success-dark);
+  --warning-color: var(--color-status-warning-dark);
+  --danger-color: var(--color-status-danger-dark);
+  --subtle-color: color-mix(in srgb, var(--foreground-color) 8%, transparent);
+  --border-strong-color: color-mix(in srgb, var(--foreground-color) 34%, transparent);
+  --primary-color-wash: color-mix(in srgb, var(--primary-color) 18%, transparent);
+  --primary-color-ring: color-mix(in srgb, var(--primary-color) 72%, transparent);
+  --scrim-color: color-mix(in srgb, var(--dark-950) 80%, transparent);
+  --rung-1-color: var(--primary-color-subtle);
+  --rung-2-color: var(--primary-color);
+  --rung-3-color: var(--primary-color-hover);
+  --rung-4-color: var(--primary-color-strong);
+}
+
+/* Semantic colour specimens and utility surfaces used by the design grammar routes. */
+.color-surface {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--foreground-color);
+}
+
+.color-surface-muted {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  color: var(--muted-color);
+}
+
+.color-accent {
+  background: var(--primary-color);
+  color: var(--primary-color-on);
+}
+
+.color-accent-subtle {
+  background: var(--primary-color-subtle);
+  color: var(--primary-color-strong);
+}
+
+.color-swatch {
+  display: grid;
+  gap: var(--layout-space-2);
+  min-block-size: 8rem;
+  padding: var(--layout-space-4);
+  border-radius: var(--layout-radius-md);
+}
+
+.color-swatch strong {
+  align-self: end;
+}

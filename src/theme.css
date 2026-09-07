@@ -526,4 +526,86 @@
   --color-cobalt-sky-800: #103f84;
   --color-cobalt-sky-900: #12366b;
   --color-cobalt-sky-950: #0d2142;
+
+  /* Spring Jade remains available as an alternate application palette. */
+  --color-spring-jade-50: #edfff5;
+  --color-spring-jade-100: #d3ffe7;
+  --color-spring-jade-200: #a7fbd0;
+  --color-spring-jade-300: #70efb5;
+  --color-spring-jade-400: #34dd98;
+  --color-spring-jade-500: #08bf79;
+  --color-spring-jade-600: #009861;
+  --color-spring-jade-700: #007e52;
+  --color-spring-jade-800: #006342;
+  --color-spring-jade-900: #004f36;
+  --color-spring-jade-950: #002e21;
+
+  --color-porcelain-50: #ffffff;
+  --color-porcelain-100: #f8f9f9;
+  --color-porcelain-200: #ecefef;
+  --color-porcelain-300: #dce1e0;
+  --color-porcelain-400: #bbc3c1;
+  --color-porcelain-500: #8d9894;
+  --color-porcelain-600: #687570;
+  --color-porcelain-700: #505e58;
+  --color-porcelain-800: #3c4843;
+  --color-porcelain-900: #28322e;
+  --color-porcelain-950: #171e1a;
+
+  --color-carbon-ink-50: #f6f8f7;
+  --color-carbon-ink-100: #e7ece9;
+  --color-carbon-ink-200: #cfd8d3;
+  --color-carbon-ink-300: #adbcb3;
+  --color-carbon-ink-400: #90a298;
+  --color-carbon-ink-500: #71867a;
+  --color-carbon-ink-600: #586d61;
+  --color-carbon-ink-700: #405448;
+  --color-carbon-ink-800: #2a3930;
+  --color-carbon-ink-900: #1d2721;
+  --color-carbon-ink-950: #111815;
+
+  /* Temple Flame is the active reading palette. */
+  --color-temple-flame-50: #fff4ef;
+  --color-temple-flame-100: #ffe5d8;
+  --color-temple-flame-200: #ffc9b1;
+  --color-temple-flame-300: #ffa380;
+  --color-temple-flame-400: #ff805d;
+  --color-temple-flame-500: #f65a35;
+  --color-temple-flame-600: #e34825;
+  --color-temple-flame-700: #c83b1d;
+  --color-temple-flame-800: #a42e18;
+  --color-temple-flame-900: #84291a;
+  --color-temple-flame-950: #43160e;
+
+  --color-reading-white-50: #ffffff;
+  --color-reading-white-100: #fafafa;
+  --color-reading-white-200: #eeeeee;
+  --color-reading-white-300: #dddddd;
+  --color-reading-white-400: #bbbbbb;
+  --color-reading-white-500: #939393;
+  --color-reading-white-600: #747474;
+  --color-reading-white-700: #5c5c5c;
+  --color-reading-white-800: #434343;
+  --color-reading-white-900: #2b2b2b;
+  --color-reading-white-950: #181818;
+
+  --color-reading-ink-50: #fafafa;
+  --color-reading-ink-100: #eeeeee;
+  --color-reading-ink-200: #d8d8d8;
+  --color-reading-ink-300: #bdbdbd;
+  --color-reading-ink-400: #a3a3a3;
+  --color-reading-ink-500: #858585;
+  --color-reading-ink-600: #676767;
+  --color-reading-ink-700: #494949;
+  --color-reading-ink-800: #323232;
+  --color-reading-ink-900: #222222;
+  --color-reading-ink-950: #141414;
+
+  /* Status pigments stay independent of the active accent. */
+  --color-status-success-light: #2f5a4c;
+  --color-status-success-dark: #7ec2ac;
+  --color-status-warning-light: #854900;
+  --color-status-warning-dark: #ffc363;
+  --color-status-danger-light: #8e2740;
+  --color-status-danger-dark: #e4677e;
 }
