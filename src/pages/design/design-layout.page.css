@@ -1,0 +1,31 @@
+/* Route shell for the composed layout reference; section geometry comes from layout.css. */
+.layout-reference-page {
+  min-block-size: 100svh;
+  padding-block-end: var(--layout-section-lg);
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.layout-reference-section + .layout-reference-section {
+  border-block-start: 1px solid var(--border-color);
+}
+
+.layout-reference-heading {
+  max-inline-size: var(--layout-reading-max);
+}
+
+.layout-reference-heading > * + * {
+  margin-block-start: var(--layout-space-4);
+}
+
+.layout-reference-heading .type-lede,
+.layout-reference-note {
+  color: var(--muted-color);
+}
+
+.layout-reference-note {
+  margin-block-start: var(--layout-space-5);
+  font-family: var(--font-mono);
+  font-size: var(--type-compact-size);
+  line-height: var(--type-compact-leading);
+}
