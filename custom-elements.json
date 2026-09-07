@@ -36,6 +36,363 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/app-button/app-button.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "AppButtonComponent",
+          "customElement": true,
+          "tagName": "app-button",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [
+            {
+              "kind": "field",
+              "name": "accessibleLabel",
+              "attribute": "accessible-label",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "block",
+              "attribute": "block",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "buttonType",
+              "attribute": "button-type",
+              "type": {
+                "text": "string"
+              },
+              "default": "button"
+            },
+            {
+              "kind": "field",
+              "name": "className",
+              "attribute": "class",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "current",
+              "attribute": "current",
+              "type": {
+                "text": "string"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "attribute": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "attribute": "href",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "attribute": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "id",
+              "attribute": "id",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "interaction",
+              "attribute": "interaction",
+              "type": {
+                "text": "string"
+              },
+              "default": "press"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "attribute": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "preview",
+              "attribute": "preview",
+              "type": {
+                "text": "string"
+              },
+              "default": "none"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "attribute": "shape",
+              "type": {
+                "text": "string"
+              },
+              "default": "default"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "attribute": "size",
+              "type": {
+                "text": "string"
+              },
+              "default": "md"
+            },
+            {
+              "kind": "field",
+              "name": "state",
+              "attribute": "state",
+              "type": {
+                "text": "string"
+              },
+              "default": "idle"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "attribute": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "tone",
+              "attribute": "tone",
+              "type": {
+                "text": "string"
+              },
+              "default": "secondary"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "accessible-label",
+              "fieldName": "accessibleLabel",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "name": "block",
+              "fieldName": "block",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "button-type",
+              "fieldName": "buttonType",
+              "type": {
+                "text": "string"
+              },
+              "default": "button"
+            },
+            {
+              "name": "class",
+              "fieldName": "className",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "name": "current",
+              "fieldName": "current",
+              "type": {
+                "text": "string"
+              },
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "fieldName": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "href",
+              "fieldName": "href",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "name": "icon",
+              "fieldName": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "name": "id",
+              "fieldName": "id",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "name": "interaction",
+              "fieldName": "interaction",
+              "type": {
+                "text": "string"
+              },
+              "default": "press"
+            },
+            {
+              "name": "label",
+              "fieldName": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "name": "preview",
+              "fieldName": "preview",
+              "type": {
+                "text": "string"
+              },
+              "default": "none"
+            },
+            {
+              "name": "shape",
+              "fieldName": "shape",
+              "type": {
+                "text": "string"
+              },
+              "default": "default"
+            },
+            {
+              "name": "size",
+              "fieldName": "size",
+              "type": {
+                "text": "string"
+              },
+              "default": "md"
+            },
+            {
+              "name": "state",
+              "fieldName": "state",
+              "type": {
+                "text": "string"
+              },
+              "default": "idle"
+            },
+            {
+              "name": "title",
+              "fieldName": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "name": "tone",
+              "fieldName": "tone",
+              "type": {
+                "text": "string"
+              },
+              "default": "secondary"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AppButtonComponent",
+          "declaration": {
+            "name": "AppButtonComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "app-button",
+          "declaration": {
+            "name": "AppButtonComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/app-footer/app-footer.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "AppFooterComponent",
+          "customElement": true,
+          "tagName": "app-footer",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AppFooterComponent",
+          "declaration": {
+            "name": "AppFooterComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "app-footer",
+          "declaration": {
+            "name": "AppFooterComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/app-header.component.js",
       "declarations": [
         {
@@ -63,6 +420,2203 @@
           "name": "app-header",
           "declaration": {
             "name": "AppHeaderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/button/button-destinations/button-destinations.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ButtonDestinationsComponent",
+          "customElement": true,
+          "tagName": "button-destinations",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonDestinationsComponent",
+          "declaration": {
+            "name": "ButtonDestinationsComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "button-destinations",
+          "declaration": {
+            "name": "ButtonDestinationsComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/button/button-feedback/button-feedback.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ButtonFeedbackComponent",
+          "customElement": true,
+          "tagName": "button-feedback",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonFeedbackComponent",
+          "declaration": {
+            "name": "ButtonFeedbackComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "button-feedback",
+          "declaration": {
+            "name": "ButtonFeedbackComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/button/button-header/button-header.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ButtonHeaderComponent",
+          "customElement": true,
+          "tagName": "button-header",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonHeaderComponent",
+          "declaration": {
+            "name": "ButtonHeaderComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "button-header",
+          "declaration": {
+            "name": "ButtonHeaderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/button/button-platform/button-platform.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ButtonPlatformComponent",
+          "customElement": true,
+          "tagName": "button-platform",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonPlatformComponent",
+          "declaration": {
+            "name": "ButtonPlatformComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "button-platform",
+          "declaration": {
+            "name": "ButtonPlatformComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/button/button-taxonomy/button-taxonomy.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ButtonTaxonomyComponent",
+          "customElement": true,
+          "tagName": "button-taxonomy",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonTaxonomyComponent",
+          "declaration": {
+            "name": "ButtonTaxonomyComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "button-taxonomy",
+          "declaration": {
+            "name": "ButtonTaxonomyComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/button/button-tones/button-tones.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ButtonTonesComponent",
+          "customElement": true,
+          "tagName": "button-tones",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonTonesComponent",
+          "declaration": {
+            "name": "ButtonTonesComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "button-tones",
+          "declaration": {
+            "name": "ButtonTonesComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/color/color-header/color-header.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ColorHeaderComponent",
+          "customElement": true,
+          "tagName": "color-header",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ColorHeaderComponent",
+          "declaration": {
+            "name": "ColorHeaderComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "color-header",
+          "declaration": {
+            "name": "ColorHeaderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/color/color-inventory/color-inventory.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ColorInventoryComponent",
+          "customElement": true,
+          "tagName": "color-inventory",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ColorInventoryComponent",
+          "declaration": {
+            "name": "ColorInventoryComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "color-inventory",
+          "declaration": {
+            "name": "ColorInventoryComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/color/color-ladder/color-ladder.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ColorLadderComponent",
+          "customElement": true,
+          "tagName": "color-ladder",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ColorLadderComponent",
+          "declaration": {
+            "name": "ColorLadderComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "color-ladder",
+          "declaration": {
+            "name": "ColorLadderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/color/color-pairing-examples/color-pairing-examples.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ColorPairingExamplesComponent",
+          "customElement": true,
+          "tagName": "color-pairing-examples",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ColorPairingExamplesComponent",
+          "declaration": {
+            "name": "ColorPairingExamplesComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "color-pairing-examples",
+          "declaration": {
+            "name": "ColorPairingExamplesComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/color/color-pairing/color-pairing.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ColorPairingComponent",
+          "customElement": true,
+          "tagName": "color-pairing",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ColorPairingComponent",
+          "declaration": {
+            "name": "ColorPairingComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "color-pairing",
+          "declaration": {
+            "name": "ColorPairingComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/color/color-palette/color-palette.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ColorPaletteComponent",
+          "customElement": true,
+          "tagName": "color-palette",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ColorPaletteComponent",
+          "declaration": {
+            "name": "ColorPaletteComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "color-palette",
+          "declaration": {
+            "name": "ColorPaletteComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/color/color-status/color-status.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ColorStatusComponent",
+          "customElement": true,
+          "tagName": "color-status",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ColorStatusComponent",
+          "declaration": {
+            "name": "ColorStatusComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "color-status",
+          "declaration": {
+            "name": "ColorStatusComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/color/color-usage-rules/color-usage-rules.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ColorUsageRulesComponent",
+          "customElement": true,
+          "tagName": "color-usage-rules",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ColorUsageRulesComponent",
+          "declaration": {
+            "name": "ColorUsageRulesComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "color-usage-rules",
+          "declaration": {
+            "name": "ColorUsageRulesComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/design-page-navigation/design-page-navigation.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignPageNavigationComponent",
+          "customElement": true,
+          "tagName": "design-page-navigation",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [
+            {
+              "kind": "field",
+              "name": "activeRoute",
+              "attribute": "active-route",
+              "type": {
+                "text": "string"
+              },
+              "default": "/design"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "active-route",
+              "fieldName": "activeRoute",
+              "type": {
+                "text": "string"
+              },
+              "default": "/design"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignPageNavigationComponent",
+          "declaration": {
+            "name": "DesignPageNavigationComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-page-navigation",
+          "declaration": {
+            "name": "DesignPageNavigationComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/directory/design-directory.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignDirectoryComponent",
+          "customElement": true,
+          "tagName": "design-directory",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignDirectoryComponent",
+          "declaration": {
+            "name": "DesignDirectoryComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-directory",
+          "declaration": {
+            "name": "DesignDirectoryComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/element/element-boundaries-section/element-boundaries-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ElementBoundariesSectionComponent",
+          "customElement": true,
+          "tagName": "element-boundaries-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ElementBoundariesSectionComponent",
+          "declaration": {
+            "name": "ElementBoundariesSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "element-boundaries-section",
+          "declaration": {
+            "name": "ElementBoundariesSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/element/element-controls-section/element-controls-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ElementControlsSectionComponent",
+          "customElement": true,
+          "tagName": "element-controls-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ElementControlsSectionComponent",
+          "declaration": {
+            "name": "ElementControlsSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "element-controls-section",
+          "declaration": {
+            "name": "ElementControlsSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/element/element-fields-section/element-fields-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ElementFieldsSectionComponent",
+          "customElement": true,
+          "tagName": "element-fields-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ElementFieldsSectionComponent",
+          "declaration": {
+            "name": "ElementFieldsSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "element-fields-section",
+          "declaration": {
+            "name": "ElementFieldsSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/element/element-material-section/element-material-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ElementMaterialSectionComponent",
+          "customElement": true,
+          "tagName": "element-material-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ElementMaterialSectionComponent",
+          "declaration": {
+            "name": "ElementMaterialSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "element-material-section",
+          "declaration": {
+            "name": "ElementMaterialSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/element/element-mistakes-section/element-mistakes-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ElementMistakesSectionComponent",
+          "customElement": true,
+          "tagName": "element-mistakes-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ElementMistakesSectionComponent",
+          "declaration": {
+            "name": "ElementMistakesSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "element-mistakes-section",
+          "declaration": {
+            "name": "ElementMistakesSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/element/element-pairings-section/element-pairings-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ElementPairingsSectionComponent",
+          "customElement": true,
+          "tagName": "element-pairings-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ElementPairingsSectionComponent",
+          "declaration": {
+            "name": "ElementPairingsSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "element-pairings-section",
+          "declaration": {
+            "name": "ElementPairingsSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/element/element-specimen-section/element-specimen-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ElementSpecimenSectionComponent",
+          "customElement": true,
+          "tagName": "element-specimen-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ElementSpecimenSectionComponent",
+          "declaration": {
+            "name": "ElementSpecimenSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "element-specimen-section",
+          "declaration": {
+            "name": "ElementSpecimenSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/english/english-color-section/english-color-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "EnglishColorSectionComponent",
+          "customElement": true,
+          "tagName": "english-color-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnglishColorSectionComponent",
+          "declaration": {
+            "name": "EnglishColorSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "english-color-section",
+          "declaration": {
+            "name": "EnglishColorSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/english/english-header/english-header.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "EnglishHeaderComponent",
+          "customElement": true,
+          "tagName": "english-header",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnglishHeaderComponent",
+          "declaration": {
+            "name": "EnglishHeaderComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "english-header",
+          "declaration": {
+            "name": "EnglishHeaderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/english/english-layout-section/english-layout-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "EnglishLayoutSectionComponent",
+          "customElement": true,
+          "tagName": "english-layout-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnglishLayoutSectionComponent",
+          "declaration": {
+            "name": "EnglishLayoutSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "english-layout-section",
+          "declaration": {
+            "name": "EnglishLayoutSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/english/english-pairings-section/english-pairings-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "EnglishPairingsSectionComponent",
+          "customElement": true,
+          "tagName": "english-pairings-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnglishPairingsSectionComponent",
+          "declaration": {
+            "name": "EnglishPairingsSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "english-pairings-section",
+          "declaration": {
+            "name": "EnglishPairingsSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/english/english-programme-section/english-programme-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "EnglishProgrammeSectionComponent",
+          "customElement": true,
+          "tagName": "english-programme-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnglishProgrammeSectionComponent",
+          "declaration": {
+            "name": "EnglishProgrammeSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "english-programme-section",
+          "declaration": {
+            "name": "EnglishProgrammeSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/english/english-roles-section/english-roles-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "EnglishRolesSectionComponent",
+          "customElement": true,
+          "tagName": "english-roles-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnglishRolesSectionComponent",
+          "declaration": {
+            "name": "EnglishRolesSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "english-roles-section",
+          "declaration": {
+            "name": "EnglishRolesSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/english/english-rules-section/english-rules-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "EnglishRulesSectionComponent",
+          "customElement": true,
+          "tagName": "english-rules-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnglishRulesSectionComponent",
+          "declaration": {
+            "name": "EnglishRulesSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "english-rules-section",
+          "declaration": {
+            "name": "EnglishRulesSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/english/english-sequence-section/english-sequence-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "EnglishSequenceSectionComponent",
+          "customElement": true,
+          "tagName": "english-sequence-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnglishSequenceSectionComponent",
+          "declaration": {
+            "name": "EnglishSequenceSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "english-sequence-section",
+          "declaration": {
+            "name": "EnglishSequenceSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/hindi/hindi-family-section/hindi-family-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "HindiFamilySectionComponent",
+          "customElement": true,
+          "tagName": "hindi-family-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HindiFamilySectionComponent",
+          "declaration": {
+            "name": "HindiFamilySectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "hindi-family-section",
+          "declaration": {
+            "name": "HindiFamilySectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/hindi/hindi-header/hindi-header.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "HindiHeaderComponent",
+          "customElement": true,
+          "tagName": "hindi-header",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HindiHeaderComponent",
+          "declaration": {
+            "name": "HindiHeaderComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "hindi-header",
+          "declaration": {
+            "name": "HindiHeaderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/hindi/hindi-programme-section/hindi-programme-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "HindiProgrammeSectionComponent",
+          "customElement": true,
+          "tagName": "hindi-programme-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HindiProgrammeSectionComponent",
+          "declaration": {
+            "name": "HindiProgrammeSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "hindi-programme-section",
+          "declaration": {
+            "name": "HindiProgrammeSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/hindi/hindi-roles-section/hindi-roles-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "HindiRolesSectionComponent",
+          "customElement": true,
+          "tagName": "hindi-roles-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HindiRolesSectionComponent",
+          "declaration": {
+            "name": "HindiRolesSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "hindi-roles-section",
+          "declaration": {
+            "name": "HindiRolesSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/hindi/hindi-rules-section/hindi-rules-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "HindiRulesSectionComponent",
+          "customElement": true,
+          "tagName": "hindi-rules-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HindiRulesSectionComponent",
+          "declaration": {
+            "name": "HindiRulesSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "hindi-rules-section",
+          "declaration": {
+            "name": "HindiRulesSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/hindi/hindi-sequence-section/hindi-sequence-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "HindiSequenceSectionComponent",
+          "customElement": true,
+          "tagName": "hindi-sequence-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HindiSequenceSectionComponent",
+          "declaration": {
+            "name": "HindiSequenceSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "hindi-sequence-section",
+          "declaration": {
+            "name": "HindiSequenceSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-action/interaction-action.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionActionComponent",
+          "customElement": true,
+          "tagName": "interaction-action",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionActionComponent",
+          "declaration": {
+            "name": "InteractionActionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-action",
+          "declaration": {
+            "name": "InteractionActionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-contract/interaction-contract.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionContractComponent",
+          "customElement": true,
+          "tagName": "interaction-contract",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionContractComponent",
+          "declaration": {
+            "name": "InteractionContractComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-contract",
+          "declaration": {
+            "name": "InteractionContractComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-disclosure/interaction-disclosure.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionDisclosureComponent",
+          "customElement": true,
+          "tagName": "interaction-disclosure",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionDisclosureComponent",
+          "declaration": {
+            "name": "InteractionDisclosureComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-disclosure",
+          "declaration": {
+            "name": "InteractionDisclosureComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-focus/interaction-focus.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionFocusComponent",
+          "customElement": true,
+          "tagName": "interaction-focus",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionFocusComponent",
+          "declaration": {
+            "name": "InteractionFocusComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-focus",
+          "declaration": {
+            "name": "InteractionFocusComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-header/interaction-header.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionHeaderComponent",
+          "customElement": true,
+          "tagName": "interaction-header",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionHeaderComponent",
+          "declaration": {
+            "name": "InteractionHeaderComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-header",
+          "declaration": {
+            "name": "InteractionHeaderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-interrupt/interaction-interrupt.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionInterruptComponent",
+          "customElement": true,
+          "tagName": "interaction-interrupt",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionInterruptComponent",
+          "declaration": {
+            "name": "InteractionInterruptComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-interrupt",
+          "declaration": {
+            "name": "InteractionInterruptComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-never/interaction-never.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionNeverComponent",
+          "customElement": true,
+          "tagName": "interaction-never",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionNeverComponent",
+          "declaration": {
+            "name": "InteractionNeverComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-never",
+          "declaration": {
+            "name": "InteractionNeverComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-pointer/interaction-pointer.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionPointerComponent",
+          "customElement": true,
+          "tagName": "interaction-pointer",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionPointerComponent",
+          "declaration": {
+            "name": "InteractionPointerComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-pointer",
+          "declaration": {
+            "name": "InteractionPointerComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-product/interaction-product.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionProductComponent",
+          "customElement": true,
+          "tagName": "interaction-product",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionProductComponent",
+          "declaration": {
+            "name": "InteractionProductComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-product",
+          "declaration": {
+            "name": "InteractionProductComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-selection/interaction-selection.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionSelectionComponent",
+          "customElement": true,
+          "tagName": "interaction-selection",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionSelectionComponent",
+          "declaration": {
+            "name": "InteractionSelectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-selection",
+          "declaration": {
+            "name": "InteractionSelectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/interaction/interaction-transient/interaction-transient.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InteractionTransientComponent",
+          "customElement": true,
+          "tagName": "interaction-transient",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InteractionTransientComponent",
+          "declaration": {
+            "name": "InteractionTransientComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "interaction-transient",
+          "declaration": {
+            "name": "InteractionTransientComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/layout/breakpoints-section/layout-breakpoints-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "LayoutBreakpointsSectionComponent",
+          "customElement": true,
+          "tagName": "layout-breakpoints-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LayoutBreakpointsSectionComponent",
+          "declaration": {
+            "name": "LayoutBreakpointsSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "layout-breakpoints-section",
+          "declaration": {
+            "name": "LayoutBreakpointsSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/layout/composition-section/layout-composition-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "LayoutCompositionSectionComponent",
+          "customElement": true,
+          "tagName": "layout-composition-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LayoutCompositionSectionComponent",
+          "declaration": {
+            "name": "LayoutCompositionSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "layout-composition-section",
+          "declaration": {
+            "name": "LayoutCompositionSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/layout/measures-section/layout-measures-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "LayoutMeasuresSectionComponent",
+          "customElement": true,
+          "tagName": "layout-measures-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LayoutMeasuresSectionComponent",
+          "declaration": {
+            "name": "LayoutMeasuresSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "layout-measures-section",
+          "declaration": {
+            "name": "LayoutMeasuresSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/layout/reference-header/layout-reference-header.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "LayoutReferenceHeaderComponent",
+          "customElement": true,
+          "tagName": "layout-reference-header",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LayoutReferenceHeaderComponent",
+          "declaration": {
+            "name": "LayoutReferenceHeaderComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "layout-reference-header",
+          "declaration": {
+            "name": "LayoutReferenceHeaderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/layout/spacing-section/layout-spacing-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "LayoutSpacingSectionComponent",
+          "customElement": true,
+          "tagName": "layout-spacing-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LayoutSpacingSectionComponent",
+          "declaration": {
+            "name": "LayoutSpacingSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "layout-spacing-section",
+          "declaration": {
+            "name": "LayoutSpacingSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/typography/typography-header/typography-header.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "TypographyHeaderComponent",
+          "customElement": true,
+          "tagName": "typography-header",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TypographyHeaderComponent",
+          "declaration": {
+            "name": "TypographyHeaderComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "typography-header",
+          "declaration": {
+            "name": "TypographyHeaderComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/typography/typography-order-section/typography-order-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "TypographyOrderSectionComponent",
+          "customElement": true,
+          "tagName": "typography-order-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TypographyOrderSectionComponent",
+          "declaration": {
+            "name": "TypographyOrderSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "typography-order-section",
+          "declaration": {
+            "name": "TypographyOrderSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/typography/typography-scale-section/typography-scale-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "TypographyScaleSectionComponent",
+          "customElement": true,
+          "tagName": "typography-scale-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TypographyScaleSectionComponent",
+          "declaration": {
+            "name": "TypographyScaleSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "typography-scale-section",
+          "declaration": {
+            "name": "TypographyScaleSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/typography/typography-serif-section/typography-serif-section.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "TypographySerifSectionComponent",
+          "customElement": true,
+          "tagName": "typography-serif-section",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TypographySerifSectionComponent",
+          "declaration": {
+            "name": "TypographySerifSectionComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "typography-serif-section",
+          "declaration": {
+            "name": "TypographySerifSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design-button.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignButtonPage",
+          "customElement": true,
+          "tagName": "design-button-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignButtonPage",
+          "declaration": {
+            "name": "DesignButtonPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-button-page",
+          "declaration": {
+            "name": "DesignButtonPage"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design-color.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignColorPage",
+          "customElement": true,
+          "tagName": "design-color-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignColorPage",
+          "declaration": {
+            "name": "DesignColorPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-color-page",
+          "declaration": {
+            "name": "DesignColorPage"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design-element.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignElementPage",
+          "customElement": true,
+          "tagName": "design-element-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignElementPage",
+          "declaration": {
+            "name": "DesignElementPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-element-page",
+          "declaration": {
+            "name": "DesignElementPage"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design-english.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignEnglishPage",
+          "customElement": true,
+          "tagName": "design-english-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignEnglishPage",
+          "declaration": {
+            "name": "DesignEnglishPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-english-page",
+          "declaration": {
+            "name": "DesignEnglishPage"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design-hindi.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignHindiPage",
+          "customElement": true,
+          "tagName": "design-hindi-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignHindiPage",
+          "declaration": {
+            "name": "DesignHindiPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-hindi-page",
+          "declaration": {
+            "name": "DesignHindiPage"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design-interaction.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignInteractionPage",
+          "customElement": true,
+          "tagName": "design-interaction-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignInteractionPage",
+          "declaration": {
+            "name": "DesignInteractionPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-interaction-page",
+          "declaration": {
+            "name": "DesignInteractionPage"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design-layout.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignLayoutPage",
+          "customElement": true,
+          "tagName": "design-layout-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignLayoutPage",
+          "declaration": {
+            "name": "DesignLayoutPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-layout-page",
+          "declaration": {
+            "name": "DesignLayoutPage"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design-typography.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignTypographyPage",
+          "customElement": true,
+          "tagName": "design-typography-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignTypographyPage",
+          "declaration": {
+            "name": "DesignTypographyPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-typography-page",
+          "declaration": {
+            "name": "DesignTypographyPage"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/pages/design/design.page.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DesignPage",
+          "customElement": true,
+          "tagName": "design-page",
+          "superclass": {
+            "name": "DotaPageElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DesignPage",
+          "declaration": {
+            "name": "DesignPage"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "design-page",
+          "declaration": {
+            "name": "DesignPage"
           }
         }
       ]
@@ -132,39 +2686,6 @@
           "name": "app-error",
           "declaration": {
             "name": "ErrorPage"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/pages/home.page.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "name": "HomePage",
-          "customElement": true,
-          "tagName": "app-home",
-          "superclass": {
-            "name": "DotaPageElement"
-          },
-          "members": [],
-          "attributes": []
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "HomePage",
-          "declaration": {
-            "name": "HomePage"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "app-home",
-          "declaration": {
-            "name": "HomePage"
           }
         }
       ]
