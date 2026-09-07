@@ -1,0 +1,12 @@
+.button-destinations__grid,
+.button-destinations__grid .button-card {
+  min-inline-size: 0;
+}
+
+.button-destinations__grid .button-card {
+  min-block-size: 15rem;
+}
+
+.button-destinations__grid app-button {
+  justify-self: start;
+}
