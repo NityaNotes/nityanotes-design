@@ -1,7 +1,13 @@
-/* Shared type roles. Keep component type choices mapped to these tokens. */
+/* Shared type roles. Keep component type choices mapped to these tokens.
+   Iteration 1: one order of things — the śloka is the subject, every other
+   role is apparatus. Three registers: scripture, interface, data. */
 :root {
-  --primary-font: var(--font-sans);
-  --type-display-size: clamp(2.75rem, 1.33rem + min(6.3vw, 8svh), 7rem);
+  --font-latin: var(--font-dm-sans);
+  --font-hindi: "Noto Sans Devanagari", "Nirmala UI", sans-serif;
+  --font-scripture: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", serif;
+  --font-data: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --primary-font: var(--font-latin);
+  --type-display-size: clamp(2.75rem, 1.33rem + 6.3vw, 7rem);
   --type-display-weight: 700;
   --type-display-tracking: -0.04em;
   --type-display-leading: 1;
@@ -35,11 +41,141 @@ html {
   text-size-adjust: 100%;
 }
 body {
-  font-family: var(--primary-font), sans-serif;
+  font-family: var(--primary-font);
   font-size: var(--type-body-size);
   line-height: var(--type-body-leading);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+:where([lang="hi"], [lang^="hi-"]) {
+  font-family: var(--font-hindi);
+  letter-spacing: normal;
+}
+
+/* Devanagari has no case: the uppercase signals lose transform and tracking
+   under Hindi and compensate with a size step and the muted colour role.
+   Positive tracking severs the shirorekha — never re-apply it. */
+:where(.type-eyebrow, .type-label):where([lang="hi"], [lang^="hi-"]),
+:where([lang="hi"], [lang^="hi-"]) :where(.type-eyebrow, .type-label) {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: var(--type-compact-size);
+  line-height: 1.5;
+}
+
+/* Scripture — the subject. One serif, and it is the verse; the interface
+   stays a low-contrast sans so the śloka reads as a text. */
+.type-verse-display,
+.type-verse,
+.type-verse-sm {
+  font-family: var(--font-scripture);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--foreground-color);
+  max-inline-size: 24rem;
+  white-space: pre-line;
+}
+
+.type-verse-display {
+  font-size: clamp(1.75rem, 1.375rem + 1.667vw, 2.875rem);
+  line-height: 1.66;
+}
+
+.type-verse {
+  font-size: clamp(1.25rem, 1.125rem + 0.556vw, 1.625rem);
+  line-height: 1.6;
+}
+
+/* IAST transliteration — the same verse in another script, so it keeps the
+   scripture family and takes Tiro's italic, the one real italic allowed. */
+.type-iast {
+  font-family: var(--font-scripture);
+  font-style: italic;
+  font-size: clamp(0.9375rem, 0.906rem + 0.139vw, 1.031rem);
+  letter-spacing: 0.005em;
+  line-height: 1.45;
+  color: var(--primary-color);
+}
+
+/* The citation — how you find the verse again. Never comes before the verse. */
+.type-source {
+  font-size: var(--type-label-size);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--muted-color);
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.type-source [lang="hi"],
+.type-source[lang="hi"] {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* A Sanskrit term in running interface copy — the correct way to get a slope. */
+.type-term {
+  font-family: var(--font-scripture);
+  font-style: italic;
+}
+
+/* Long-form body that is denser than a lede but longer than a paragraph. */
+.type-prose {
+  font-size: clamp(1.0625rem, 1.042rem + 0.093vw, 1.125rem);
+  line-height: 1.75;
+  letter-spacing: -0.006em;
+  color: var(--muted-strong-color);
+  max-inline-size: 45rem;
+}
+
+/* Counts, streaks and timings — always tabular so digits do not jump. */
+.type-metric {
+  font-size: clamp(1.5rem, 1.25rem + 1.111vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Interface chrome — fixed on purpose, the same physical size on every screen. */
+.type-control {
+  font-size: var(--type-control-size);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.type-chip {
+  font-size: var(--type-eyebrow-size);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.type-micro {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  color: var(--muted-color);
+}
+
+.type-code {
+  font-family: var(--font-data);
+  font-size: 0.84375rem;
+  line-height: 1.5;
+  font-variant-ligatures: none;
+  color: var(--primary-color);
+}
+
+.type-bilingual {
+  font-family: var(--font-latin);
+}
+
+.type-bilingual [lang="hi"] {
+  font-family: var(--font-hindi);
 }
 :where(button, input, select, textarea) {
   font: inherit;
@@ -71,6 +207,28 @@ body {
   font-size: var(--type-lede-size);
   line-height: var(--type-lede-leading);
 }
+
+/* The meaning line under a verse — same numbers as the lede, deliberately
+   two names: a gloss is content, a lede is apparatus. */
+.type-gloss {
+  font-size: var(--type-lede-size);
+  line-height: var(--type-lede-leading);
+  letter-spacing: -0.008em;
+  color: var(--muted-strong-color);
+  max-inline-size: 35rem;
+}
+
+.type-card-title {
+  font-size: var(--type-card-title-size);
+  font-weight: var(--type-card-title-weight);
+  letter-spacing: var(--type-card-title-tracking);
+  line-height: 1.35;
+}
+
+.type-compact {
+  font-size: var(--type-compact-size);
+  line-height: var(--type-compact-leading);
+}
 .type-eyebrow,
 .type-label {
   text-transform: uppercase;
@@ -84,6 +242,10 @@ body {
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);
   letter-spacing: var(--type-label-tracking);
+}
+
+:where(.type-display, .type-section, .type-subsection)[lang="hi"] {
+  letter-spacing: normal;
 }
 .type-price,
 [data-count] {
