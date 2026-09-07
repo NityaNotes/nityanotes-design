@@ -1,0 +1,41 @@
+/* Composition and nested-surface specimens for the layout reference. */
+.layout-composition-section__grid {
+  margin-block-start: var(--layout-space-7);
+}
+
+.layout-composition-section__surface-stack {
+  margin-block-start: var(--layout-space-6);
+}
+
+.layout-composition-section__surface-stack > div,
+.layout-composition-section__surface-stack > div > div,
+.layout-composition-section__surface-stack > div > div > div {
+  display: grid;
+  gap: var(--layout-space-4);
+  border: 1px solid var(--border-color);
+}
+
+.layout-composition-section__surface-stack > div {
+  padding: var(--layout-space-6);
+  border-radius: var(--layout-radius-xl);
+  background: var(--primary-color-subtle);
+}
+
+.layout-composition-section__surface-stack > div > div {
+  padding: var(--layout-space-5);
+  border-radius: var(--layout-radius-lg);
+  background: var(--surface-color);
+}
+
+.layout-composition-section__surface-stack > div > div > div {
+  justify-items: start;
+  padding: var(--layout-space-4);
+  border-radius: var(--layout-radius-md);
+  background: var(--background-color);
+}
+
+.layout-composition-section__surface-stack code {
+  color: var(--muted-color);
+  font-family: var(--font-mono);
+  font-size: var(--type-compact-size);
+}
