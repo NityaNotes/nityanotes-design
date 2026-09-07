@@ -1,2 +1,10 @@
-export { HomePage } from "@app/pages/home.page.ts";
 export { ErrorPage } from "@app/pages/error.page.ts";
+export { DesignButtonPage } from "@app/pages/design/design-button.page.ts";
+export { DesignColorPage } from "@app/pages/design/design-color.page.ts";
+export { DesignEnglishPage } from "@app/pages/design/design-english.page.ts";
+export { DesignElementPage } from "@app/pages/design/design-element.page.ts";
+export { DesignHindiPage } from "@app/pages/design/design-hindi.page.ts";
+export { DesignInteractionPage } from "@app/pages/design/design-interaction.page.ts";
+export { DesignLayoutPage } from "@app/pages/design/design-layout.page.ts";
+export { DesignPage } from "@app/pages/design/design.page.ts";
+export { DesignTypographyPage } from "@app/pages/design/design-typography.page.ts";
