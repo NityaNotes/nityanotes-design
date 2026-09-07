@@ -1,0 +1,81 @@
+/* Shared, unbranded element shapes for cards, fields, badges, and callouts. */
+.element-card {
+  padding: var(--layout-space-6);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-lg);
+  box-shadow: 0 1px 2px var(--shadow-color);
+}
+
+.element-card > * + * {
+  margin-block-start: var(--layout-space-3);
+}
+
+.element-badge {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 1.75rem;
+  padding-inline: var(--layout-space-3);
+  border-radius: var(--layout-radius-pill);
+  background: var(--primary-color-subtle);
+  color: var(--primary-color-strong);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-tracking);
+  text-transform: uppercase;
+}
+
+/* Shared numbered rule rows for grammar and element reference pages. */
+.element-rule-list {
+  counter-reset: element-rule;
+  display: grid;
+  gap: var(--layout-space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.element-rule-list > li {
+  counter-increment: element-rule;
+  display: grid;
+  grid-template-columns: minmax(2.5rem, auto) minmax(0, 1fr);
+  gap: var(--layout-space-4);
+  align-items: start;
+  min-inline-size: 0;
+  padding: var(--layout-space-4) var(--layout-space-5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-md);
+  background: var(--surface-color);
+}
+
+.element-rule-list > li::before {
+  content: counter(element-rule, decimal-leading-zero);
+  color: var(--primary-color-strong);
+  font-family: var(--font-data);
+  font-size: var(--type-compact-size);
+  line-height: var(--type-compact-leading);
+  font-variant-numeric: tabular-nums;
+}
+
+.element-rule-list__body {
+  display: grid;
+  gap: var(--layout-space-1);
+  min-inline-size: 0;
+}
+
+.element-rule-list__body p {
+  margin: 0;
+}
+
+.element-rule-list__body .type-compact {
+  color: var(--muted-strong-color);
+}
+
+/* Field and input aliases are owned by input.css. */
+
+.element-callout {
+  padding: var(--layout-space-4);
+  border-inline-start: 4px solid var(--primary-color);
+  background: var(--primary-color-subtle);
+  border-radius: 0 var(--layout-radius-sm) var(--layout-radius-sm) 0;
+}

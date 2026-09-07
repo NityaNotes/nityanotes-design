@@ -1,0 +1,158 @@
+/* Shared field grammar for text-like inputs, native selects, and textareas.
+   Use .input with .layout-input-* modifiers; .element-input remains an alias.
+   Layout owns sizing, typography owns text roles, interaction owns feedback,
+   and color.css supplies mode-aware paint. Keep labels associated with for/id
+   and connect help or error text with aria-describedby. Single-line fields share
+   button pill corners; multiline fields retain room for text at their corners. */
+:is(.input, .element-input) {
+  --input-background: var(--background-color);
+  --input-border: var(--border-color);
+  --input-color: var(--foreground-color);
+  --input-hover-border: var(--border-strong-color);
+  --input-focus-border: var(--primary-color);
+  --input-focus-ring: color-mix(in srgb, var(--input-focus-border) 18%, transparent);
+
+  display: block;
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: var(--input-block-size, var(--layout-input-size-md));
+  padding-block: 0;
+  padding-inline: var(--input-padding-inline, var(--layout-input-padding-md));
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-radius, var(--layout-radius-pill));
+  outline: none;
+  background-color: var(--input-background);
+  color: var(--input-color);
+  caret-color: var(--primary-color);
+  font-family: inherit;
+  font-size: max(1rem, var(--type-body-size));
+  line-height: var(--type-body-leading);
+  text-align: start;
+}
+
+/* The solid border carries focus emphasis; the ring is a quiet tint of that
+   same color, including validation states. Pointer and keyboard focus agree. The
+   shadow follows the field radius without changing its size or adding an outline. */
+:is(.input, .element-input):not(:disabled):not([aria-disabled="true"]):focus {
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px var(--input-focus-ring);
+}
+
+:is(.input, .element-input)::placeholder {
+  color: var(--muted-color);
+  opacity: 1;
+}
+
+/* Preserve native pickers, select arrows, and search/number affordances.
+   Multiline fields keep their rows attribute and can grow vertically. */
+textarea:is(.input, .element-input) {
+  padding-block: var(--layout-space-3);
+  border-radius: var(--input-radius, var(--layout-radius-sm));
+  resize: vertical;
+}
+
+select:is(.input, .element-input) {
+  cursor: pointer;
+}
+
+/* Selects use the same end inset as other inputs while keeping their indicator
+   inside the control rather than against its border. */
+.input-select {
+  position: relative;
+  min-inline-size: 0;
+}
+
+.input-select::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: var(--layout-space-5);
+  inline-size: var(--layout-space-2);
+  block-size: var(--layout-space-2);
+  border-inline-end: 1px solid var(--muted-color);
+  border-block-end: 1px solid var(--muted-color);
+  transform: translateY(-65%) rotate(45deg);
+  pointer-events: none;
+}
+
+.input-select > select:is(.input, .element-input) {
+  appearance: none;
+  padding-inline-end: var(--layout-space-7);
+}
+
+/* Validation is explicit or follows native user interaction, never :invalid
+   on an untouched required field. Errors also need a visible text message. */
+:is(.input, .element-input)[data-state="success"] {
+  --input-border: var(--success-color);
+  --input-hover-border: var(--success-color);
+  --input-focus-border: var(--success-color);
+}
+
+:is(.input, .element-input)[aria-invalid="true"],
+:is(.input, .element-input)[data-state="error"],
+:is(.input, .element-input):user-invalid {
+  --input-border: var(--danger-color);
+  --input-hover-border: var(--danger-color);
+  --input-focus-border: var(--danger-color);
+}
+
+:is(.input, .element-input)[readonly] {
+  --input-background: var(--surface-color);
+}
+
+/* :disabled also covers controls inside a disabled fieldset. aria-disabled
+   changes presentation only; callers must prevent editing when using ARIA. */
+:is(.input, .element-input):disabled,
+:is(.input, .element-input)[aria-disabled="true"] {
+  --input-background: var(--surface-hover-color);
+  --input-border: var(--border-color);
+  --input-color: var(--muted-color);
+  --input-hover-border: var(--input-border);
+  --input-focus-border: var(--input-border);
+
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.input-field,
+.element-field {
+  display: grid;
+  min-inline-size: 0;
+  gap: var(--layout-space-2);
+}
+
+/* Pair labels with .type-label and help/messages with .type-compact to keep
+   typography, including Hindi labels, in the shared role system. */
+.input-help {
+  color: var(--muted-color);
+}
+
+.input-message[data-state="error"] {
+  color: var(--danger-color);
+}
+
+.input-message[data-state="success"] {
+  color: var(--success-color);
+}
+
+/* Checkboxes and radios opt into native selection paint separately from
+   text fields; retain their semantics, keyboard behavior, and system shape. */
+.input-choice {
+  appearance: auto;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Plain labels expand the native choice target without adding a badge surface. */
+.input-choice-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--layout-space-2);
+  min-block-size: var(--layout-input-size-md);
+  cursor: pointer;
+}
+
+.input-choice:disabled,
+.input-choice[aria-disabled="true"] {
+  cursor: not-allowed;
+}
