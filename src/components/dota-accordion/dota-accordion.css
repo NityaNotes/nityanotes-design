@@ -1,0 +1,97 @@
+/* App-wide presentation for the light-DOM Dota UI accordion used by FAQ lists. */
+dota-accordion {
+  display: block;
+  border-block-end: 1px solid var(--border-color);
+}
+
+dota-accordion .faq-accordion {
+  inline-size: 100%;
+}
+
+dota-accordion #header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--layout-space-4);
+  inline-size: 100%;
+  margin: 0;
+  padding: var(--layout-space-4) 0;
+  color: var(--foreground-color);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+dota-accordion #header:hover {
+  color: var(--primary-color-hover);
+}
+
+dota-accordion #header:focus-visible {
+  outline: 2px solid var(--focus-ring-color);
+  outline-offset: 3px;
+}
+
+dota-accordion #header > div:first-child {
+  min-inline-size: 0;
+}
+
+dota-accordion #header span {
+  display: block;
+  overflow: visible;
+  color: inherit;
+  font-size: var(--type-card-title-size);
+  font-weight: var(--type-card-title-weight);
+  letter-spacing: var(--type-card-title-tracking);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  -webkit-line-clamp: unset;
+}
+
+dota-accordion #icon {
+  flex: none;
+  color: var(--muted-color);
+  transition: transform 220ms ease;
+}
+
+dota-accordion #icon.active {
+  transform: rotate(90deg);
+}
+
+dota-accordion #description {
+  display: grid;
+  min-block-size: 0;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  opacity: 0;
+  transition: grid-template-rows 320ms ease, opacity 180ms ease;
+}
+
+dota-accordion #description.description-active {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+dota-accordion #description > .accordion-content {
+  min-block-size: 0;
+  overflow: hidden;
+}
+
+dota-accordion #content {
+  margin: 0;
+  padding: 0 0 var(--layout-space-4);
+  color: var(--muted-strong-color);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-leading);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  dota-accordion #icon,
+  dota-accordion #description {
+    transition-duration: 1ms;
+  }
+}
