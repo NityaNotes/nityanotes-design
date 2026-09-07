@@ -1,0 +1,55 @@
+/* Button header for /design/button; it shares the design-reference hero grid,
+   type roles, spacing, and fixed-chrome offset. */
+.button-header {
+  padding-block-start: calc(var(--layout-section-hero) + var(--layout-nav-h));
+}
+
+.button-header__grid {
+  align-items: center;
+}
+
+.button-header__eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.button-header__lede {
+  max-inline-size: var(--layout-reading-max);
+  margin-block-start: var(--layout-space-5);
+  color: var(--muted-color);
+}
+
+.button-header__button {
+  margin-block-start: var(--layout-space-5);
+}
+
+.button-header__nav {
+  margin-block-start: var(--layout-space-7);
+}
+
+.button-header__demo {
+  min-inline-size: 0;
+}
+
+.button-header__actions app-button .button-secondary {
+  --button-background: var(--contrast-foreground-color);
+  --button-border: var(--contrast-foreground-color);
+  --button-color: var(--contrast-background-color);
+  --button-hover-background: color-mix(in srgb, var(--contrast-foreground-color) 88%, transparent);
+  --button-hover-border: var(--contrast-foreground-color);
+  --button-hover-color: var(--contrast-background-color);
+  --button-active-background: color-mix(in srgb, var(--contrast-foreground-color) 76%, transparent);
+  --button-active-border: var(--contrast-foreground-color);
+  --button-active-color: var(--contrast-background-color);
+}
+
+.button-header__actions app-button .button-link {
+  --button-color: var(--contrast-foreground-color);
+  --button-hover-color: var(--contrast-foreground-color);
+  --button-active-color: var(--contrast-foreground-color);
+}
+
+.button-header__nav a[aria-current="page"] {
+  color: var(--primary-color-strong);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
