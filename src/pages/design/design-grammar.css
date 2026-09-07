@@ -1,0 +1,186 @@
+/* Shared presentation for the design grammar routes: the specimen classes the
+   typography routes (/design/typography, /design/english, /design/hindi) and
+   the /design directory consume. Sections own their geometry through
+   layout.css and keep every colour on semantic roles. */
+
+/* Heading rhythm — the one ratio every design route shares: eyebrow → heading
+   is space-4, heading → lede is space-5. Scoped to every grammar section class
+   and route hero; route-local rules must not override these margins, adjust
+   here instead. */
+:is(.design-section, .interaction-section, .button-section, .color-section, .english-section, .hindi-section, .typography-section, .design-heading, .layout-reference-heading, .button-header__intro, .color-header__grid > div) > .type-eyebrow + :is(h1, h2, .type-section, .type-subsection, .type-display),
+:is(.design-hero, .layout-reference-header, .element-reference-header, .english-header, .hindi-header, .typography-header, .color-header, .button-header, .interaction-hero) > .type-eyebrow + h1 {
+  margin-block-start: var(--layout-space-4);
+}
+
+:is(.design-section, .interaction-section, .button-section, .color-section, .english-section, .hindi-section, .typography-section, .design-heading, .layout-reference-heading, .button-header__intro, .color-header__grid > div) > :is(h1, h2, .type-section, .type-subsection) + :is(.type-lede, .interaction-section__note, .button-section__note),
+:is(.design-hero, .layout-reference-header, .element-reference-header, .english-header, .hindi-header, .typography-header, .color-header, .interaction-hero) > h1 + .type-lede {
+  margin-block-start: var(--layout-space-5);
+}
+
+.design-showcase {
+  min-block-size: 100svh;
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.design-hero {
+  padding-block-start: calc(var(--layout-section-hero) + var(--layout-nav-h));
+}
+
+.design-eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.design-lede {
+  max-inline-size: var(--layout-reading-max);
+  margin-block-start: var(--layout-space-5);
+  color: var(--muted-color);
+}
+
+.design-hero__button {
+  margin-block-start: var(--layout-space-5);
+}
+
+.design-hero-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-space-3);
+  margin-block-start: var(--layout-space-7);
+}
+
+/* Shared grammar hero: constrain display copy to a readable measure so the
+   route title carries enough vertical weight and every language follows one
+   rhythm before its route-specific content begins. */
+.design-grammar-header {
+  padding-block-start: calc(var(--layout-section-hero) + var(--layout-nav-h));
+}
+
+.design-grammar-header > .type-display {
+  max-inline-size: var(--layout-reading-max);
+}
+
+/* Every design route hero uses the display role at the same readable measure;
+   the surrounding layout may differ when a route has a rail or a demo. */
+:is(.design-hero, .element-reference-header, .interaction-hero, .layout-reference-header, .design-grammar-header, .button-header__intro, .color-header__grid > div) > .type-display {
+  max-inline-size: var(--layout-reading-max);
+}
+
+.design-grammar-header > .type-lede {
+  max-inline-size: var(--layout-reading-max);
+  margin-block-start: var(--layout-space-5);
+  color: var(--muted-color);
+}
+
+.design-grammar-header > app-button {
+  display: block;
+  margin-block-start: var(--layout-space-5);
+}
+
+.design-grammar-header > .design-hero-nav {
+  margin-block-start: var(--layout-space-7);
+}
+
+.design-section {
+  scroll-margin-block-start: var(--layout-stick);
+}
+
+.design-section > p:last-child {
+  color: var(--muted-color);
+}
+
+.design-section code {
+  padding-inline: var(--layout-space-1);
+  background: var(--primary-color-subtle);
+  border-radius: var(--layout-radius-xs);
+  color: var(--primary-color-strong);
+}
+
+/* Cross-reference and note lines inside specimens keep muted colouring. */
+.element-specimen-note,
+.element-specimen-link {
+  color: var(--muted-color);
+  font-size: var(--type-compact-size);
+}
+
+.element-specimen-link a,
+#element-boundaries a {
+  color: var(--primary-color-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.element-mistakes {
+  margin: 0;
+  padding-inline-start: var(--layout-space-5);
+  display: grid;
+  gap: var(--layout-space-2);
+}
+
+.element-mistakes li::marker {
+  color: var(--primary-color-strong);
+}
+
+/* English sections keep the same separation as the design directory: the
+   heading explains the rule, then the specimen gets its own breathing room. */
+.english-section > :is(.layout-row, .design-specimen, .element-rule-list) {
+  margin-block-start: var(--layout-space-7);
+}
+
+.english-section > :is(.layout-row, .design-specimen) + p {
+  margin-block-start: var(--layout-space-5);
+}
+
+.english-rules-section .element-specimen-note {
+  max-inline-size: var(--layout-reading-max);
+  margin-block-start: var(--layout-space-6);
+}
+
+/* Verse specimens sit on the page background so the scripture ladder and its
+   colour roles read exactly as they do inside the product. */
+.design-specimen {
+  padding: var(--layout-space-6);
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-md);
+}
+
+.design-specimen > * + * {
+  margin-block-start: var(--layout-space-3);
+}
+
+.design-specimen-eyebrow {
+  color: var(--primary-color-strong);
+}
+
+/* Scale tables stack role names above live samples, then split to two
+   columns on wider screens. */
+.design-specimen-scale {
+  margin: 0;
+  display: grid;
+  gap: var(--layout-space-5);
+}
+
+.design-specimen-scale div {
+  display: grid;
+  gap: var(--layout-space-1);
+  min-inline-size: 0;
+}
+
+.design-specimen-scale dd {
+  margin: 0;
+}
+
+/* Page shells: the three typography routes share one canvas contract. */
+.typography-page,
+.english-page,
+.hindi-page {
+  min-block-size: 100svh;
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.typography-page section + section,
+.english-page section + section,
+.hindi-page section + section {
+  border-block-start: 1px solid var(--border-color);
+}
