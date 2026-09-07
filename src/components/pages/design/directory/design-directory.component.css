@@ -1,0 +1,226 @@
+/* Route-owned presentation for the design grammar index. Global layers own the
+   shared element, typography, and layout contracts this page consumes. */
+
+.design-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-space-6);
+  margin-block-start: var(--layout-space-7);
+}
+
+.design-hero-stat {
+  display: grid;
+  gap: var(--layout-space-1);
+}
+
+.design-hero-stat .type-metric {
+  color: var(--primary-color-strong);
+  line-height: 1;
+}
+
+.design-hero-stat .type-label {
+  color: var(--muted-color);
+}
+
+.design-section-eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.design-grammars__heading,
+.design-grammars__lede {
+  max-inline-size: 42rem;
+}
+
+/* Heading rhythm (eyebrow → heading, heading → lede) comes from the shared
+   .design-heading contract in design-grammar.css; only measure lives here. */
+.design-ownership__lede,
+.design-start__lede {
+  max-inline-size: 42rem;
+  color: var(--muted-color);
+}
+
+.design-grammars__grid {
+  margin-block-start: var(--layout-space-7);
+}
+
+.design-grammar-card {
+  position: relative;
+  display: grid;
+  gap: var(--layout-space-4);
+  align-content: start;
+  min-inline-size: 0;
+}
+
+.design-grammar-card > * + * {
+  margin-block-start: 0;
+}
+
+.design-grammar-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.design-grammar-card .type-card-title {
+  color: var(--foreground-color);
+}
+
+.design-grammar-card__settles {
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-leading);
+}
+
+/* The title link stretches over the card; jump links sit above it. */
+.design-grammar-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.design-grammar-card:hover,
+.design-grammar-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--shadow-color);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.design-grammar-card__index {
+  color: var(--primary-color-strong);
+}
+
+.design-grammar-card__settles {
+  color: var(--muted-strong-color);
+}
+
+.design-grammar-card__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-space-4) var(--layout-space-5);
+  margin-block-start: var(--layout-space-1);
+}
+
+.design-grammar-card__stat {
+  display: grid;
+  gap: var(--layout-space-1);
+}
+
+.design-grammar-card__stat .type-metric {
+  line-height: 1;
+  color: var(--primary-color-strong);
+}
+
+.design-grammar-card__source {
+  color: var(--primary-color-strong);
+  overflow-wrap: anywhere;
+}
+
+.design-grammar-card__jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-space-1) var(--layout-space-2);
+  margin: 0;
+}
+
+.design-grammar-card__jumps a {
+  position: relative;
+  z-index: var(--layout-z-base);
+  color: var(--primary-color-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.design-ownership__lede {
+  max-inline-size: 42rem;
+  color: var(--muted-color);
+}
+
+.design-ownership-table {
+  display: grid;
+  gap: var(--layout-space-2);
+  margin-block-start: var(--layout-space-7);
+}
+
+.design-ownership-row {
+  display: grid;
+  grid-template-columns: minmax(8rem, 1fr) 2fr 2fr minmax(10rem, 1.25fr);
+  gap: var(--layout-space-4);
+  align-items: start;
+  padding: var(--layout-space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-md);
+  background: var(--surface-color);
+}
+
+.design-ownership-row--head {
+  display: none;
+  padding-block: var(--layout-space-2);
+  background: none;
+  border: none;
+  color: var(--muted-color);
+}
+
+.design-ownership-row .type-code {
+  align-self: center;
+  overflow-wrap: anywhere;
+}
+
+.design-ownership-row__never {
+  color: var(--muted-color);
+}
+
+.design-ownership-precedence {
+  margin-block-start: var(--layout-space-5);
+}
+
+.design-ownership-precedence > * + * {
+  margin-block-start: var(--layout-space-2);
+}
+
+.design-start__lede {
+  max-inline-size: 42rem;
+  color: var(--muted-color);
+}
+
+.design-start__grid {
+  margin-block-start: var(--layout-space-7);
+}
+
+.design-start-task {
+  display: grid;
+  gap: var(--layout-space-2);
+  align-content: start;
+}
+
+.design-start-task .element-badge {
+  justify-self: start;
+}
+
+.design-start-task p {
+  color: var(--muted-strong-color);
+}
+
+/* Ship checklist uses the shared numbered rule rows from element.css. */
+.design-ship-list {
+  margin-block-start: var(--layout-space-7);
+}
+
+.design-ship-closing {
+  margin-block-start: var(--layout-space-7);
+}
+
+.design-ship__button {
+  margin-block-start: var(--layout-space-7);
+}
+
+@media (min-width: 700px) {
+  .design-ownership-row--head {
+    display: grid;
+  }
+
+  .design-ownership-row {
+    grid-template-columns: minmax(7rem, 1fr) 2fr 1.75fr minmax(9rem, 1.1fr);
+  }
+}

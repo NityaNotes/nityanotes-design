@@ -1,0 +1,10 @@
+/* Shared route navigation displayed immediately after every design hero. */
+.design-page-navigation {
+  display: block;
+}
+
+.design-page-navigation .design-hero-nav a[aria-current="page"] {
+  color: var(--primary-color-strong);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
