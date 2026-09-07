@@ -1,0 +1,4 @@
+/* Hindi typography hero: route-specific accent color. */
+.hindi-header__eyebrow {
+  color: var(--primary-color-strong);
+}
