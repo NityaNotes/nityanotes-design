@@ -1,0 +1,5 @@
+/* Colour usage rule cards. */
+.color-usage-rules__grid,
+.color-usage-rules .element-card {
+  min-inline-size: 0;
+}
