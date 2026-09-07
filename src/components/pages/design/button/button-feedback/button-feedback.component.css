@@ -1,0 +1,62 @@
+/* The button-feedback section on /design/button lays out the public size,
+   shape, interaction, and state modifiers. Shared geometry comes from
+   layout.css; each specimen's paint and motion come from the button system. */
+.button-reference {
+  display: grid;
+  gap: var(--layout-space-7);
+}
+
+.button-reference__group {
+  min-inline-size: 0;
+  margin: 0;
+  padding-block-start: var(--layout-space-4);
+  border-block-start: 1px solid var(--border-color);
+}
+
+.button-reference__group > :is(p, h3) {
+  margin: 0;
+}
+
+.button-reference__group > h3 {
+  margin-block-start: var(--layout-space-2);
+}
+
+.button-reference__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--layout-space-4);
+  margin-block-start: var(--layout-space-5);
+}
+
+.button-reference__item {
+  display: flex;
+  min-inline-size: 0;
+  min-block-size: 7rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--layout-space-4);
+  padding: var(--layout-space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-md);
+  background: var(--surface-color);
+}
+
+.button-reference__item code {
+  max-inline-size: 100%;
+  overflow-wrap: anywhere;
+}
+
+.button-reference__states {
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+@media (min-width: 700px) {
+  .button-reference__row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .button-reference__states {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
