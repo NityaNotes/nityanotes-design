@@ -1,0 +1,139 @@
+/* Shared button paint and semantic states. Layout and motion modifiers live in
+   layout.css and interaction.css so every button can combine tone, geometry,
+   and feedback without creating a new component selector. Controls default to
+   pill corners in every state; only explicit geometry modifiers change them. */
+.button {
+  --button-background: transparent;
+  --button-border: transparent;
+  --button-color: var(--foreground-color);
+  --button-hover-background: var(--button-background);
+  --button-hover-border: var(--button-border);
+  --button-hover-color: var(--button-color);
+  --button-active-background: var(--button-hover-background);
+  --button-active-border: var(--button-hover-border);
+  --button-active-color: var(--button-hover-color);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--layout-space-2);
+  min-block-size: var(--button-block-size, var(--layout-button-size-md));
+  padding-inline: var(--button-padding-inline, var(--layout-button-padding-md));
+  border: 1px solid var(--button-border);
+  border-radius: var(--button-radius, var(--layout-radius-pill));
+  background: var(--button-background);
+  color: var(--button-color);
+  font-family: inherit;
+  font-size: var(--type-control-size);
+  font-weight: var(--type-control-weight);
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button-primary {
+  --button-background: var(--primary-color);
+  --button-color: var(--primary-color-on);
+  --button-hover-background: var(--primary-color-hover);
+  --button-hover-color: var(--primary-color-hover-on);
+  --button-active-background: var(--primary-color-hover);
+  --button-active-color: var(--primary-color-hover-on);
+}
+
+.button-secondary {
+  --button-border: var(--border-color);
+  --button-color: var(--foreground-color);
+  --button-hover-background: color-mix(in srgb, var(--foreground-color) 7%, transparent);
+  --button-hover-border: var(--border-strong-color);
+  --button-hover-color: var(--foreground-color);
+  --button-active-background: color-mix(in srgb, var(--foreground-color) 13%, transparent);
+  --button-active-border: var(--foreground-color);
+  --button-active-color: var(--foreground-color);
+}
+
+.button-quiet {
+  --button-color: var(--primary-color-strong);
+  --button-hover-background: color-mix(in srgb, var(--primary-color) 7%, transparent);
+  --button-hover-color: var(--primary-color-strong);
+  --button-active-background: color-mix(in srgb, var(--primary-color) 13%, transparent);
+  --button-active-color: var(--primary-color-strong);
+}
+
+.button-danger {
+  --button-border: var(--danger-color);
+  --button-color: var(--danger-color);
+  --button-hover-background: color-mix(in srgb, var(--danger-color) 7%, transparent);
+  --button-hover-border: var(--danger-color);
+  --button-hover-color: var(--danger-color);
+  --button-active-background: color-mix(in srgb, var(--danger-color) 13%, transparent);
+  --button-active-border: var(--danger-color);
+  --button-active-color: var(--danger-color);
+}
+
+.button-link {
+  --button-block-size: auto;
+  --button-padding-inline: 0;
+  --button-radius: 0;
+  --button-color: var(--primary-color-strong);
+  --button-hover-color: var(--primary-color-hover);
+  --button-active-color: var(--primary-color-hover);
+
+  border: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.layout-button-icon svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  --button-background: var(--surface-hover-color);
+  --button-border: var(--border-color);
+  --button-color: var(--muted-color);
+
+  cursor: not-allowed;
+}
+
+.button[data-state="busy"] {
+  cursor: progress;
+}
+
+.button[data-state="busy"]::after {
+  inline-size: 1em;
+  block-size: 1em;
+  border: 2px solid currentColor;
+  border-block-end-color: transparent;
+  border-radius: var(--layout-radius-pill);
+  content: "";
+}
+
+.button[data-state="done"] {
+  --button-background: color-mix(in srgb, var(--success-color) 10%, transparent);
+  --button-border: var(--success-color);
+  --button-color: var(--success-color);
+}
+
+.button[data-state="error"] {
+  --button-background: color-mix(in srgb, var(--danger-color) 10%, transparent);
+  --button-border: var(--danger-color);
+  --button-color: var(--danger-color);
+}
+
+.button-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--layout-space-2);
+}
+
+.button-group .button[aria-pressed="true"] {
+  --button-background: var(--primary-color);
+  --button-border: var(--primary-color);
+  --button-color: var(--primary-color-on);
+}

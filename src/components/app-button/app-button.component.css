@@ -1,0 +1,17 @@
+/* app-button is the shared action/destination host. The nested native control
+   consumes button.css, layout.css, and interaction.css; this file only defines
+   host sizing so inline, grid, and block compositions remain predictable. */
+app-button {
+  display: inline-flex;
+  max-inline-size: 100%;
+  vertical-align: middle;
+}
+
+app-button:is([block="true"], [block=""]) {
+  display: flex;
+  inline-size: 100%;
+}
+
+app-button:is([block="true"], [block=""]) > .app-button__control {
+  flex: 1;
+}
