@@ -1,0 +1,51 @@
+/* Header navigation and source summary for the colour page. */
+.color-header {
+  padding-block-start: calc(var(--layout-section-hero) + var(--layout-nav-h));
+}
+
+.color-header__grid {
+  align-items: center;
+}
+
+.color-header__eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.color-header__lede {
+  max-inline-size: var(--layout-reading-max);
+  margin-block-start: var(--layout-space-5);
+  color: var(--muted-color);
+}
+
+.color-header__button {
+  margin-block-start: var(--layout-space-5);
+}
+
+.color-header__nav {
+  margin-block-start: var(--layout-space-7);
+}
+
+.color-header__rail {
+  padding: var(--layout-space-6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-lg);
+  background: var(--surface-color);
+}
+
+.color-header__rail dl {
+  display: grid;
+  gap: var(--layout-space-3);
+  margin-block-start: var(--layout-space-5);
+}
+
+.color-header__rail dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--layout-space-3);
+}
+
+.color-header__rail dt,
+.color-header__rail dd {
+  margin: 0;
+  font-size: var(--type-compact-size);
+}
