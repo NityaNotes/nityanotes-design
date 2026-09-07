@@ -1,0 +1,538 @@
+/* Interaction grammar page (/design/interaction): editorial hierarchy and
+   specimen skins for the seven interaction families, action lifecycle,
+   transient and interrupt surfaces, and the product verbs.
+   Colocated section components contribute selector-local rules through
+   their own stylesheets; this file owns page-level rhythm, the shared
+   section grammar classes, the demo chip/row/toast/dialog skins, and the
+   reduced-motion preview. Consumes semantic colour roles and layout tokens;
+   never redefines them. */
+
+.interaction-page {
+  overflow: clip;
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.interaction-page code {
+  color: var(--primary-color-strong);
+  font-family: var(--font-data);
+  font-size: 0.8125rem;
+}
+
+/* Section rhythm: one top rule and a primary rung, shared with the button
+   grammar so the design routes read as one atlas. */
+.interaction-section {
+  position: relative;
+  display: block;
+  border-block-start: 1px solid var(--border-color);
+}
+
+.interaction-section::before {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: var(--layout-gutter);
+  inline-size: var(--layout-space-8);
+  block-size: 3px;
+  background: var(--primary-color);
+  content: "";
+}
+
+.interaction-section__eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.interaction-section__heading {
+  max-inline-size: var(--layout-reading-max);
+  text-wrap: balance;
+}
+
+.interaction-section__note {
+  max-inline-size: var(--layout-reading-max);
+  color: var(--muted-color);
+  line-height: var(--type-body-leading);
+}
+
+.interaction-hero__lede {
+  max-inline-size: var(--layout-reading-max);
+}
+
+.interaction-section__content {
+  margin-block-start: var(--layout-space-7);
+}
+
+.interaction-hero__nav {
+  margin-block-start: var(--layout-space-7);
+}
+
+.interaction-hero__nav a[aria-current="page"] {
+  color: var(--primary-color-strong);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.interaction-hero__metrics {
+  display: grid;
+  gap: var(--layout-space-4);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-block-start: var(--layout-space-8);
+}
+
+@media (min-width: 700px) {
+  .interaction-hero__metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.interaction-hero__metrics p {
+  margin: 0;
+}
+
+.interaction-hero__metrics .type-compact {
+  color: var(--muted-color);
+}
+
+/* ---- Demo skins ---------------------------------------------------------
+   Paint only; colour roles and mix-ramp tokens, no literals. A preview of
+   element.css — the same shape the production surfaces will take. */
+
+.interaction-tile,
+.interaction-card {
+  border-block-start: 1px solid var(--border-color);
+}
+
+.interaction-tile {
+  padding-block-start: var(--layout-space-4);
+  display: grid;
+  align-content: start;
+  gap: var(--layout-space-2);
+  min-inline-size: 0;
+}
+
+.interaction-tile > *,
+.interaction-card > * {
+  margin: 0;
+}
+
+.interaction-card {
+  padding: var(--layout-space-6);
+  display: grid;
+  align-content: start;
+  gap: var(--layout-space-3);
+  min-inline-size: 0;
+}
+
+.interaction-card--contrast {
+  background: var(--contrast-background-color);
+  border-color: var(--contrast-background-color);
+  color: var(--contrast-foreground-color);
+}
+
+.interaction-card--contrast .type-eyebrow {
+  color: inherit;
+  opacity: 0.72;
+}
+
+.interaction-mono {
+  font-family: var(--font-data);
+  font-size: var(--type-compact-size);
+  color: var(--muted-color);
+}
+
+.interaction-stage {
+  inline-size: 100%;
+  min-block-size: 2.75rem;
+  display: flex;
+  align-items: center;
+  gap: var(--layout-space-3);
+  flex-wrap: wrap;
+  margin-block-start: var(--layout-space-2);
+}
+
+/* A row that washes — selection owns colour, hover owns the trailing mark. */
+.interaction-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--layout-space-4);
+  inline-size: 100%;
+  padding: var(--layout-space-3) var(--layout-space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-md);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.interaction-row .interaction-row__nudge {
+  transition: transform 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .interaction-row:hover {
+    background: var(--surface-hover-color);
+  }
+  .interaction-row:hover .interaction-row__nudge {
+    transform: translateX(4px);
+  }
+}
+
+.interaction-row:focus-visible .interaction-row__nudge {
+  transform: translateX(4px);
+}
+
+.interaction-row--static {
+  cursor: default;
+  opacity: 0.55;
+}
+
+/* Selection chips — a real radio or checkbox visually replaced by its label
+   so keyboard and screen reader get the grouping for free. */
+.interaction-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--layout-space-2);
+  min-block-size: 2.25rem;
+  padding-inline: var(--layout-space-3);
+  border: 1px solid var(--border-strong-color);
+  border-radius: var(--layout-radius-pill);
+  background: transparent;
+  color: var(--muted-strong-color);
+  font-size: var(--type-compact-size);
+  font-weight: var(--type-card-title-weight);
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.interaction-chip:active {
+  transform: scale(0.98);
+}
+
+.interaction-chip input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.interaction-chip:has(input:checked) {
+  background: var(--primary-color-wash);
+  border-color: var(--primary-color);
+  color: var(--primary-color-strong);
+}
+
+.interaction-chip:has(input:focus-visible) {
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 3px;
+}
+
+.interaction-chip__mark {
+  inline-size: 0.375rem;
+  block-size: 0.375rem;
+  border-radius: var(--layout-radius-pill);
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.interaction-chip:has(input:checked) .interaction-chip__mark {
+  opacity: 1;
+}
+
+.interaction-fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.interaction-fieldset legend {
+  padding: 0;
+}
+
+/* Async action — all four faces stack in one grid cell so the control does
+   not resize between states. */
+.interaction-action[data-state="pending"] {
+  cursor: progress;
+  pointer-events: none;
+}
+
+.interaction-action__faces {
+  display: grid;
+}
+
+.interaction-action__faces > span {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--layout-space-2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 160ms ease;
+}
+
+.interaction-action[data-state="idle"] [data-face="idle"],
+.interaction-action[data-state="pending"] [data-face="pending"],
+.interaction-action[data-state="done"] [data-face="done"],
+.interaction-action[data-state="failed"] [data-face="failed"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.interaction-spinner {
+  inline-size: 1rem;
+  block-size: 1rem;
+  border: 2px solid currentColor;
+  border-block-start-color: transparent;
+  border-radius: 50%;
+  animation: interaction-spin 700ms linear infinite;
+}
+
+@keyframes interaction-spin {
+  to { transform: rotate(360deg); }
+}
+
+.interaction-draw {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+}
+
+[data-state="done"] .interaction-draw,
+[data-state="failed"] .interaction-draw {
+  animation: interaction-draw 320ms ease forwards;
+}
+
+@keyframes interaction-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Toast — one at a time; repeats coalesce. */
+.interaction-toast {
+  position: fixed;
+  inset-inline: var(--layout-space-4);
+  inset-block-end: var(--layout-space-4);
+  z-index: 60;
+  margin-inline: auto;
+  max-inline-size: 38rem;
+  min-block-size: 2.75rem;
+  display: flex;
+  align-items: center;
+  gap: var(--layout-space-3);
+  padding: var(--layout-space-3) var(--layout-space-4);
+  border-radius: var(--layout-radius-md);
+  background: var(--contrast-background-color);
+  color: var(--contrast-foreground-color);
+  box-shadow: 0 8px 28px var(--shadow-color);
+  transition: transform 220ms ease, opacity 160ms ease;
+}
+
+.interaction-toast[data-tone="failed"] {
+  background: var(--danger-color);
+  color: var(--background-color);
+}
+
+.interaction-toast[data-shown="false"] {
+  transform: translateY(var(--layout-space-4));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.interaction-toast__dismiss {
+  margin-inline-start: auto;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: var(--layout-space-1) var(--layout-space-2);
+}
+
+/* The native dialog — bottom sheet on a phone, centred from 700 up. */
+.interaction-dialog {
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-lg);
+  background: var(--surface-color);
+  color: var(--foreground-color);
+  padding: var(--layout-space-6);
+  max-inline-size: min(100% - 2 * var(--layout-space-5), 30rem);
+  inline-size: 100%;
+}
+
+.interaction-dialog::backdrop {
+  background: var(--scrim-color);
+}
+
+.interaction-dialog__actions {
+  justify-content: flex-end;
+  margin-block-start: var(--layout-space-5);
+}
+
+.interaction-dialog__actions .button {
+  min-block-size: 2.75rem;
+}
+
+/* rise — the ladder rung grows and steps one rung colour up, once. */
+.interaction-ladder {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--layout-space-3);
+  block-size: 4.5rem;
+  margin-block-start: var(--layout-space-5);
+}
+
+.interaction-ladder__rung {
+  inline-size: 0.625rem;
+  border-radius: 4px;
+  background: var(--rung-1-color);
+  transition: block-size 480ms ease, background-color 480ms ease;
+}
+
+.interaction-ladder__rung[data-rung="1"] { block-size: 1.125rem; background: var(--rung-1-color); }
+.interaction-ladder__rung[data-rung="2"] { block-size: 2.125rem; background: var(--rung-2-color); }
+.interaction-ladder__rung[data-rung="3"] { block-size: 3.25rem;  background: var(--rung-3-color); }
+.interaction-ladder__rung[data-rung="4"] { block-size: 4.5rem;   background: var(--rung-4-color); }
+
+.interaction-ladder__label {
+  display: grid;
+  gap: var(--layout-space-1);
+  padding-block-end: var(--layout-space-1);
+}
+
+.interaction-ladder__label p {
+  margin: 0;
+}
+
+/* travel — the pāṭha lamp along the rail; syllable rate, linear, and only
+   when the reader asks for it. */
+.interaction-lamprail {
+  position: relative;
+  block-size: 0.75rem;
+  margin-block-start: var(--layout-space-5);
+}
+
+.interaction-lamprail__rail {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline: 0;
+  block-size: 2px;
+  border-radius: 2px;
+  background: var(--primary-color);
+  transform: translateY(-50%);
+}
+
+.interaction-lamprail__lamp {
+  position: absolute;
+  inset-block-start: 1px;
+  inset-inline-start: 0;
+  inline-size: 0.625rem;
+  block-size: 0.625rem;
+  border-radius: 50%;
+  background: var(--warning-color);
+  offset-path: path("M 0 0 L 300 0");
+}
+
+.interaction-lamprail__lamp.is-travelling {
+  animation: interaction-travel var(--travel-dur, 4s) linear 1 both;
+}
+
+@keyframes interaction-travel {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+.interaction-verse {
+  margin-block-start: var(--layout-space-3);
+}
+
+.interaction-verse .interaction-word {
+  color: var(--muted-color);
+  transition: color 160ms ease;
+}
+
+.interaction-verse .interaction-word.is-lit {
+  color: var(--foreground-color);
+}
+
+/* Contract table and the never grid follow the button grammar's table. */
+.interaction-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.interaction-table th,
+.interaction-table td {
+  padding: var(--layout-space-3) var(--layout-space-3) var(--layout-space-3) 0;
+  border-block-end: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.interaction-table th {
+  color: var(--muted-color);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-tracking);
+  text-transform: uppercase;
+}
+
+.interaction-table td {
+  color: var(--muted-strong-color);
+  font-size: var(--type-compact-size);
+}
+
+.interaction-table td code {
+  font-size: 0.8125rem;
+}
+
+.interaction-table-wrap {
+  overflow-x: auto;
+  margin-block-start: var(--layout-space-7);
+}
+
+.interaction-table-wrap .interaction-table {
+  min-inline-size: 34rem;
+}
+
+/* Reduced-motion preview — the page toggle paints the same rules the media
+   query would, scoped to the demo surfaces. */
+.interaction-page.rm-preview .interaction-ladder__rung,
+.interaction-page.rm-preview dota-accordion #icon,
+.interaction-page.rm-preview dota-accordion #description,
+.interaction-page.rm-preview .interaction-action__faces > span,
+.interaction-page.rm-preview .interaction-chip,
+.interaction-page.rm-preview .interaction-row,
+.interaction-page.rm-preview .interaction-toast {
+  transition-duration: 1ms !important;
+}
+
+.interaction-page.rm-preview .interaction-spinner,
+.interaction-page.rm-preview .interaction-lamprail__lamp,
+.interaction-page.rm-preview .interaction-draw {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interaction-ladder__rung,
+  .interaction-action__faces > span,
+  .interaction-toast,
+  .interaction-row,
+  .interaction-chip {
+    transition-duration: 1ms;
+  }
+  .interaction-spinner,
+  .interaction-lamprail__lamp,
+  .interaction-draw {
+    animation: none !important;
+  }
+  .interaction-draw {
+    stroke-dashoffset: 0;
+  }
+}
