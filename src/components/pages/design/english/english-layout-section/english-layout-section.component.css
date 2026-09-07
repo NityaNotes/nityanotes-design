@@ -1,0 +1,42 @@
+/* Layout specimens: framed containers whose visible width is the lesson.
+   Geometry comes from layout.css tokens; paint stays on semantic roles. */
+.english-layout-section__specimens {
+  display: grid;
+  gap: var(--layout-space-6);
+}
+
+.english-layout-section__frame {
+  padding: var(--layout-space-6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-lg);
+}
+
+/* The reading and content measures show their real widths inside the wider
+   card, so centre them and let the border reveal each measure. */
+.english-layout-section__frame--reading {
+  max-inline-size: var(--layout-reading-max);
+  margin-inline: auto;
+}
+
+.english-layout-section__frame--content {
+  max-inline-size: var(--layout-content-max);
+  margin-inline: auto;
+}
+
+.english-layout-section__measures {
+  display: grid;
+  gap: var(--layout-space-3);
+}
+
+.english-layout-section__cell {
+  display: grid;
+  gap: var(--layout-space-2);
+  min-inline-size: 0;
+  padding: var(--layout-space-4);
+  background: var(--surface-color);
+  border-radius: var(--layout-radius-md);
+}
+
+.english-layout-section__cell-note {
+  color: var(--muted-color);
+}

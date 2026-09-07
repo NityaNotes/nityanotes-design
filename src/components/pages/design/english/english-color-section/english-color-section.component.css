@@ -1,0 +1,30 @@
+/* Text colour role specimens. Each row paints through the semantic role it
+   names; no literal pigment appears in this file. */
+.english-color-section__roles {
+  display: grid;
+  gap: var(--layout-space-3);
+}
+
+.english-color-section__role--foreground {
+  color: var(--foreground-color);
+}
+
+.english-color-section__role--muted {
+  color: var(--muted-color);
+}
+
+.english-color-section__role--primary {
+  color: var(--primary-color);
+}
+
+.english-color-section__role--success {
+  color: var(--success-color);
+}
+
+.english-color-section__role--warning {
+  color: var(--warning-color);
+}
+
+.english-color-section__role--danger {
+  color: var(--danger-color);
+}
