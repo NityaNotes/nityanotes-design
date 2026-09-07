@@ -1,0 +1,87 @@
+/* A book-like closing rule and compact navigation; the shared tokens own both themes. */
+app-footer {
+  display: block;
+}
+
+.app-footer {
+  color: var(--foreground-color);
+  background: var(--background-color);
+  border-block-start: 1px solid var(--border-color);
+}
+
+.app-footer__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-space-5);
+}
+
+/* Two short strokes echo a closing mark without adding another icon or control. */
+.app-footer__inner::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inline-size: var(--layout-space-5);
+  block-size: var(--layout-space-2);
+  border-inline: 2px solid var(--foreground-color);
+}
+
+.app-footer__signature,
+.app-footer__navigation {
+  min-inline-size: 0;
+}
+
+.app-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--layout-button-size-md);
+  font-size: var(--type-subsection-size);
+  font-weight: var(--type-section-weight);
+  letter-spacing: var(--type-section-tracking);
+  line-height: var(--type-section-leading);
+}
+
+.app-footer__description {
+  margin-block-start: var(--layout-space-2);
+  color: var(--muted-color);
+  font-size: var(--type-compact-size);
+  line-height: var(--type-compact-leading);
+}
+
+.app-footer__navigation {
+  gap: var(--layout-space-5);
+}
+
+.app-footer__link {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--layout-button-size-md);
+  font-size: var(--type-control-size);
+  font-weight: var(--type-control-weight);
+  line-height: var(--type-body-leading);
+}
+
+.app-footer a {
+  color: var(--foreground-color);
+  text-decoration: none;
+  text-underline-offset: var(--layout-space-1);
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+.app-footer a:focus-visible {
+  outline: 2px solid var(--foreground-color);
+  outline-offset: var(--layout-space-1);
+  border-radius: var(--layout-radius-xs);
+}
+
+@media (min-width: 700px) {
+  .app-footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--layout-space-7);
+  }
+}
