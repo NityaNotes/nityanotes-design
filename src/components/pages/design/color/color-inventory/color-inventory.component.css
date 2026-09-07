@@ -1,0 +1,56 @@
+/* Full semantic role inventory. */
+.color-inventory__grid,
+.color-inventory .element-card {
+  min-inline-size: 0;
+}
+
+.color-inventory__role {
+  display: grid;
+  gap: var(--layout-space-3);
+}
+
+.color-inventory__note {
+  color: var(--muted-color);
+}
+
+.color-inventory__list {
+  margin: var(--layout-space-2) 0 0;
+}
+
+.color-inventory__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--layout-space-4);
+  padding-block: var(--layout-space-3);
+  border-block-end: 1px solid var(--border-color);
+  font-size: var(--type-compact-size);
+}
+
+.color-inventory__row:last-child {
+  border-block-end: 0;
+}
+
+.color-inventory__row dt {
+  display: flex;
+  align-items: center;
+  gap: var(--layout-space-3);
+  min-inline-size: 0;
+  text-transform: capitalize;
+}
+
+.color-inventory__row dd {
+  margin: 0;
+  color: var(--muted-color);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-align: end;
+}
+
+.color-inventory__dot {
+  inline-size: var(--layout-space-3);
+  block-size: var(--layout-space-3);
+  flex: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-round);
+}

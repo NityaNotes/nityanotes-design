@@ -1,0 +1,53 @@
+/* Palette family ramps. */
+.color-palette__ramps {
+  display: grid;
+  gap: var(--layout-space-6);
+}
+
+.color-palette__label {
+  margin-block-end: var(--layout-space-3);
+  font-family: var(--font-mono);
+  font-size: var(--type-compact-size);
+}
+
+.color-palette__ramp {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  gap: var(--layout-space-2);
+}
+
+.color-palette__step {
+  display: grid;
+  gap: var(--layout-space-2);
+  min-inline-size: 0;
+}
+
+.color-palette__chip {
+  display: block;
+  min-block-size: var(--layout-space-8);
+  border: 1px solid var(--border-color);
+  border-radius: var(--layout-radius-md);
+}
+
+.color-palette__ramp small {
+  color: var(--foreground-color);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .color-palette__ramp {
+    grid-template-columns: 1fr;
+  }
+
+  .color-palette__step {
+    grid-template-columns: 3rem 1fr;
+    align-items: center;
+  }
+
+  .color-palette__chip {
+    min-block-size: var(--layout-space-6);
+  }
+}
