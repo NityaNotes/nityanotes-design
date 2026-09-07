@@ -1,0 +1,22 @@
+/* Header and route navigation for the layout reference. */
+.layout-reference-header {
+  padding-block-start: calc(var(--layout-section-hero) + var(--layout-nav-h));
+}
+
+.layout-reference-header__eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.layout-reference-header__lede {
+  max-inline-size: var(--layout-reading-max);
+  margin-block-start: var(--layout-space-5);
+  color: var(--muted-color);
+}
+
+.layout-reference-header__button {
+  margin-block-start: var(--layout-space-5);
+}
+
+.layout-reference-header__nav {
+  margin-block-start: var(--layout-space-7);
+}
