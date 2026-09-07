@@ -1,4 +1,3 @@
-import "@app/pages/home.page.ts";
 import "@app/pages/error.page.ts";
 import "@app/components/app-header.component.ts";
 import { AfterInit, BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
