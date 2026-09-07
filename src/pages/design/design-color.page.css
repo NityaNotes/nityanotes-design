@@ -1,0 +1,25 @@
+/* Page canvas and shared rhythm for the colour system sections. */
+.color-page {
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.color-page section + section {
+  border-block-start: 1px solid var(--border-color);
+}
+
+.color-page .color-section__eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.color-page .color-section__lede {
+  color: var(--muted-color);
+}
+
+.color-page .color-section__heading {
+  color: var(--foreground-color);
+}
+
+.color-page .color-section__content {
+  margin-block-start: var(--layout-space-7);
+}
