@@ -1,0 +1,2 @@
+/** Authored copy and metadata for the Hindi typography route. */
+export const designHindiContent = { seo: { title: "Hindi typography · Nitya Notes", description: "Hindi reading and interface typography for Nitya Notes.", keywords: ["Nitya Notes", "Hindi typography", "Devanagari"], og: { title: "Hindi typography · Nitya Notes", description: "Hindi reading and interface typography for Nitya Notes." } } } as const;
