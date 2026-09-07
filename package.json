@@ -1,0 +1,25 @@
+{
+  "name": "dota-wrap-template",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  },
+  "dependencies": {
+    "@ayu-sh-kr/dota-ui": "0.0.28",
+    "@ayu-sh-kr/dota-wrap": "0.0.34",
+    "@types/node": "^26.2.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "web-types": "./web-types.json",
+  "customElements": "custom-elements.json"
+}
