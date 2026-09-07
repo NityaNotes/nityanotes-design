@@ -1,0 +1,12 @@
+/* Semantic pairing specimens. */
+.color-pairing-examples__grid {
+  min-inline-size: 0;
+}
+
+.color-pairing-examples__pair {
+  display: grid;
+  gap: var(--layout-space-2);
+  min-block-size: var(--layout-space-10);
+  padding: var(--layout-space-5);
+  border-radius: var(--layout-radius-lg);
+}

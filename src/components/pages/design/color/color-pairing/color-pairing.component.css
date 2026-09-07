@@ -1,0 +1,83 @@
+/* Examples of semantic foreground and surface pairings. */
+.color-pairing__intro {
+  align-items: start;
+}
+
+.color-pairing__intro > div:first-child {
+  display: grid;
+  align-content: start;
+}
+
+.color-pairing__grid {
+  min-inline-size: 0;
+  gap: var(--layout-space-4);
+}
+
+.color-pairing__pair {
+  display: grid;
+  gap: var(--layout-space-2);
+  min-block-size: var(--layout-space-10);
+  padding: var(--layout-space-5);
+  border-radius: var(--layout-radius-lg);
+}
+
+.color-pairing__pair code,
+.color-pairing__rules code {
+  color: var(--muted-color);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+}
+
+.color-pairing__pair button {
+  justify-self: start;
+  padding: var(--layout-space-3) var(--layout-space-5);
+  border: 0;
+  border-radius: var(--layout-radius-pill);
+  background: var(--primary-color);
+  color: var(--primary-color-on);
+  cursor: pointer;
+}
+
+.color-pairing__pair button:hover {
+  background: var(--primary-color-hover);
+}
+
+.color-pairing__pair--contrast {
+  border-color: var(--contrast-border-color, var(--border-color));
+  background: var(--contrast-background-color);
+  color: var(--contrast-foreground-color);
+}
+
+.color-pairing__pair--contrast .type-eyebrow,
+.color-pairing__pair--contrast code {
+  color: var(--contrast-muted-color);
+}
+
+.color-pairing__pair--contrast .type-subsection {
+  color: var(--contrast-foreground-color);
+}
+
+.color-pairing__rules {
+  gap: var(--layout-space-6);
+  margin-block-start: var(--layout-space-9);
+}
+
+.color-pairing__rules article {
+  padding-block-start: var(--layout-space-4);
+  border-block-start: 1px solid var(--border-strong-color);
+}
+
+.color-pairing__rules h3 {
+  margin: 0;
+}
+
+.color-pairing__rules p {
+  margin-block-start: var(--layout-space-2);
+  color: var(--muted-color);
+}
+
+@media (max-width: 1100px) {
+  .color-pairing__intro {
+    grid-template-columns: 1fr;
+  }
+}
