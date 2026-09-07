@@ -1,0 +1,28 @@
+.button-taxonomy__grid,
+.button-taxonomy__card {
+  min-inline-size: 0;
+}
+
+.button-taxonomy__card {
+  display: grid;
+  align-content: center;
+  gap: var(--layout-space-2);
+  min-block-size: 11rem;
+}
+
+.button-taxonomy__card h3,
+.button-taxonomy__card p {
+  margin: 0;
+}
+
+.button-taxonomy__card code {
+  color: var(--primary-color-strong);
+  font-family: var(--font-data);
+  font-size: 0.6875rem;
+}
+
+@media (max-width: 519px) {
+  .button-taxonomy__card {
+    min-block-size: auto;
+  }
+}

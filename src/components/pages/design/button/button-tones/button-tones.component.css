@@ -1,0 +1,27 @@
+.button-tones .button-copy {
+  line-height: var(--type-body-leading);
+}
+
+.button-tones .button-specimen {
+  min-block-size: 12rem;
+  align-content: center;
+}
+
+@media (min-width: 700px) {
+  .button-tones .button-specimen {
+    min-block-size: 18rem;
+  }
+}
+
+.button-tones .button-copy {
+  max-inline-size: var(--layout-reading-max);
+}
+
+.button-tones__grid,
+.button-tones__grid .button-card {
+  min-inline-size: 0;
+}
+
+.button-tones__grid .button-card {
+  min-block-size: 14rem;
+}
