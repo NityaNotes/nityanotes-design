@@ -1,0 +1,53 @@
+/* Route shell for the element reference; each specimen retains its own component owner. */
+.element-reference-page {
+  min-block-size: 100svh;
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.element-reference-header {
+  padding-block-start: calc(var(--layout-section-hero) + var(--layout-nav-h));
+}
+
+.element-reference-header > .type-eyebrow {
+  color: var(--primary-color-strong);
+}
+
+.element-reference-header > .type-lede {
+  max-inline-size: var(--layout-reading-max);
+  margin-block-start: var(--layout-space-5);
+  color: var(--muted-color);
+}
+
+.element-reference-header__button {
+  margin-block-start: var(--layout-space-5);
+}
+
+.element-reference-nav {
+  margin-block-start: var(--layout-space-7);
+}
+
+.element-reference-page > :is(element-controls-section, element-material-section, element-specimen-section, element-fields-section, element-pairings-section, element-mistakes-section, element-boundaries-section) {
+  display: block;
+}
+
+.element-reference-page section + section {
+  border-block-start: 1px solid var(--border-color);
+}
+
+.element-reference-page .type-eyebrow + .type-section,
+.element-reference-page .type-eyebrow + .type-subsection {
+  margin-block-start: var(--layout-space-4);
+}
+
+.element-reference-page :is(.type-section, .type-subsection) + .type-lede {
+  margin-block-start: var(--layout-space-5);
+}
+
+.element-reference-page .type-lede {
+  max-inline-size: var(--layout-reading-max);
+}
+
+.element-reference-page .type-card-title + :is(p, .type-compact) {
+  margin-block-start: var(--layout-space-2);
+}
