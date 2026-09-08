@@ -8,6 +8,9 @@ import { ApplicationEventService } from "@ayu-sh-kr/dota-wrap/core";
 import components from "virtual:dota-components";
 import { routeConfig } from "virtual:dota-routes";
 import { AccordionComponent, IconsComponent, OrbBackgroundComponent } from "@ayu-sh-kr/dota-ui";
+import { designSystemManifest, designSystemRecipes } from "@app/design-system/manifest.ts";
+import { createDesignSystemTools, isWebMcpAvailable } from "@app/design-system/webmcp.adapter.ts";
+import type { ModelContextLike } from "@app/design-system/webmcp.types.ts";
 const applicationEventService = ApplicationEventService.getInstance();
 const applicationEventPublisher = applicationEventService.getPublisher();
 const applicationEventListener = applicationEventService.getListener();
@@ -31,4 +34,15 @@ applicationReady
   })
   .catch((error) => console.error(error));
 
-export { routerService, applicationEventService, applicationEventPublisher, applicationEventListener };
+// WebMCP is an experimental draft API; absence is a supported state and the
+// no-op cleanup keeps teardown symmetrical. The shared abort signal removes all
+// four tools together on teardown or hot-module replacement.
+const webmcpCleanup = isWebMcpAvailable()
+  ? createDesignSystemTools(
+      (document as { modelContext?: ModelContextLike }).modelContext,
+      designSystemManifest,
+      designSystemRecipes,
+    ).catch(() => () => {})
+  : Promise.resolve(() => {});
+
+export { routerService, applicationEventService, applicationEventPublisher, applicationEventListener, webmcpCleanup };
