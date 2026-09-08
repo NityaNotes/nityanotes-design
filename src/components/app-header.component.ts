@@ -1,5 +1,6 @@
 import { BindEvent, BaseElement, Component, WindowListener } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { appHeaderContent } from "@app/components/app-header-content.ts";
 import { GeneralUtils } from "@app/utils/general.utils.ts";
 
 @Component({
@@ -24,7 +25,7 @@ export class AppHeaderComponent extends BaseElement {
   render() {
     const isDarkTheme = typeof document !== "undefined" && GeneralUtils.isDarkMode();
     const themeIcon = isDarkTheme ? "mdi:white-balance-sunny" : "mdi:brightness-2";
-    const themeLabel = isDarkTheme ? "Switch to light theme" : "Switch to dark theme";
+    const themeLabel = isDarkTheme ? appHeaderContent.theme.lightLabel : appHeaderContent.theme.darkLabel;
 
     return html`
       <header class="fixed inset-x-0 top-0 z-[var(--layout-z-nav)] px-5 pt-5 sm:px-6 lg:px-8">
@@ -33,7 +34,7 @@ export class AppHeaderComponent extends BaseElement {
             href="/"
             class="truncate text-2xl font-extrabold text-[var(--foreground-color)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)]"
           >
-            nityanotes
+            ${appHeaderContent.brand}
           </a>
           <app-button
             id="theme-toggle"
