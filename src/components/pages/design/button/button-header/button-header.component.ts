@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designButtonContent } from "@app/data/design-button-content.ts";
 
 /**
  * Introduces the button grammar and links the reference to the other design routes.
@@ -12,23 +13,24 @@ export class ButtonHeaderComponent extends BaseElement {
 
   /** Renders the route heading and the design grammar navigation. */
   render() {
+    const copy = designButtonContent.copy["button/button-header/button-header"];
     return html`
       <header class="layout-page layout-section-hero button-header">
         <div class="layout-grid-2 button-header__grid">
           <div>
-            <p class="type-eyebrow button-header__eyebrow">Design grammar / 03</p>
-            <h1 class="type-display">The button system</h1>
-            <p class="type-lede button-header__lede">Every control on every surface, and the four beats each one answers with: intent, commit, acknowledgement, result.</p>
-            <app-button label="Continue to directory" tone="primary" size="md" href="/design" class="button-header__button"></app-button>
+            <p class="type-eyebrow button-header__eyebrow">${copy[3]}</p>
+            <h1 class="type-display">${copy[4]}</h1>
+            <p class="type-lede button-header__lede">${copy[5]}</p>
+            <app-button label="${copy[0]}" tone="primary" size="md" href="/design" class="button-header__button"></app-button>
             <design-page-navigation active-route="/design/button"></design-page-navigation>
           </div>
           <article class="button-header__demo button-card button-card--contrast">
-            <p class="type-eyebrow">Primary work</p>
-            <h2 class="type-subsection">The next action is obvious.</h2>
-            <p class="type-compact">The label carries the verb. The surface carries the priority. The result gets its own visible state.</p>
+            <p class="type-eyebrow">${copy[6]}</p>
+            <h2 class="type-subsection">${copy[7]}</h2>
+            <p class="type-compact">${copy[8]}</p>
             <div class="layout-row button-header__actions">
-              <app-button label="Create a note"></app-button>
-              <app-button label="Read the rules" tone="link"></app-button>
+              <app-button label="${copy[1]}"></app-button>
+              <app-button label="${copy[2]}" tone="link"></app-button>
             </div>
           </article>
         </div>
