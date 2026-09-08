@@ -9,7 +9,7 @@ import { designTypographyContent } from "@app/data/design-typography-content.ts"
  * SEO belongs to this route while the composed sections render the
  * scripture-first specimens that consume the global typography roles.
  */
-@Route({ path: "/design/typography" })
+@Route({ path: "/design/typography", ssr: true })
 @Component({ selector: "design-typography-page", shadow: false })
 export class DesignTypographyPage extends DotaPageElement {
   /** Creates the routed page before Dota resolves its SEO and rendered content. */

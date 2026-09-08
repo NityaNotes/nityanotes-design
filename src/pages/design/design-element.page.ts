@@ -8,7 +8,7 @@ import { designElementPageContent } from "@app/data/design-element-page-content.
  *
  * The route owns the element reference and composes its named specimen sections.
  */
-@Route({ path: "/design/element" })
+@Route({ path: "/design/element", ssr: true })
 @Component({ selector: "design-element-page", shadow: false })
 export class DesignElementPage extends DotaPageElement {
   /** Creates the routed page before Dota resolves its SEO and rendered content. */

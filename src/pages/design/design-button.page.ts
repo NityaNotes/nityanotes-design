@@ -9,7 +9,7 @@ import { designButtonContent } from "@app/data/design-button-content.ts";
  * The page makes the button grammar independently navigable while the reusable
  * showcase keeps its specimens aligned with the other design references.
  */
-@Route({ path: "/design/button" })
+@Route({ path: "/design/button", ssr: true })
 @Component({ selector: "design-button-page", shadow: false })
 export class DesignButtonPage extends DotaPageElement {
   /** Creates the routed page before Dota resolves its SEO and rendered content. */

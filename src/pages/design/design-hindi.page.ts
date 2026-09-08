@@ -9,7 +9,7 @@ import { designHindiContent } from "@app/data/design-hindi-content.ts";
  * The route exposes Hindi-specific SEO and composes the Devanagari specimen
  * sections and language-specific constraints from iteration one.
  */
-@Route({ path: "/design/hindi" })
+@Route({ path: "/design/hindi", ssr: true })
 @Component({ selector: "design-hindi-page", shadow: false })
 export class DesignHindiPage extends DotaPageElement {
   /** Creates the page before Dota resolves its route metadata and view. */

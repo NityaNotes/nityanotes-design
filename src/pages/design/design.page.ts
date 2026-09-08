@@ -9,7 +9,7 @@ import { designPageContent } from "@app/data/design-page-content.ts";
  * At `/` and `/design`, this page provides SEO and composes the directory component;
  * each iteration then owns its own route and dedicated set of sections.
  */
-@Route({ path: "/" })
+@Route({ path: "/", ssr: true })
 @Component({ selector: "design-page", shadow: false })
 export class DesignPage extends DotaPageElement {
   /** Creates the routed page before Dota resolves its SEO and rendered directory. */

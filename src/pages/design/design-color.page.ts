@@ -6,7 +6,7 @@ import { designColorContent } from "@app/data/design-color-content.ts";
 /**
  * Shows the semantic colour system at `/design/color`.
  */
-@Route({ path: "/design/color" })
+@Route({ path: "/design/color", ssr: true })
 @Component({ selector: "design-color-page", shadow: false })
 export class DesignColorPage extends DotaPageElement {
   /** Creates the routed page before Dota resolves its SEO and rendered content. */

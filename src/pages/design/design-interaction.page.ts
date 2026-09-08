@@ -11,7 +11,7 @@ import { designInteractionContent } from "@app/data/design-interaction-content.t
  * lifecycle, transient feedback and interruption, followed by the two product
  * verbs and the timing contract.
  */
-@Route({ path: "/design/interaction" })
+@Route({ path: "/design/interaction", ssr: true })
 @Component({ selector: "design-interaction-page", shadow: false })
 export class DesignInteractionPage extends DotaPageElement {
   /** Creates the routed page before Dota resolves its SEO and rendered content. */

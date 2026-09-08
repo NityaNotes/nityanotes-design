@@ -8,7 +8,7 @@ import { designLayoutContent } from "@app/data/design-layout-content.ts";
  *
  * This route supplies SEO and composes the independently owned layout sections.
  */
-@Route({ path: "/design/layout" })
+@Route({ path: "/design/layout", ssr: true })
 @Component({ selector: "design-layout-page", shadow: false })
 export class DesignLayoutPage extends DotaPageElement {
   /** Creates the routed page before Dota resolves its SEO and rendered content. */

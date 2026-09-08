@@ -9,7 +9,7 @@ import { designEnglishContent } from "@app/data/design-english-content.ts";
  * The route keeps English-specific SEO at the route boundary and composes the
  * independently owned specimen sections in reader order.
  */
-@Route({ path: "/design/english" })
+@Route({ path: "/design/english", ssr: true })
 @Component({ selector: "design-english-page", shadow: false })
 export class DesignEnglishPage extends DotaPageElement {
   /** Creates the page before Dota resolves its route metadata and view. */

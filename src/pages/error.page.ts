@@ -3,7 +3,7 @@ import { html } from "@ayu-sh-kr/dota-wrap/rendering";
 import { Route } from "@ayu-sh-kr/dota-wrap/router";
 import { errorContent } from "@app/data/error-content.ts";
 
-@Route({ path: "/error" })
+@Route({ path: "/error", ssr: true })
 @Component({
   selector: "app-error",
   shadow: false,
