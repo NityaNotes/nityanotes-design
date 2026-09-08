@@ -30,6 +30,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@app": resolve("./src"),
+      "/assets/css": resolve("./public/assets/css"),
     },
   },
   publicDir: "public",

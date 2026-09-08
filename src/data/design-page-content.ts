@@ -39,7 +39,7 @@ export const designPageContent = {
       title: "Layout",
       href: "/design/layout",
       settles: "Geometry only: measure, spacing, rhythm, grids, radius, and stacking order. It owns where things sit, never the colour, border, or type scale of the surfaces that sit there.",
-      source: "src/layout.css",
+      source: "public/assets/css/layout.css",
       stats: [
         { value: "4", label: "measures" },
         { value: "10", label: "space steps" },
@@ -59,7 +59,7 @@ export const designPageContent = {
       title: "Elements",
       href: "/design/element",
       settles: "The parts bin and its paint. Cards, badges, callouts, and field composition — reuse the production element before inventing a local treatment.",
-      source: "src/element.css",
+      source: "public/assets/css/element.css",
       stats: [
         { value: "3", label: "shared shapes" },
         { value: "1", label: "geometry" },
@@ -79,7 +79,7 @@ export const designPageContent = {
       title: "Interaction",
       href: "/design/interaction",
       settles: "Seven families of behaviour and one curve. Every specimen is live: hover it, focus it, scroll it, or reduce motion. If an interaction does not belong to a family, it is drift.",
-      source: "src/interaction.css",
+      source: "public/assets/css/interaction.css",
       stats: [
         { value: "7", label: "families" },
         { value: "10", label: "verbs" },
@@ -99,7 +99,7 @@ export const designPageContent = {
       title: "English typography",
       href: "/design/english",
       settles: "Three registers, scripture first. Tiro carries every śloka; DM Sans carries the apparatus; monospace carries the data. Seventeen roles cover the whole product, and you never set a size.",
-      source: "src/typography.css",
+      source: "public/assets/css/typography.css",
       stats: [
         { value: "3", label: "registers" },
         { value: "17", label: "roles" },
@@ -119,7 +119,7 @@ export const designPageContent = {
       title: "Hindi typography",
       href: "/design/hindi",
       settles: "Devanagari decides the family. No tracking, no uppercase transform, no synthetic bold on a verse — the language picks the face, never the reverse.",
-      source: "src/typography.css",
+      source: "public/assets/css/typography.css",
       stats: [
         { value: "1", label: "family rule" },
         { value: "0", label: "tracking" },
@@ -139,7 +139,7 @@ export const designPageContent = {
       title: "Color",
       href: "/design/color",
       settles: "Literal pigment lives in the palette layer; the role layer maps the active family onto intent. A component never names a hue or a scale step.",
-      source: "src/theme.css · src/color.css",
+      source: "public/assets/css/theme.css · public/assets/css/color.css",
       stats: [
         { value: "6", label: "role groups" },
         { value: "25", label: "roles" },
@@ -159,7 +159,7 @@ export const designPageContent = {
       title: "Buttons",
       href: "/design/button",
       settles: "Every control on every surface, and the four beats each one answers with: intent, commit, acknowledgement, result.",
-      source: "src/button.css · src/input.css",
+      source: "public/assets/css/button.css · public/assets/css/input.css",
       stats: [
         { value: "5", label: "tones" },
         { value: "4", label: "states" },
@@ -180,13 +180,13 @@ export const designPageContent = {
     lede: "If two grammars appear to disagree, a rule has crossed a boundary rather than created a real conflict.",
     precedence: "Build in reading order: layout places things, typography shapes the reading, elements give surfaces their meaning, colour resolves what they mean, interaction defines the response, buttons commit the work. A later layer may consume an earlier token; it may never redefine it. When two grammars disagree, neither wins — move the rule to the layer that owns it.",
     rows: [
-      { layer: "Layout", owns: "Measure, spacing, rhythm, grids, radius value, and z-order.", never: "Colour, border, shadow, background, and type size.", source: "src/layout.css" },
-      { layer: "Typography", owns: "Size, weight, tracking, leading, and the measure cap.", never: "Position, padding, and a surface's colour.", source: "src/typography.css" },
-      { layer: "Elements", owns: "Surfaces, badges, callouts, and field composition.", never: "Its own measures or its own type scale.", source: "src/element.css" },
-      { layer: "Color", owns: "Palette pigment and the semantic role layer.", never: "Component-local hues or scale steps.", source: "src/theme.css · src/color.css" },
-      { layer: "Interaction", owns: "State change over time: curve, duration, trigger, and verb.", never: "Static appearance at rest.", source: "src/interaction.css" },
-      { layer: "Buttons", owns: "Button paint, tones, and lifecycle states.", never: "Movement or geometry — interaction and layout own those.", source: "src/button.css" },
-      { layer: "Fields", owns: "Field states, validation messaging, and choice controls.", never: "Sizing beyond the shared step or a local type scale.", source: "src/input.css" },
+      { layer: "Layout", owns: "Measure, spacing, rhythm, grids, radius value, and z-order.", never: "Colour, border, shadow, background, and type size.", source: "public/assets/css/layout.css" },
+      { layer: "Typography", owns: "Size, weight, tracking, leading, and the measure cap.", never: "Position, padding, and a surface's colour.", source: "public/assets/css/typography.css" },
+      { layer: "Elements", owns: "Surfaces, badges, callouts, and field composition.", never: "Its own measures or its own type scale.", source: "public/assets/css/element.css" },
+      { layer: "Color", owns: "Palette pigment and the semantic role layer.", never: "Component-local hues or scale steps.", source: "public/assets/css/theme.css · public/assets/css/color.css" },
+      { layer: "Interaction", owns: "State change over time: curve, duration, trigger, and verb.", never: "Static appearance at rest.", source: "public/assets/css/interaction.css" },
+      { layer: "Buttons", owns: "Button paint, tones, and lifecycle states.", never: "Movement or geometry — interaction and layout own those.", source: "public/assets/css/button.css" },
+      { layer: "Fields", owns: "Field states, validation messaging, and choice controls.", never: "Sizing beyond the shared step or a local type scale.", source: "public/assets/css/input.css" },
     ],
   },
   start: {

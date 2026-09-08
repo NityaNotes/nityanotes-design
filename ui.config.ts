@@ -41,7 +41,7 @@ export const uiConfig = {
     },
   },
   tailwind: {
-    cssThemeFile: "./src/theme.css",
+    cssThemeFile: "./public/assets/css/theme.css",
     utilityMapping: {
       backgrounds: ["bg-canvas", "bg-surface"],
       text: ["text-ink", "text-muted", "text-header-text"],
