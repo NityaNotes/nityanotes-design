@@ -1,6 +1,12 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build:ssg",
+  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
   "headers": [
     {
@@ -11,6 +17,53 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/design/button",
+      "destination": "/design/button/",
+      "permanent": true
+    },
+    {
+      "source": "/design/color",
+      "destination": "/design/color/",
+      "permanent": true
+    },
+    {
+      "source": "/design/element",
+      "destination": "/design/element/",
+      "permanent": true
+    },
+    {
+      "source": "/design/english",
+      "destination": "/design/english/",
+      "permanent": true
+    },
+    {
+      "source": "/design/hindi",
+      "destination": "/design/hindi/",
+      "permanent": true
+    },
+    {
+      "source": "/design/interaction",
+      "destination": "/design/interaction/",
+      "permanent": true
+    },
+    {
+      "source": "/design/layout",
+      "destination": "/design/layout/",
+      "permanent": true
+    },
+    {
+      "source": "/design/typography",
+      "destination": "/design/typography/",
+      "permanent": true
+    },
+    {
+      "source": "/error",
+      "destination": "/error/",
+      "permanent": true
     }
   ]
 }
