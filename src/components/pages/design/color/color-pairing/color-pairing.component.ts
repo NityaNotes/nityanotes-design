@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designColorContent } from "@app/data/design-color-content.ts";
 
 /** Explains the supported colour relationships and application rules. */
 @Component({ selector: "color-pairing", shadow: false })
@@ -9,58 +10,59 @@ export class ColorPairingComponent extends BaseElement {
   }
 
   render() {
+    const copy = designColorContent.copy["color/color-pairing/color-pairing"];
     return html`
       <section id="color-pairing" class="layout-page layout-section color-section color-pairing">
         <div class="layout-grid-2 color-pairing__intro">
           <div>
-            <p class="type-eyebrow color-section__eyebrow">03 · Application rules</p>
-            <h2 class="type-section color-section__heading">Make the theme do the work.</h2>
-            <p class="type-lede color-section__lede">These five pairs are the only colour relationships a component needs to express. The role layer selects their values; component CSS stays focused on intent.</p>
+            <p class="type-eyebrow color-section__eyebrow">${copy[1]}</p>
+            <h2 class="type-section color-section__heading">${copy[2]}</h2>
+            <p class="type-lede color-section__lede">${copy[3]}</p>
           </div>
           <div class="layout-grid-2 color-pairing__grid">
             <article class="color-pairing__pair color-surface-muted">
-              <p class="type-eyebrow">Canvas / content</p>
-              <h3 class="type-subsection">Readable default</h3>
-              <code>--background-color + --foreground-color</code>
+              <p class="type-eyebrow">${copy[4]}</p>
+              <h3 class="type-subsection">${copy[5]}</h3>
+              <code>${copy[6]}</code>
             </article>
             <article class="color-pairing__pair color-surface">
-              <p class="type-eyebrow">Surface / content</p>
-              <h3 class="type-subsection">Human input</h3>
-              <code>--surface-color + --foreground-color</code>
+              <p class="type-eyebrow">${copy[7]}</p>
+              <h3 class="type-subsection">${copy[8]}</h3>
+              <code>${copy[9]}</code>
             </article>
             <article class="color-pairing__pair color-surface-muted">
-              <p class="type-eyebrow">Action / on action</p>
-              <app-button label="Primary action" tone="primary"></app-button>
-              <code>--primary-color + --primary-color-on</code>
+              <p class="type-eyebrow">${copy[10]}</p>
+              <app-button label="${copy[0]}" tone="primary"></app-button>
+              <code>${copy[11]}</code>
             </article>
             <article class="color-pairing__pair color-accent-subtle">
-              <p class="type-eyebrow">Subtle / content</p>
-              <h3 class="type-subsection">Aside or mark</h3>
-              <code>--primary-color-subtle + --foreground-color</code>
+              <p class="type-eyebrow">${copy[12]}</p>
+              <h3 class="type-subsection">${copy[13]}</h3>
+              <code>${copy[14]}</code>
             </article>
             <article class="color-pairing__pair color-pairing__pair--contrast">
-              <p class="type-eyebrow">Contrast / content</p>
-              <h3 class="type-subsection">Focused emphasis</h3>
-              <code>--contrast-background-color + --contrast-foreground-color</code>
+              <p class="type-eyebrow">${copy[15]}</p>
+              <h3 class="type-subsection">${copy[16]}</h3>
+              <code>${copy[17]}</code>
             </article>
           </div>
         </div>
         <div class="layout-grid-2 color-pairing__rules">
           <article>
-            <h3 class="type-subsection">Name the role, not the shade</h3>
-            <p class="type-compact">Choose <code>--muted-color</code> for supporting copy, never a step that only happens to work on one surface.</p>
+            <h3 class="type-subsection">${copy[18]}</h3>
+            <p class="type-compact">${copy[19]}<code>${copy[20]}</code>${copy[21]}</p>
           </article>
           <article>
-            <h3 class="type-subsection">Keep literals in the palette</h3>
-            <p class="type-compact">Add or adjust raw values only in the palette layer. Map their meaning in the role layer. A hex in a component file is drift by definition.</p>
+            <h3 class="type-subsection">${copy[22]}</h3>
+            <p class="type-compact">${copy[23]}</p>
           </article>
           <article>
-            <h3 class="type-subsection">Theme state is centralised</h3>
-            <p class="type-compact">Light and dark resolve through the same role names. Do not add a page-level colour preference block.</p>
+            <h3 class="type-subsection">${copy[24]}</h3>
+            <p class="type-compact">${copy[25]}</p>
           </article>
           <article>
-            <h3 class="type-subsection">Use the mix ramp</h3>
-            <p class="type-compact">Take <code>--primary-color-ring</code> or <code>--shadow-lift</code> instead of writing a new alpha or shadow in a component.</p>
+            <h3 class="type-subsection">${copy[26]}</h3>
+            <p class="type-compact">${copy[27]}<code>${copy[28]}</code>${copy[29]}<code>${copy[30]}</code>${copy[31]}</p>
           </article>
         </div>
       </section>
