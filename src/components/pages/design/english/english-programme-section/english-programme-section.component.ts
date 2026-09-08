@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designEnglishContent } from "@app/data/design-english-content.ts";
 
 /**
  * Shows the three English registers: scripture, interface, and data.
@@ -18,17 +19,18 @@ export class EnglishProgrammeSectionComponent extends BaseElement {
 
   /** Renders the register programme without reading or changing application state. */
   render() {
+    const copy = designEnglishContent.copy["english/english-programme-section/english-programme-section"];
     return html`
-      <section class="layout-page layout-section english-section design-section" id="english-programme" aria-label="The English programme">
-          <p class="type-eyebrow design-specimen-eyebrow">01 · The programme</p>
-          <h2 class="type-subsection">Three registers: scripture, interface, data.</h2>
-          <p class="type-lede">Tiro Devanagari Sanskrit carries every śloka and every IAST line. DM Sans carries the whole English apparatus — display, sections, body, controls, labels. A monospace face carries verse IDs, timeline slots and code, and nothing else.</p>
+      <section class="layout-page layout-section english-section design-section" id="english-programme" aria-label="${copy[0]}">
+          <p class="type-eyebrow design-specimen-eyebrow">${copy[1]}</p>
+          <h2 class="type-subsection">${copy[2]}</h2>
+          <p class="type-lede">${copy[3]}</p>
           <div class="layout-row">
-            <span class="element-badge">Tiro · the verse</span>
-            <span class="element-badge">DM Sans · the apparatus</span>
-            <span class="element-badge">Mono · the data</span>
+            <span class="element-badge">${copy[4]}</span>
+            <span class="element-badge">${copy[5]}</span>
+            <span class="element-badge">${copy[6]}</span>
           </div>
-          <p>The load-bearing rule is one serif, and it is the verse. A second serif — an editorial display face for headings — would put the apparatus in argument with the scripture, which is the one thing this product exists to present.</p>
+          <p>${copy[7]}</p>
       </section>
     `;
   }

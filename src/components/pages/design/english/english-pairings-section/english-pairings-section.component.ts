@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designEnglishContent } from "@app/data/design-english-content.ts";
 
 /**
  * Demonstrates the standard pairing patterns between type roles.
@@ -19,33 +20,34 @@ export class EnglishPairingsSectionComponent extends BaseElement {
 
   /** Renders the pairing patterns without reading or changing application state. */
   render() {
+    const copy = designEnglishContent.copy["english/english-pairings-section/english-pairings-section"];
     return html`
-      <section class="layout-page layout-section english-section design-section" id="english-pairings" aria-label="Pairing patterns">
-          <p class="type-eyebrow design-specimen-eyebrow">06 · Pairing patterns</p>
-          <h2 class="type-subsection">Consistency is in the pairing.</h2>
-          <p class="type-lede">A section opens with one heading and one lede, then hands over. A card answers with a title, body, and one compact line. A count changes beside a word, never alone.</p>
+      <section class="layout-page layout-section english-section design-section" id="english-pairings" aria-label="${copy[0]}">
+          <p class="type-eyebrow design-specimen-eyebrow">${copy[2]}</p>
+          <h2 class="type-subsection">${copy[3]}</h2>
+          <p class="type-lede">${copy[4]}</p>
           <div class="layout-row">
-            <span class="element-badge">Section + lede</span>
-            <span class="element-badge">Card title + body</span>
-            <span class="element-badge">Metric + word</span>
-            <span class="element-badge">Label + field</span>
+            <span class="element-badge">${copy[5]}</span>
+            <span class="element-badge">${copy[6]}</span>
+            <span class="element-badge">${copy[7]}</span>
+            <span class="element-badge">${copy[8]}</span>
           </div>
-          <div class="design-specimen english-pairings-section__specimen" aria-label="Settings pairing specimen">
-            <h3 class="type-section">Settings</h3>
-            <p class="type-lede">Manage your practice preferences and account.</p>
+          <div class="design-specimen english-pairings-section__specimen" aria-label="${copy[1]}">
+            <h3 class="type-section">${copy[9]}</h3>
+            <p class="type-lede">${copy[10]}</p>
             <div class="layout-grid-2 english-pairings-section__fields">
               <div class="element-field">
-                <label class="type-label" for="english-daily-goal">Daily goal</label>
+                <label class="type-label" for="english-daily-goal">${copy[11]}</label>
                 <div class="input-select">
                   <select class="input" id="english-daily-goal">
-                    <option>10 minutes</option>
-                    <option>20 minutes</option>
-                    <option>30 minutes</option>
+                    <option>${copy[12]}</option>
+                    <option>${copy[13]}</option>
+                    <option>${copy[14]}</option>
                   </select>
                 </div>
               </div>
               <div class="element-field">
-                <label class="type-label" for="english-reminder-time">Reminder time</label>
+                <label class="type-label" for="english-reminder-time">${copy[15]}</label>
                 <input class="input" id="english-reminder-time" type="time" />
               </div>
             </div>

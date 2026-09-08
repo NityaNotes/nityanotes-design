@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designEnglishContent } from "@app/data/design-english-content.ts";
 
 /**
  * States the hard boundaries of the English typography system.
@@ -19,20 +20,21 @@ export class EnglishRulesSectionComponent extends BaseElement {
 
   /** Renders the hard rules without reading or changing application state. */
   render() {
+    const copy = designEnglishContent.copy["english/english-rules-section/english-rules-section"];
     return html`
-      <section class="layout-page layout-section-end english-section design-section english-rules-section" id="english-rules" aria-label="Hard rules">
-          <p class="type-eyebrow design-specimen-eyebrow">07 · Hard rules</p>
-          <h2 class="type-subsection">Where the system stops.</h2>
+      <section class="layout-page layout-section-end english-section design-section english-rules-section" id="english-rules" aria-label="${copy[0]}">
+          <p class="type-eyebrow design-specimen-eyebrow">${copy[1]}</p>
+          <h2 class="type-subsection">${copy[2]}</h2>
           <ol class="element-rule-list">
-            <li><div class="element-rule-list__body"><p class="type-card-title">Never hardcode a px or rem font-size.</p><p class="type-compact">Pick the nearest role in a page or component file instead.</p></div></li>
-            <li><div class="element-rule-list__body"><p class="type-card-title">Never redefine a shared type role per page.</p><p class="type-compact">Use <code>.type-display</code>, <code>.type-verse</code>, and <code>.type-eyebrow</code> as they are. One display per screen, three uppercase runs per page, maximum.</p></div></li>
-            <li><div class="element-rule-list__body"><p class="type-card-title">Emphasis is weight, not slope.</p><p class="type-compact">The interface faces ship no italic; the only italic is Tiro's, and it belongs to IAST and Sanskrit terms like <span class="type-term">kaṇṭhastha</span>.</p></div></li>
-            <li><div class="element-rule-list__body"><p class="type-card-title">Colour comes from the role layer.</p><p class="type-compact">Use foreground, muted, primary, and status roles instead of local pigment on type.</p></div></li>
-            <li><div class="element-rule-list__body"><p class="type-card-title">Layout comes from shared tokens.</p><p class="type-compact">Use <code>src/layout.css</code> for margins, paddings, gaps, and container widths.</p></div></li>
-            <li><div class="element-rule-list__body"><p class="type-card-title">Keep render() pure.</p><p class="type-compact">Build strings from <code>this</code> state only. Data loading belongs in <code>@OnEvent("connected", true)</code> or a service.</p></div></li>
-            <li><div class="element-rule-list__body"><p class="type-card-title">Inline single-call helpers.</p><p class="type-compact">A 2–3 line private method called once adds a name to learn without earning reuse.</p></div></li>
+            <li><div class="element-rule-list__body"><p class="type-card-title">${copy[3]}</p><p class="type-compact">${copy[4]}</p></div></li>
+            <li><div class="element-rule-list__body"><p class="type-card-title">${copy[5]}</p><p class="type-compact">${copy[6]}<code>${copy[7]}</code>${copy[8]}<code>${copy[9]}</code>${copy[10]}<code>${copy[11]}</code>${copy[12]}</p></div></li>
+            <li><div class="element-rule-list__body"><p class="type-card-title">${copy[13]}</p><p class="type-compact">${copy[14]}<span class="type-term">${copy[15]}</span>${copy[16]}</p></div></li>
+            <li><div class="element-rule-list__body"><p class="type-card-title">${copy[17]}</p><p class="type-compact">${copy[18]}</p></div></li>
+            <li><div class="element-rule-list__body"><p class="type-card-title">${copy[19]}</p><p class="type-compact">${copy[20]}<code>${copy[21]}</code>${copy[22]}</p></div></li>
+            <li><div class="element-rule-list__body"><p class="type-card-title">${copy[23]}</p><p class="type-compact">${copy[24]}<code>${copy[25]}</code>${copy[26]}<code>${copy[27]}</code>${copy[28]}</p></div></li>
+            <li><div class="element-rule-list__body"><p class="type-card-title">${copy[29]}</p><p class="type-compact">${copy[30]}</p></div></li>
           </ol>
-          <p class="element-specimen-note">The shared roles live in <code>src/typography.css</code>, colours in <code>src/color.css</code>, layout in <code>src/layout.css</code>; the specimens on this page consume them directly, so what you see is the enforceable contract any component can use.</p>
+          <p class="element-specimen-note">${copy[31]}<code>${copy[32]}</code>${copy[33]}<code>${copy[34]}</code>${copy[35]}<code>${copy[36]}</code>${copy[37]}</p>
       </section>
     `;
   }

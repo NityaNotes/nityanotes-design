@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designEnglishContent } from "@app/data/design-english-content.ts";
 
 /**
  * Demonstrates the semantic colour roles that typography is allowed to wear.
@@ -19,20 +20,21 @@ export class EnglishColorSectionComponent extends BaseElement {
 
   /** Renders the text colour roles without reading or changing application state. */
   render() {
+    const copy = designEnglishContent.copy["english/english-color-section/english-color-section"];
     return html`
-      <section class="layout-page layout-section english-section design-section" id="english-color" aria-label="Colour roles for text">
-          <p class="type-eyebrow design-specimen-eyebrow">04 · Colour roles for text</p>
-          <h2 class="type-subsection">Semantic colour, not pigment — foreground, muted, primary, status.</h2>
-          <p class="type-lede">Typography never names a hue. It consumes the role layer from <code>src/color.css</code> so light and dark modes share one contract.</p>
+      <section class="layout-page layout-section english-section design-section" id="english-color" aria-label="${copy[0]}">
+          <p class="type-eyebrow design-specimen-eyebrow">${copy[1]}</p>
+          <h2 class="type-subsection">${copy[2]}</h2>
+          <p class="type-lede">${copy[3]}<code>${copy[4]}</code>${copy[5]}</p>
           <div class="design-specimen english-color-section__roles">
-            <p class="type-prose english-color-section__role english-color-section__role--foreground"><strong>Foreground</strong> — <code>var(--foreground-color)</code> — primary reading text</p>
-            <p class="type-prose english-color-section__role english-color-section__role--muted"><strong>Muted</strong> — <code>var(--muted-color)</code> — supporting copy, metadata, helper text</p>
-            <p class="type-prose english-color-section__role english-color-section__role--primary"><strong>Primary</strong> — <code>var(--primary-color)</code> — links, key actions, intentional emphasis</p>
-            <p class="type-prose english-color-section__role english-color-section__role--success"><strong>Success</strong> — <code>var(--success-color)</code> — confirmed state, completed count</p>
-            <p class="type-prose english-color-section__role english-color-section__role--warning"><strong>Warning</strong> — <code>var(--warning-color)</code> — attention needed, pending state</p>
-            <p class="type-prose english-color-section__role english-color-section__role--danger"><strong>Danger</strong> — <code>var(--danger-color)</code> — destructive action, error text</p>
+            <p class="type-prose english-color-section__role english-color-section__role--foreground"><strong>${copy[6]}</strong>${copy[7]}<code>${copy[8]}</code>${copy[9]}</p>
+            <p class="type-prose english-color-section__role english-color-section__role--muted"><strong>${copy[10]}</strong>${copy[11]}<code>${copy[12]}</code>${copy[13]}</p>
+            <p class="type-prose english-color-section__role english-color-section__role--primary"><strong>${copy[14]}</strong>${copy[15]}<code>${copy[16]}</code>${copy[17]}</p>
+            <p class="type-prose english-color-section__role english-color-section__role--success"><strong>${copy[18]}</strong>${copy[19]}<code>${copy[20]}</code>${copy[21]}</p>
+            <p class="type-prose english-color-section__role english-color-section__role--warning"><strong>${copy[22]}</strong>${copy[23]}<code>${copy[24]}</code>${copy[25]}</p>
+            <p class="type-prose english-color-section__role english-color-section__role--danger"><strong>${copy[26]}</strong>${copy[27]}<code>${copy[28]}</code>${copy[29]}</p>
           </div>
-          <p class="type-compact">Never use raw hex, palette utilities, or hardcoded colours on text. Pair colour with weight or icon — never rely on colour alone for meaning.</p>
+          <p class="type-compact">${copy[30]}</p>
       </section>
     `;
   }
