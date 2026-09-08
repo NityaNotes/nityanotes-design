@@ -14,14 +14,16 @@ const applicationEventListener = applicationEventService.getListener();
 
 let routerService!: RouterService<Router<HTMLElement>>;
 
-initializeApp({
+export const applicationReady = initializeApp({
   modules: components,
   routes: [...routeConfig, { path: "/design", component: DesignPage }],
   externalComponents: [AccordionComponent, IconsComponent, OrbBackgroundComponent],
   errorRoute: { path: "/error", component: ErrorPage },
   defaultRoute: { path: "/", component: DesignPage },
   root: AppComponent,
-})
+});
+
+applicationReady
   .then((value) => {
     DefaultApplicationEventListenerRegistry.setListener(applicationEventListener);
     routerService = value.routerService;

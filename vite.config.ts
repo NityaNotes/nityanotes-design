@@ -20,6 +20,11 @@ export default defineConfig({
       eventMap: {
         outFile: "src/event-map.d.ts",
       },
+      ssg: {
+        entry: "/src/main.ts",
+        autoDetectRoutes: true,
+        vercel: true,
+      },
     }),
   ],
   resolve: {
