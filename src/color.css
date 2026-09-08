@@ -104,6 +104,12 @@ html.dark {
   --rung-4-color: var(--primary-color-strong);
 }
 
+/* Text selection follows the active accent and retains its paired readable ink. */
+::selection {
+  background-color: var(--primary-color);
+  color: var(--primary-color-on);
+}
+
 /* Semantic colour specimens and utility surfaces used by the design grammar routes. */
 .color-surface {
   background: var(--surface-color);
