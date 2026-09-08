@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designHindiContent } from "@app/data/design-hindi-content.ts";
 
 /**
  * Introduces the Hindi typography grammar and links to the sibling routes.
@@ -18,12 +19,13 @@ export class HindiHeaderComponent extends BaseElement {
 
   /** Renders the hero without reading or changing application state. */
   render() {
+    const copy = designHindiContent.copy["hindi/hindi-header/hindi-header"];
     return html`
       <header class="layout-page layout-section-hero design-grammar-header hindi-header" lang="hi">
-        <p class="type-eyebrow hindi-header__eyebrow">Design grammar / 05</p>
-        <h1 class="type-display">हिंदी टाइपोग्राफ़ी.</h1>
-        <p class="type-lede hindi-header__lede">देवनागरी परिवार तय करती है। कोई अक्षर-अंतर नहीं, कोई बड़े-अक्षर रूपांतरण नहीं, श्लोक पर कोई कृत्रिम बोल्ड नहीं — भाषा फ़ॉन्ट चुनती है, उल्टा कभी नहीं।</p>
-        <app-button label="Continue to color" tone="primary" size="md" href="/design/color" class="hindi-header__button"></app-button>
+        <p class="type-eyebrow hindi-header__eyebrow">${copy[1]}</p>
+        <h1 class="type-display">${copy[2]}</h1>
+        <p class="type-lede hindi-header__lede">${copy[3]}</p>
+        <app-button label="${copy[0]}" tone="primary" size="md" href="/design/color" class="hindi-header__button"></app-button>
         <design-page-navigation active-route="/design/hindi"></design-page-navigation>
       </header>
     `;
