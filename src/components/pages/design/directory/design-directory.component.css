@@ -145,7 +145,7 @@
 
 .design-ownership-row {
   display: grid;
-  grid-template-columns: minmax(8rem, 1fr) 2fr 2fr minmax(10rem, 1.25fr);
+  grid-template-columns: 1fr;
   gap: var(--layout-space-4);
   align-items: start;
   padding: var(--layout-space-4);
@@ -213,6 +213,12 @@
 
 .design-ship__button {
   margin-block-start: var(--layout-space-7);
+}
+
+@media (min-width: 520px) {
+  .design-ownership-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 700px) {
