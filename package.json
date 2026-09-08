@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "build:ssg": "tsc && vite build -- --ssg",
+    "build:design-manifest": "node scripts/design-system/build-manifest.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {

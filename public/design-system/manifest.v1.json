@@ -1,0 +1,1519 @@
+{
+  "schemaVersion": "1.0",
+  "designVersion": "1.0.0",
+  "name": "Nitya Notes",
+  "generatedAt": "2026-09-08T15:15:45.019Z",
+  "sourceRevision": "webmcp-initial",
+  "manifestUrl": "/design-system/manifest.v1.json",
+  "categories": {
+    "color": {
+      "summary": "Literal pigment lives only in the palette layer (theme.css); semantic roles (color.css) map the active Temple Flame family onto intent so components name roles, never hues.",
+      "sources": [
+        {
+          "path": "public/assets/css/theme.css",
+          "role": "tokens"
+        },
+        {
+          "path": "public/assets/css/color.css",
+          "role": "styles"
+        },
+        {
+          "path": "src/data/design-color-content.ts",
+          "role": "content"
+        }
+      ],
+      "tokens": [
+        {
+          "name": "--primary-color",
+          "value": "var(--primary-700)",
+          "description": "The single accent for primary actions and marks; light mode uses the dark end of the Temple Flame ramp.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--primary-color-hover",
+          "value": "var(--primary-800)",
+          "description": "Hover/active accent for primary actions; one step deeper than the rest color.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--primary-color-on",
+          "value": "var(--light-50)",
+          "description": "Readable ink paired with the accent surface.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--primary-color-strong",
+          "value": "var(--primary-900)",
+          "description": "Loudest accent for quiet text treatments (links, quiet buttons).",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--primary-color-subtle",
+          "value": "var(--primary-50)",
+          "description": "Whisper-quiet wash surface for badges and callouts.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--background-color",
+          "value": "var(--light-50)",
+          "description": "Page canvas.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--foreground-color",
+          "value": "var(--dark-950)",
+          "description": "Readable default content on the canvas.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--surface-color",
+          "value": "var(--light-100)",
+          "description": "Surface for cards and human-input containers.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--surface-hover-color",
+          "value": "var(--light-200)",
+          "description": "Surface a step up on hover and the disabled fill.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--muted-color",
+          "value": "var(--light-700)",
+          "description": "Supporting copy, placeholders, and disabled labels.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--muted-strong-color",
+          "value": "var(--light-800)",
+          "description": "Glosses and secondary prose that need more weight than muted.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--border-color",
+          "value": "var(--light-300)",
+          "description": "Default hairline border.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--border-strong-color",
+          "value": "color-mix(in srgb, var(--foreground-color) 24%, transparent)",
+          "description": "Hover border for secondary surfaces.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--contrast-background-color",
+          "value": "var(--dark-950)",
+          "description": "Focused-emphasis canvas; pairs with contrast foreground.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--contrast-foreground-color",
+          "value": "var(--light-50)",
+          "description": "Readable ink on the contrast canvas.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--success-color",
+          "value": "var(--color-status-success-light)",
+          "description": "Success status pigment, independent of the accent.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--warning-color",
+          "value": "var(--color-status-warning-light)",
+          "description": "Warning status pigment, independent of the accent.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--danger-color",
+          "value": "var(--color-status-danger-light)",
+          "description": "Danger status pigment, independent of the accent.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--focus-ring-color",
+          "value": "color-mix(in srgb, var(--primary-color) 72%, transparent)",
+          "description": "The one keyboard focus ring; a tint of the accent.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--primary-color-ring",
+          "value": "color-mix(in srgb, var(--primary-color) 72%, transparent)",
+          "description": "Button focus ring tint.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--primary-color-wash",
+          "value": "color-mix(in srgb, var(--primary-color) 14%, transparent)",
+          "description": "Quiet accent wash for selected/hovered surfaces.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--subtle-color",
+          "value": "color-mix(in srgb, var(--foreground-color) 6%, transparent)",
+          "description": "Foreground tint for quiet marks and surfaces.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--scrim-color",
+          "value": "color-mix(in srgb, var(--dark-950) 72%, transparent)",
+          "description": "Modal/dialog scrim.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--shadow-color",
+          "value": "color-mix(in srgb, var(--foreground-color) 12%, transparent)",
+          "description": "Card and lift shadows.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--rung-1-color",
+          "value": "var(--primary-color-subtle)",
+          "description": "Ladder rung 1 — quietest emphasis step.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--rung-2-color",
+          "value": "var(--primary-color)",
+          "description": "Ladder rung 2 emphasis.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--rung-3-color",
+          "value": "var(--primary-color-hover)",
+          "description": "Ladder rung 3 emphasis.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--rung-4-color",
+          "value": "var(--primary-color-strong)",
+          "description": "Ladder rung 4 — loudest emphasis step.",
+          "sourcePath": "public/assets/css/color.css",
+          "sourceSelector": ":root"
+        }
+      ],
+      "classes": [
+        {
+          "name": "color-surface",
+          "purpose": "Semantic surface specimen: surface background, border, and readable content.",
+          "sourcePath": "public/assets/css/color.css"
+        },
+        {
+          "name": "color-surface-muted",
+          "purpose": "Canvas-background specimen with muted content.",
+          "sourcePath": "public/assets/css/color.css"
+        },
+        {
+          "name": "color-accent",
+          "purpose": "Solid accent surface with paired readable ink.",
+          "sourcePath": "public/assets/css/color.css"
+        },
+        {
+          "name": "color-accent-subtle",
+          "purpose": "Accent wash surface with strong accent content.",
+          "sourcePath": "public/assets/css/color.css"
+        },
+        {
+          "name": "color-swatch",
+          "purpose": "Grid swatch layout for palette specimens.",
+          "sourcePath": "public/assets/css/color.css"
+        }
+      ],
+      "rules": [
+        "Name the role, not the shade — choose a semantic role, never a scale step that merely works on one surface.",
+        "Keep literals in the palette — a raw colour in a component is drift by definition.",
+        "Theme state is centralised — the same role names resolve in light and dark mode; do not add a page-level colour preference block.",
+        "Use the mix ramp — take --primary-color-ring or --shadow-color instead of writing a new alpha or shadow in a component.",
+        "Emphasis steps through a single family at rising value; the ladder must survive greyscale.",
+        "A status never relies on colour alone — the label carries the result across themes and reduced-colour conditions."
+      ],
+      "examples": [
+        {
+          "title": "Primary action pairing",
+          "html": "<span class=\"color-accent type-control\">Join the waitlist</span>"
+        },
+        {
+          "title": "Quiet emphasis pairing",
+          "html": "<span class=\"color-accent-subtle type-compact\">A thought worth keeping</span>"
+        }
+      ]
+    },
+    "typography": {
+      "summary": "Three registers — scripture (Tiro Devanagari Sanskrit), interface (DM Sans / Noto Sans Devanagari), and data (monospace) — with fluid roles that interpolate between 360px and 1440px and fixed roles that never change physical size.",
+      "sources": [
+        {
+          "path": "public/assets/css/typography.css",
+          "role": "styles"
+        },
+        {
+          "path": "public/assets/css/theme.css",
+          "role": "tokens"
+        },
+        {
+          "path": "src/data/design-typography-content.ts",
+          "role": "content"
+        }
+      ],
+      "tokens": [
+        {
+          "name": "--font-latin",
+          "value": "var(--font-dm-sans)",
+          "description": "Interface sans for Latin-script copy.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--font-hindi",
+          "value": "\"Noto Sans Devanagari\", \"Nirmala UI\", sans-serif",
+          "description": "Interface sans for Devanagari copy.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--font-scripture",
+          "value": "\"Tiro Devanagari Sanskrit\", \"Noto Serif Devanagari\", serif",
+          "description": "The only written-stroke face; reserved for the verse, transliteration, and Sanskrit terms.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--font-data",
+          "value": "\"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace",
+          "description": "Monospace for verse IDs and code; never a small-label style.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-display-size",
+          "value": "clamp(2.75rem, 1.33rem + 6.3vw, 7rem)",
+          "description": "Fluid display heading size.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-section-size",
+          "value": "clamp(2.25rem, 1.67rem + 2.6vw, 4rem)",
+          "description": "Fluid section heading size.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-subsection-size",
+          "value": "clamp(1.8rem, 1.56rem + 1.04vw, 2.5rem)",
+          "description": "Fluid nested-heading size.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-lede-size",
+          "value": "clamp(1rem, 0.93rem + 0.3vw, 1.2rem)",
+          "description": "Lede/intro paragraph size.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-body-size",
+          "value": "1rem",
+          "description": "Body copy floor — never below 16px.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-compact-size",
+          "value": "0.875rem",
+          "description": "Metadata and helper text size.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-card-title-size",
+          "value": "1.05rem",
+          "description": "Card heading size.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-eyebrow-size",
+          "value": "0.8125rem",
+          "description": "Kicker/eyebrow size.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-label-size",
+          "value": "0.75rem",
+          "description": "Field-label size; loses uppercase transform under Hindi.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--type-control-size",
+          "value": "0.9375rem",
+          "description": "Interface chrome size — the same physical size on every screen.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        }
+      ],
+      "classes": [
+        {
+          "name": "type-display",
+          "purpose": "Fluid display heading; balances wrapping.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-section",
+          "purpose": "Fluid section heading.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-subsection",
+          "purpose": "Fluid nested heading.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-lede",
+          "purpose": "Intro paragraph making the purpose clear before body copy.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-gloss",
+          "purpose": "The meaning line under a verse — same numbers as the lede, deliberately a different name.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-verse-display",
+          "purpose": "Large scripture specimen in Tiro.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-verse",
+          "purpose": "Standard scripture line in Tiro.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-iast",
+          "purpose": "IAST transliteration — scripture family with the one allowed italic.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-source",
+          "purpose": "Citation line; uppercase and tabular, never before the verse.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-term",
+          "purpose": "A Sanskrit term in running interface copy.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-prose",
+          "purpose": "Long-form body denser than a lede, capped at 45rem.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-metric",
+          "purpose": "Counts and timings — always tabular so digits do not jump.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-card-title",
+          "purpose": "Card heading role.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-compact",
+          "purpose": "Metadata and helper text.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-eyebrow",
+          "purpose": "Uppercase kicker above a heading.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-label",
+          "purpose": "Field label; associate with the control via for/id.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-control",
+          "purpose": "Button and control text.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-chip",
+          "purpose": "Chip text at eyebrow size.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-micro",
+          "purpose": "Smallest legal interface text.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-code",
+          "purpose": "Inline code in the data font.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-bilingual",
+          "purpose": "Mixed-language container — Latin base with Devanagari children switching font.",
+          "sourcePath": "public/assets/css/typography.css"
+        }
+      ],
+      "rules": [
+        "The śloka is the subject; every other role is apparatus — the scripture ladder never interleaves with the interface ladder.",
+        "One serif, and it is the verse — Tiro is the only face with a written stroke; headings and labels stay interface sans.",
+        "A verse is presented in one fixed sequence — verse, transliteration, gloss, source; the citation never comes first.",
+        "Devanagari has no case — uppercase roles lose transform and tracking under Hindi and gain a size step instead; positive tracking severs the shirorekha, so never re-apply it.",
+        "Body copy never drops below 16px; interface chrome stays the same physical size on a phone and a monitor.",
+        "Monospace is reserved for verse IDs and code — it is not a style for small labels."
+      ],
+      "examples": [
+        {
+          "title": "Verse block",
+          "html": "<p class=\"type-verse\" lang=\"sa\">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।</p>\n<p class=\"type-iast\">karmaṇy evādhikāras te mā phaleṣu kadācana</p>\n<p class=\"type-gloss\">Your right is to action alone, never to its fruits.</p>\n<p class=\"type-source\">Bhagavad Gītā 2.47</p>"
+        },
+        {
+          "title": "Section heading",
+          "html": "<p class=\"type-eyebrow\">01 · The order of things</p>\n<h2 class=\"type-section\">The śloka is the subject.</h2>\n<p class=\"type-lede\">A lede makes the purpose clear before the body carries the detail.</p>"
+        }
+      ]
+    },
+    "layout": {
+      "summary": "One container per section chosen by content shape (80/60/45/38rem), a shared spacing scale, five radii, and grids that only take fixed column counts when the count says something.",
+      "sources": [
+        {
+          "path": "public/assets/css/layout.css",
+          "role": "styles"
+        },
+        {
+          "path": "src/data/design-layout-content.ts",
+          "role": "content"
+        }
+      ],
+      "tokens": [
+        {
+          "name": "--layout-page-max",
+          "value": "80rem",
+          "description": "Page measure for wide composition and site chrome.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-content-max",
+          "value": "60rem",
+          "description": "One or two columns of focused interface work.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-reading-max",
+          "value": "45rem",
+          "description": "Long-form reading measure.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-form-max",
+          "value": "38rem",
+          "description": "Compact frame for fields and settings groups.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-gutter",
+          "value": "clamp(1.25rem, 4vw, 3rem)",
+          "description": "The single gutter; one container per section keeps it singular.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-space-1",
+          "value": "0.25rem",
+          "description": "Spacing step 1.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-space-2",
+          "value": "0.5rem",
+          "description": "Spacing step 2.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-space-3",
+          "value": "0.75rem",
+          "description": "Spacing step 3.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-space-4",
+          "value": "1rem",
+          "description": "Spacing step 4 — the default stack gap.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-space-5",
+          "value": "1.5rem",
+          "description": "Spacing step 5 — the default grid gap.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-space-6",
+          "value": "2rem",
+          "description": "Spacing step 6.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-radius-xs",
+          "value": "4px",
+          "description": "Control-radius corner.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-radius-sm",
+          "value": "8px",
+          "description": "Tile radius.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-radius-md",
+          "value": "14px",
+          "description": "Card radius.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-radius-lg",
+          "value": "20px",
+          "description": "Panel radius.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-radius-pill",
+          "value": "999px",
+          "description": "Pill corner for buttons and single-line inputs.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-button-size-md",
+          "value": "2.75rem",
+          "description": "Default button target height.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-button-touch-lg",
+          "value": "3.5rem",
+          "description": "Coarse-pointer target height applied automatically on touch.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-input-size-md",
+          "value": "var(--layout-button-size-md)",
+          "description": "Field height matches adjacent buttons.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-nav-h",
+          "value": "57px",
+          "description": "Site chrome height feeding the sticky offset.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-stick",
+          "value": "calc(var(--layout-nav-h) + var(--layout-space-4))",
+          "description": "Sticky top offset below the site chrome.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-z-sticky",
+          "value": "20",
+          "description": "Sticky layer.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-z-nav",
+          "value": "30",
+          "description": "Navigation chrome layer.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-z-overlay",
+          "value": "40",
+          "description": "Overlay layer.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-z-modal",
+          "value": "50",
+          "description": "Modal layer.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--layout-z-toast",
+          "value": "60",
+          "description": "Toast layer — the top of the z scale.",
+          "sourcePath": "public/assets/css/layout.css",
+          "sourceSelector": ":root"
+        }
+      ],
+      "classes": [
+        {
+          "name": "layout-page",
+          "purpose": "80rem wide page container.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-content",
+          "purpose": "60rem focused-work container.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-reading",
+          "purpose": "45rem long-form reading container.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-form",
+          "purpose": "38rem form container.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-section",
+          "purpose": "Standard vertical section padding.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-section-sm",
+          "purpose": "Small section padding.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-section-lg",
+          "purpose": "Large section padding.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-section-hero",
+          "purpose": "Hero section padding that steps down after the first screen.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-stack",
+          "purpose": "Vertical rhythm for siblings; default gap 1rem.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-stack-xs",
+          "purpose": "Extra-small stack gap.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-stack-sm",
+          "purpose": "Small stack gap.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-stack-lg",
+          "purpose": "Large stack gap.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-stack-xl",
+          "purpose": "Extra-large stack gap.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-grid-auto",
+          "purpose": "Auto-fit grid that wraps before copy crowds.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-grid-2",
+          "purpose": "Two-column grid (collapses to one below 700px).",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-grid-3",
+          "purpose": "Three-column grid (collapses to one below 700px).",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-grid-4",
+          "purpose": "Four-column grid (two-up at 520px, full at 700px).",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-row",
+          "purpose": "Wrapped row of controls that stays aligned as it wraps.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-row-split",
+          "purpose": "Row with space-between ends.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-rail",
+          "purpose": "Supporting rail that sticks below the chrome at 1100px and up.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-button-sm",
+          "purpose": "Small button target size.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-button-md",
+          "purpose": "Default button target size.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-button-lg",
+          "purpose": "Large button target size.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-button-shape-square",
+          "purpose": "Square button corner modifier.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-button-shape-rounded",
+          "purpose": "Rounded button corner modifier.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-button-shape-pill",
+          "purpose": "Pill button corner modifier.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-button-block",
+          "purpose": "Full-width button modifier.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-button-icon",
+          "purpose": "Square icon-button modifier.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-input-sm",
+          "purpose": "Small field target size.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-input-md",
+          "purpose": "Default field target size.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-input-lg",
+          "purpose": "Large field target size.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-input-shape-square",
+          "purpose": "Square field corner modifier.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-input-shape-rounded",
+          "purpose": "Rounded field corner modifier.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-input-shape-pill",
+          "purpose": "Pill field corner modifier.",
+          "sourcePath": "public/assets/css/layout.css"
+        }
+      ],
+      "rules": [
+        "Choose the measure by the content shape — page 80rem, content 60rem, reading 45rem, form 38rem.",
+        "One container per section keeps the gutter singular.",
+        "Stack first, then choose a grid — sibling spacing uses a layout stack rather than one-off margins.",
+        "A grid earns a fixed column count only when that count says something; otherwise use auto-fit.",
+        "Nested surfaces step down in radius: panel → card → tile → control.",
+        "Breakpoints: 520px four-grid becomes two-up; 700px fixed grids reach their count; 1100px a rail may stick; containers are capped at 1440px and only the ground gets wider.",
+        "320px is the floor — no horizontal scroll."
+      ],
+      "examples": [
+        {
+          "title": "Standard page section",
+          "html": "<section class=\"layout-section\">\n  <div class=\"layout-content layout-stack\">\n    <h2 class=\"type-section\">A clear hierarchy.</h2>\n    <p class=\"type-lede\">Body follows.</p>\n  </div>\n</section>"
+        },
+        {
+          "title": "Auto-fit card grid",
+          "html": "<div class=\"layout-grid-auto\">\n  <article class=\"element-card\">…</article>\n</div>"
+        }
+      ]
+    },
+    "interaction": {
+      "summary": "One ring with three offsets for keyboard focus, press/lift/shift motion modifiers on a 220ms spatial curve, and hard rules — no transition:all, no hover-only state, no sixth duration, no scroll-driven animation, no autoplay.",
+      "sources": [
+        {
+          "path": "public/assets/css/interaction.css",
+          "role": "styles"
+        },
+        {
+          "path": "src/data/design-interaction-content.ts",
+          "role": "content"
+        }
+      ],
+      "tokens": [
+        {
+          "name": "--motion-press",
+          "value": "100ms",
+          "description": "Contact duration — shorter than a tap is long.",
+          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--motion-tint",
+          "value": "160ms",
+          "description": "Colour-only duration; never moves anything.",
+          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--motion-move",
+          "value": "220ms",
+          "description": "Translation under 8px.",
+          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--motion-mark",
+          "value": "320ms",
+          "description": "A glyph turning or a stroke drawing.",
+          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--motion-measure",
+          "value": "480ms",
+          "description": "A height or a number that changed — the longest legal transition.",
+          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--ease-spatial",
+          "value": "cubic-bezier(.2, 0, 0, 1)",
+          "description": "The one motion curve — fast out of the gate, long settle, no overshoot.",
+          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourceSelector": ":root"
+        }
+      ],
+      "classes": [
+        {
+          "name": "interaction-button-press",
+          "purpose": "Default button movement — scale down on press.",
+          "sourcePath": "public/assets/css/interaction.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "interaction-button-lift",
+          "purpose": "Hover lift with shadow; settle on press.",
+          "sourcePath": "public/assets/css/interaction.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "interaction-button-shift",
+          "purpose": "Nudge toward the end of the line on hover/press.",
+          "sourcePath": "public/assets/css/interaction.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "interaction-lift",
+          "purpose": "Card lift — 2px rise with shadow on hover, settle on press.",
+          "sourcePath": "public/assets/css/interaction.css"
+        },
+        {
+          "name": "interaction-muted",
+          "purpose": "Quiet hover wash using the surface-hover role.",
+          "sourcePath": "public/assets/css/interaction.css"
+        },
+        {
+          "name": "interaction-state-hover",
+          "purpose": "Force the hover face — for documentation/specimen rendering only.",
+          "sourcePath": "public/assets/css/interaction.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "interaction-state-pressed",
+          "purpose": "Force the pressed face — for documentation/specimen rendering only.",
+          "sourcePath": "public/assets/css/interaction.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "interaction-state-focus",
+          "purpose": "Force the focus face — for documentation/specimen rendering only.",
+          "sourcePath": "public/assets/css/interaction.css",
+          "requires": [
+            "button"
+          ]
+        }
+      ],
+      "rules": [
+        "One ring, three offsets — pills and chips get Clear, fields and packed cards get Tight, full-bleed rows get Inset; a background change is not a focus state.",
+        "Every hover rule sits inside @media (hover: hover) so a tapped control does not stay lit.",
+        "Hover confirms reachability; it never carries information a keyboard or a thumb would miss.",
+        "Selection owns colour and a mark; hover owns transform — those properties never compete.",
+        "Five durations, one curve — anything longer than 480ms is not a transition, it is content.",
+        "Never: transition: all, hover-only state, a sixth duration, a new verb for a composition, scroll-driven anything, autoplay.",
+        "A native <dialog> owns the top layer, focus trap, Escape, and focus return — no parallel overlay.",
+        "Destructive confirmations open focused on Cancel.",
+        "A control whose visible box is smaller than its 44px hit area rings the visible box, not the target."
+      ],
+      "examples": [
+        {
+          "title": "Async action lifecycle",
+          "html": "<button class=\"button button-primary interaction-button-press\" data-state=\"idle\">Mark as recalled</button>\n<!-- pending locks the control; done holds ~2.2s; error stays ~2.6s and retries -->"
+        }
+      ]
+    },
+    "input": {
+      "summary": "The shared field grammar for text-like inputs, selects, and textareas — `.input` with layout size/shape modifiers, explicit validation states, native choice controls, and focus delivered as a solid border plus a soft ring.",
+      "sources": [
+        {
+          "path": "public/assets/css/input.css",
+          "role": "styles"
+        },
+        {
+          "path": "public/assets/css/layout.css",
+          "role": "tokens"
+        },
+        {
+          "path": "public/assets/css/typography.css",
+          "role": "tokens"
+        },
+        {
+          "path": "public/assets/css/color.css",
+          "role": "tokens"
+        },
+        {
+          "path": "public/assets/css/interaction.css",
+          "role": "tokens"
+        }
+      ],
+      "tokens": [
+        {
+          "name": "--input-background",
+          "value": "var(--background-color)",
+          "description": "Field fill.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "--input-border",
+          "value": "var(--border-color)",
+          "description": "Field border at rest.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "--input-hover-border",
+          "value": "var(--border-strong-color)",
+          "description": "Field border on hover.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "--input-focus-border",
+          "value": "var(--primary-color)",
+          "description": "Solid border carrying focus emphasis.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "--input-focus-ring",
+          "value": "color-mix(in srgb, var(--input-focus-border) 18%, transparent)",
+          "description": "Quiet ring tint that follows the field radius without changing its size.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "--input-block-size",
+          "value": "var(--layout-input-size-md)",
+          "description": "Field height; override with layout-input-* modifiers.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "--input-radius",
+          "value": "var(--layout-radius-pill)",
+          "description": "Field corner; single-line fields share button pill corners, textareas stay rounded.",
+          "sourcePath": "public/assets/css/input.css"
+        }
+      ],
+      "classes": [
+        {
+          "name": "input",
+          "purpose": "The shared field class for text-like inputs, selects, and textareas.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "element-input",
+          "purpose": "Legacy alias of .input — kept for compatibility, prefer .input.",
+          "sourcePath": "public/assets/css/input.css",
+          "requires": [
+            "input"
+          ]
+        },
+        {
+          "name": "input-field",
+          "purpose": "Grid wrapper grouping a label, control, help, and message with a consistent gap.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "element-field",
+          "purpose": "Legacy alias of .input-field.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "input-help",
+          "purpose": "Helper text under a field, muted.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "input-message",
+          "purpose": "Validation message; colour driven by data-state success/error.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "input-select",
+          "purpose": "Wrapper adding a native select arrow inside the control's padding.",
+          "sourcePath": "public/assets/css/input.css",
+          "requires": [
+            "input"
+          ]
+        },
+        {
+          "name": "input-choice",
+          "purpose": "Native checkbox/radio paint with the accent colour; retains native semantics and shape.",
+          "sourcePath": "public/assets/css/input.css"
+        },
+        {
+          "name": "input-choice-label",
+          "purpose": "Plain label expanding the native choice target to 44px without a badge surface.",
+          "sourcePath": "public/assets/css/input.css"
+        }
+      ],
+      "rules": [
+        "Layout owns sizing, typography owns text roles, interaction owns feedback, colour supplies mode-aware paint — never duplicate those in field markup.",
+        "Keep labels associated with for/id and connect help or error text with aria-describedby.",
+        "Pair labels with .type-label and help/messages with .type-compact so bilingual text stays in the role system.",
+        "Validation is explicit or follows native user interaction — never :invalid on an untouched required field.",
+        "Errors always need a visible text message, never colour alone.",
+        "Pointer and keyboard focus agree: solid border plus soft ring, no outline, no layout shift.",
+        "Single-line fields share button pill corners; multiline fields keep room for text at their corners.",
+        "Coarse pointers get the md field height for sm, and the touch-lg height for lg — automatically."
+      ],
+      "examples": [
+        {
+          "title": "Text field with label and help",
+          "html": "<div class=\"input-field\">\n  <label class=\"type-label\" for=\"email\">Email</label>\n  <input class=\"input\" id=\"email\" type=\"email\" placeholder=\"you@example.com\" aria-describedby=\"email-help\" />\n  <p class=\"input-help type-compact\" id=\"email-help\">Two emails, then silence.</p>\n</div>"
+        },
+        {
+          "title": "Error state",
+          "html": "<div class=\"input-field\">\n  <label class=\"type-label\" for=\"note\">Note</label>\n  <textarea class=\"input\" id=\"note\" rows=\"3\" aria-invalid=\"true\" aria-describedby=\"note-error\"></textarea>\n  <p class=\"input-message type-compact\" id=\"note-error\" data-state=\"error\">A note needs a verse to point at.</p>\n</div>"
+        }
+      ]
+    },
+    "element": {
+      "summary": "Unbranded shared shapes — cards, badges, numbered rule rows, and callouts — composed entirely from the colour, layout, and typography grammars; elements compose, they never invent.",
+      "sources": [
+        {
+          "path": "public/assets/css/element.css",
+          "role": "styles"
+        },
+        {
+          "path": "src/data/design-element-content.ts",
+          "role": "content"
+        },
+        {
+          "path": "src/data/design-element-page-content.ts",
+          "role": "content"
+        }
+      ],
+      "tokens": [],
+      "classes": [
+        {
+          "name": "element-card",
+          "purpose": "Surface card with shared border, radius, and shadow; direct children stack with one rhythm.",
+          "sourcePath": "public/assets/css/element.css"
+        },
+        {
+          "name": "element-badge",
+          "purpose": "Uppercase label chip on the subtle accent wash.",
+          "sourcePath": "public/assets/css/element.css"
+        },
+        {
+          "name": "element-rule-list",
+          "purpose": "Numbered rule rows with leading-zero counters.",
+          "sourcePath": "public/assets/css/element.css"
+        },
+        {
+          "name": "element-callout",
+          "purpose": "Accent-bordered aside when a detail needs more weight than body copy.",
+          "sourcePath": "public/assets/css/element.css"
+        }
+      ],
+      "rules": [
+        "Elements take their colour, geometry, type, and behaviour from the grammars that own those decisions.",
+        "Do not invent geometry — reuse surface, border, radius, and spacing tokens.",
+        "Do not hide semantics — a visible label names a field; an anchor navigates; a button acts.",
+        "Do not stack emphasis — one callout per idea keeps its weight meaningful.",
+        "One callout per idea; badges identify a state while the card holds the idea."
+      ],
+      "examples": [
+        {
+          "title": "Card with badge",
+          "html": "<article class=\"element-card\">\n  <span class=\"element-badge\">Saved</span>\n  <h3 class=\"type-card-title\">A thought worth keeping</h3>\n  <p class=\"type-compact\">The card holds the idea; the badge identifies a state.</p>\n</article>"
+        },
+        {
+          "title": "Callout",
+          "html": "<aside class=\"element-callout type-compact\">One detail earns stronger emphasis.</aside>"
+        }
+      ]
+    },
+    "button": {
+      "summary": "Four tones (primary, secondary, quiet, danger) on one geometry — `.button` plus tone, layout size/shape, and interaction modifiers — with data-state busy/done/error for async lifecycle and an anchor whenever the control changes the URL.",
+      "sources": [
+        {
+          "path": "public/assets/css/button.css",
+          "role": "styles"
+        },
+        {
+          "path": "public/assets/css/layout.css",
+          "role": "tokens"
+        },
+        {
+          "path": "public/assets/css/interaction.css",
+          "role": "tokens"
+        },
+        {
+          "path": "src/data/design-button-content.ts",
+          "role": "content"
+        }
+      ],
+      "tokens": [
+        {
+          "name": "--button-background",
+          "value": "transparent",
+          "description": "Button fill at rest; tone classes set it.",
+          "sourcePath": "public/assets/css/button.css"
+        },
+        {
+          "name": "--button-border",
+          "value": "transparent",
+          "description": "Button border at rest.",
+          "sourcePath": "public/assets/css/button.css"
+        },
+        {
+          "name": "--button-color",
+          "value": "var(--foreground-color)",
+          "description": "Button text colour at rest.",
+          "sourcePath": "public/assets/css/button.css"
+        },
+        {
+          "name": "--button-hover-background",
+          "value": "var(--button-background)",
+          "description": "Hover fill; tone classes set it.",
+          "sourcePath": "public/assets/css/button.css"
+        },
+        {
+          "name": "--button-block-size",
+          "value": "var(--layout-button-size-md)",
+          "description": "Button height; layout-button-* modifiers set it.",
+          "sourcePath": "public/assets/css/button.css"
+        },
+        {
+          "name": "--button-radius",
+          "value": "var(--layout-radius-pill)",
+          "description": "Button corner; controls default to pill, only explicit geometry modifiers change it.",
+          "sourcePath": "public/assets/css/button.css"
+        }
+      ],
+      "classes": [
+        {
+          "name": "button",
+          "purpose": "Base button paint and geometry for native buttons and anchors styled as buttons.",
+          "sourcePath": "public/assets/css/button.css"
+        },
+        {
+          "name": "button-primary",
+          "purpose": "The one clear commitment — highest attention, one per surface.",
+          "sourcePath": "public/assets/css/button.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "button-secondary",
+          "purpose": "A useful alternative that does not compete with the primary.",
+          "sourcePath": "public/assets/css/button.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "button-quiet",
+          "purpose": "Reversible, low-emphasis actions that keep the flow moving.",
+          "sourcePath": "public/assets/css/button.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "button-danger",
+          "purpose": "Destructive actions — hairline confirms danger, the label carries the consequence.",
+          "sourcePath": "public/assets/css/button.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "button-link",
+          "purpose": "Inline destination inside a sentence without shifting the line box.",
+          "sourcePath": "public/assets/css/button.css",
+          "requires": [
+            "button"
+          ]
+        },
+        {
+          "name": "button-group",
+          "purpose": "Wrapped row of related buttons; aria-pressed children take the accent.",
+          "sourcePath": "public/assets/css/button.css"
+        }
+      ],
+      "rules": [
+        "Sort by behaviour first, styling second — async action uses <button> with data-state; navigation uses a real <a href>; choice uses radio/checkbox or aria-pressed; utility toggles with explicit name and state.",
+        "One accent button per surface — the label carries the verb, the surface carries the priority, the result gets its own visible state.",
+        "Controls default to pill corners in every state; only explicit geometry modifiers change them.",
+        "data-state drives the async lifecycle: busy locks the control and shows the spinner, done holds briefly, error stays visible and retryable; every action carries a 12-second timeout.",
+        "A link changes the URL and has no request lifecycle — it can look like a button but stays an anchor in the markup.",
+        "Disabled uses :disabled or aria-disabled; aria-disabled changes presentation only, callers must prevent editing.",
+        "Tone, geometry, and feedback compose freely — combine a tone class, a layout-button-* modifier, and an interaction modifier without creating a new selector."
+      ],
+      "examples": [
+        {
+          "title": "Primary async action",
+          "html": "<button class=\"button button-primary interaction-button-press\" data-state=\"idle\">Create a note</button>"
+        },
+        {
+          "title": "Navigation action",
+          "html": "<a class=\"button button-secondary\" href=\"/design/typography/\">Read the rules</a>"
+        },
+        {
+          "title": "Choice chips",
+          "html": "<div class=\"button-group\" role=\"group\" aria-label=\"Text\">\n  <button class=\"button\" aria-pressed=\"true\">Gītā</button>\n  <button class=\"button\" aria-pressed=\"false\">Upaniṣad</button>\n  <button class=\"button\" aria-pressed=\"false\">Veda</button>\n</div>"
+        }
+      ]
+    }
+  },
+  "recipes": [
+    {
+      "id": "text-field",
+      "title": "Text field with label, help, and error states",
+      "mode": "both",
+      "html": "<div class=\"input-field\">\n  <label class=\"type-label\" for=\"email\">Email</label>\n  <input class=\"input\" id=\"email\" type=\"email\" placeholder=\"you@example.com\" aria-describedby=\"email-help email-error\" />\n  <p class=\"input-help type-compact\" id=\"email-help\">Two emails, then silence.</p>\n  <p class=\"input-message type-compact\" id=\"email-error\" data-state=\"error\" hidden>A valid email is needed.</p>\n</div>",
+      "classes": [
+        "input-field",
+        "type-label",
+        "input",
+        "input-help",
+        "input-message",
+        "type-compact"
+      ],
+      "dependencies": [
+        "input.css",
+        "typography.css",
+        "layout.css"
+      ],
+      "accessibility": [
+        "Label associated with for/id; never a placeholder as the only label.",
+        "Help and error text connected with aria-describedby; unhide the message only when the state is real.",
+        "On error also set aria-invalid=\"true\" on the control; the visible message carries the result, colour never alone."
+      ],
+      "sources": [
+        "public/assets/css/input.css",
+        "public/assets/css/typography.css",
+        "public/assets/css/layout.css"
+      ]
+    },
+    {
+      "id": "primary-async-action",
+      "title": "Primary async action button",
+      "mode": "both",
+      "html": "<button class=\"button button-primary interaction-button-press\" data-state=\"idle\">Join the waitlist</button>\n<!-- feature code resolves or rejects a promise and moves data-state: idle → busy → done|error → idle -->",
+      "classes": [
+        "button",
+        "button-primary",
+        "interaction-button-press"
+      ],
+      "dependencies": [
+        "button.css",
+        "layout.css",
+        "interaction.css"
+      ],
+      "accessibility": [
+        "The control owns the state machine — repeat triggers are ignored while busy.",
+        "Done holds ~2.2s then returns; error stays ~2.6s so it can be read, then the action is ready to retry.",
+        "Every action carries a 12-second timeout; a control that never settles is a handler bug."
+      ],
+      "sources": [
+        "public/assets/css/button.css",
+        "public/assets/css/interaction.css"
+      ]
+    },
+    {
+      "id": "navigation-action",
+      "title": "Navigation action (anchor shaped like a button)",
+      "mode": "both",
+      "html": "<a class=\"button button-primary\" href=\"/design/typography/\">Read the rules</a>",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "dependencies": [
+        "button.css",
+        "layout.css"
+      ],
+      "accessibility": [
+        "A link changes the URL and has no request lifecycle — it can look like a button but stays an anchor in the markup.",
+        "Do not add data-state to an anchor; there is no result to report."
+      ],
+      "sources": [
+        "public/assets/css/button.css"
+      ]
+    },
+    {
+      "id": "choice-chip",
+      "title": "Choice chip group",
+      "mode": "both",
+      "html": "<div class=\"button-group\" role=\"group\" aria-label=\"Text\">\n  <button class=\"button\" aria-pressed=\"true\">Gītā</button>\n  <button class=\"button\" aria-pressed=\"false\">Upaniṣad</button>\n  <button class=\"button\" aria-pressed=\"false\">Veda</button>\n</div>",
+      "classes": [
+        "button-group",
+        "button"
+      ],
+      "dependencies": [
+        "button.css",
+        "layout.css"
+      ],
+      "accessibility": [
+        "Selection changes with aria-pressed — the selected state is the feedback, colour is never the only signal.",
+        "Group with role=\"group\" and an aria-label naming the choice."
+      ],
+      "sources": [
+        "public/assets/css/button.css"
+      ]
+    },
+    {
+      "id": "card-list-row",
+      "title": "Card / list row",
+      "mode": "both",
+      "html": "<article class=\"element-card interaction-lift\">\n  <span class=\"element-badge\">Saved</span>\n  <h3 class=\"type-card-title\">A thought worth keeping</h3>\n  <p class=\"type-compact\">The badge identifies a state; the card holds the idea.</p>\n</article>",
+      "classes": [
+        "element-card",
+        "interaction-lift",
+        "element-badge",
+        "type-card-title",
+        "type-compact"
+      ],
+      "dependencies": [
+        "element.css",
+        "interaction.css"
+      ],
+      "accessibility": [
+        "The badge is presentational text — give the card itself the accessible name via its heading.",
+        "Hover lift is enhancement only; it never carries information a keyboard or thumb would miss."
+      ],
+      "sources": [
+        "public/assets/css/element.css",
+        "public/assets/css/interaction.css"
+      ]
+    },
+    {
+      "id": "page-shell",
+      "title": "Standard page / container / section stack",
+      "mode": "both",
+      "html": "<main class=\"layout-section layout-section-hero\">\n  <div class=\"layout-page layout-stack\">\n    <p class=\"type-eyebrow\">Nitya Notes · Design grammar</p>\n    <h1 class=\"type-display\">Layout.</h1>\n    <p class=\"type-lede\">A shared geometry for page composition.</p>\n  </div>\n</main>\n<section class=\"layout-section\">\n  <div class=\"layout-content layout-grid-auto\">\n    <!-- cards -->\n  </div>\n</section>",
+      "classes": [
+        "layout-section",
+        "layout-section-hero",
+        "layout-page",
+        "layout-stack",
+        "type-eyebrow",
+        "type-display",
+        "type-lede",
+        "layout-content",
+        "layout-grid-auto"
+      ],
+      "dependencies": [
+        "layout.css",
+        "typography.css"
+      ],
+      "accessibility": [
+        "One h1 per page, in reading order before the lede.",
+        "Anchored targets get scroll-margin from the shared [id] rule — no manual scroll offsets."
+      ],
+      "sources": [
+        "public/assets/css/layout.css",
+        "public/assets/css/typography.css"
+      ]
+    }
+  ]
+}
