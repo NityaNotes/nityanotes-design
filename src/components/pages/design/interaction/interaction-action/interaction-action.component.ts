@@ -1,5 +1,6 @@
 import { BaseElement, Component, HostListener } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designInteractionContent } from "@app/data/design-interaction-content.ts";
 
 type ActionState = "idle" | "busy" | "done" | "error";
 
@@ -67,39 +68,32 @@ export class InteractionActionComponent extends BaseElement {
 
   /** Renders resolved and rejected work side by side so both holds are visible. */
   render() {
+    const copy = designInteractionContent.copy["interaction/interaction-action/interaction-action"];
     return html`
       <section id="action" class="layout-page layout-section interaction-section">
-        <p class="type-eyebrow interaction-section__eyebrow">05 · Response</p>
-        <h2 class="type-section interaction-section__heading">Action lifecycle</h2>
-        <p class="interaction-section__note">
-          Four states on one element, driven by one attribute. The control owns
-          the machine — feature code resolves or rejects a promise and nothing
-          else. All four faces are stacked in one grid cell, so the button does
-          not resize as it moves between them.
-        </p>
+        <p class="type-eyebrow interaction-section__eyebrow">${copy[2]}</p>
+        <h2 class="type-section interaction-section__heading">${copy[3]}</h2>
+        <p class="interaction-section__note">${copy[4]}</p>
 
         <div class="layout-grid-2 interaction-section__content">
           <div class="interaction-card">
-            <p class="type-card-title">Resolved work</p>
-            <p class="type-compact">Pending locks the control and ignores repeat triggers. Success holds 2.2s, then returns.</p>
+            <p class="type-card-title">${copy[5]}</p>
+            <p class="type-compact">${copy[6]}</p>
             <div class="interaction-stage">
-              <app-button label="Mark as recalled" tone="primary" size="lg" class="interaction-action" data-state="idle" data-resolve="true"></app-button>
+              <app-button label="${copy[0]}" tone="primary" size="lg" class="interaction-action" data-state="idle" data-resolve="true"></app-button>
             </div>
           </div>
 
           <div class="interaction-card">
-            <p class="type-card-title">Rejected work</p>
-            <p class="type-compact">Failure stays visible for 2.6s — longer, because it has to be read — then the same action is ready to retry.</p>
+            <p class="type-card-title">${copy[7]}</p>
+            <p class="type-compact">${copy[8]}</p>
             <div class="interaction-stage">
-              <app-button label="Sync this device" size="lg" class="interaction-action" data-state="idle" data-resolve="false"></app-button>
+              <app-button label="${copy[1]}" size="lg" class="interaction-action" data-state="idle" data-resolve="false"></app-button>
             </div>
           </div>
         </div>
 
-        <p class="type-compact interaction-section__note">
-          Every action carries a 12-second timeout. A control that never settles
-          is a bug in the handler, not a state to design for.
-        </p>
+        <p class="type-compact interaction-section__note">${copy[9]}</p>
       </section>
     `;
   }

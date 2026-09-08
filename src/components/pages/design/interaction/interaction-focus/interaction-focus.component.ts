@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designInteractionContent } from "@app/data/design-interaction-content.ts";
 
 /**
  * Focus and keyboard. One ring, three offsets, chosen by what the ring has to
@@ -16,49 +17,40 @@ export class InteractionFocusComponent extends BaseElement {
 
   /** Renders the three ring offsets and the keyboard contract. */
   render() {
+    const copy = designInteractionContent.copy["interaction/interaction-focus/interaction-focus"];
     return html`
       <section id="focus" class="layout-page layout-section interaction-section">
-        <p class="type-eyebrow interaction-section__eyebrow">02 · Input</p>
-        <h2 class="type-section interaction-section__heading">Focus and keyboard</h2>
-        <p class="interaction-section__note">
-          One ring. Three offsets, chosen by what the ring has to clear. A
-          background change is not a focus state — the ring must survive colour
-          being discarded. Tab through the three specimens and watch which edge
-          the ring draws on.
-        </p>
+        <p class="type-eyebrow interaction-section__eyebrow">${copy[4]}</p>
+        <h2 class="type-section interaction-section__heading">${copy[5]}</h2>
+        <p class="interaction-section__note">${copy[6]}</p>
 
         <div class="layout-grid-3 interaction-section__content">
           <div class="interaction-tile">
-            <p class="type-card-title">Clear</p>
-            <p class="type-compact">Pills, chips and text links have paper to spare.</p>
+            <p class="type-card-title">${copy[7]}</p>
+            <p class="type-compact">${copy[8]}</p>
             <div class="interaction-stage">
-              <app-button label="Upaniṣad" size="sm"></app-button>
+              <app-button label="${copy[0]}" size="sm"></app-button>
             </div>
           </div>
           <div class="interaction-tile">
-            <p class="type-card-title">Tight</p>
-            <p class="type-compact">Fields and packed cards clear their neighbours without touching them.</p>
+            <p class="type-card-title">${copy[9]}</p>
+            <p class="type-compact">${copy[10]}</p>
             <div class="interaction-stage">
-              <input class="element-input" type="email" placeholder="you@example.com" aria-label="Email" />
+              <input class="element-input" type="email" placeholder="${copy[1]}" aria-label="${copy[2]}" />
             </div>
           </div>
           <div class="interaction-tile">
-            <p class="type-card-title">Inset</p>
-            <p class="type-compact">Full-bleed rows place the ring inside their own edge.</p>
+            <p class="type-card-title">${copy[11]}</p>
+            <p class="type-compact">${copy[12]}</p>
             <div class="interaction-stage">
-              <app-button label="A row in a list →" block="true" class="interaction-row"></app-button>
+              <app-button label="${copy[3]}" block="true" class="interaction-row"></app-button>
             </div>
           </div>
         </div>
 
         <div class="interaction-card" style="margin-block-start: var(--layout-space-5)">
-          <p class="type-card-title">Keyboard contract</p>
-          <p class="type-compact">
-            Tab reaches every control in document order. The dialog resolves
-            Escape and returns focus to whatever opened it. Destructive
-            confirmations open focused on Cancel. A control whose visible box is
-            smaller than its 44px hit area rings the visible box, not the target.
-          </p>
+          <p class="type-card-title">${copy[13]}</p>
+          <p class="type-compact">${copy[14]}</p>
         </div>
       </section>
     `;

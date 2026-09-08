@@ -1,5 +1,6 @@
 import { BaseElement, BindEvent, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designInteractionContent } from "@app/data/design-interaction-content.ts";
 
 /**
  * Introduces the interaction grammar and links the reference to the other
@@ -34,22 +35,23 @@ export class InteractionHeaderComponent extends BaseElement {
 
   /** Renders the route heading, the reduced-motion preview, and the grammar nav. */
   render() {
+    const copy = designInteractionContent.copy["interaction/interaction-header/interaction-header"];
     return html`
       <header class="layout-page layout-section-hero interaction-hero">
-        <p class="type-eyebrow interaction-hero__eyebrow">Nitya Notes · Design grammar / 04</p>
-        <h1 class="type-display">Interaction</h1>
-        <p class="type-lede interaction-hero__lede">Seven families. Ten verbs. One curve, one ring. Every interactive behaviour belongs to one family and moves with one verb at one of five durations — and nothing on this product animates because the page moved.</p>
+        <p class="type-eyebrow interaction-hero__eyebrow">${copy[2]}</p>
+        <h1 class="type-display">${copy[3]}</h1>
+        <p class="type-lede interaction-hero__lede">${copy[4]}</p>
         <div class="layout-row" style="margin-block-start: var(--layout-space-5)">
-          <app-button label="Preview reduced motion" id="interaction-rm-toggle"></app-button>
-          <span class="interaction-mono" id="interaction-rm-state">system setting</span>
+          <app-button label="${copy[0]}" id="interaction-rm-toggle"></app-button>
+          <span class="interaction-mono" id="interaction-rm-state">${copy[5]}</span>
         </div>
         <div class="interaction-hero__metrics">
-          <div><p class="type-metric">7</p><p class="type-compact">families</p></div>
-          <div><p class="type-metric">10</p><p class="type-compact">verbs</p></div>
-          <div><p class="type-metric">5</p><p class="type-compact">durations</p></div>
-          <div><p class="type-metric">1</p><p class="type-compact">curve, one ring</p></div>
+          <div><p class="type-metric">${copy[6]}</p><p class="type-compact">${copy[7]}</p></div>
+          <div><p class="type-metric">${copy[8]}</p><p class="type-compact">${copy[9]}</p></div>
+          <div><p class="type-metric">${copy[10]}</p><p class="type-compact">${copy[11]}</p></div>
+          <div><p class="type-metric">${copy[12]}</p><p class="type-compact">${copy[13]}</p></div>
         </div>
-        <app-button label="Continue to English typography" tone="primary" size="md" href="/design/english" class="interaction-hero__button"></app-button>
+        <app-button label="${copy[1]}" tone="primary" size="md" href="/design/english" class="interaction-hero__button"></app-button>
         <design-page-navigation active-route="/design/interaction"></design-page-navigation>
       </header>
     `;

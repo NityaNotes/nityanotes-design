@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designInteractionContent } from "@app/data/design-interaction-content.ts";
 
 /**
  * Selection. Selection owns colour and a mark; hover owns transform. Underneath
@@ -15,32 +16,29 @@ export class InteractionSelectionComponent extends BaseElement {
 
   /** Renders radio and checkbox chip groups with native inputs underneath. */
   render() {
+    const copy = designInteractionContent.copy["interaction/interaction-selection/interaction-selection"];
     return html`
       <section id="selection" class="layout-page layout-section interaction-section">
-        <p class="type-eyebrow interaction-section__eyebrow">03 · Commitment</p>
-        <h2 class="type-section interaction-section__heading">Selection</h2>
-        <p class="interaction-section__note">
-          Selection owns colour and a mark. Hover owns transform. Those
-          properties never compete, and the mark is never the only signal — the
-          label stays readable in greyscale.
-        </p>
+        <p class="type-eyebrow interaction-section__eyebrow">${copy[0]}</p>
+        <h2 class="type-section interaction-section__heading">${copy[1]}</h2>
+        <p class="interaction-section__note">${copy[2]}</p>
 
         <div class="interaction-section__content">
           <fieldset class="interaction-fieldset interaction-card">
-            <legend class="type-label">Which text first?</legend>
+            <legend class="type-label">${copy[3]}</legend>
             <div class="layout-row" style="margin-block-start: var(--layout-space-4)">
-              <label class="interaction-chip"><input type="radio" name="corpus" value="gita" checked /><span class="interaction-chip__mark" aria-hidden="true"></span>Gītā</label>
-              <label class="interaction-chip"><input type="radio" name="corpus" value="upa" /><span class="interaction-chip__mark" aria-hidden="true"></span>Upaniṣad</label>
-              <label class="interaction-chip"><input type="radio" name="corpus" value="veda" /><span class="interaction-chip__mark" aria-hidden="true"></span>Veda</label>
-              <label class="interaction-chip"><input type="radio" name="corpus" value="stotra" /><span class="interaction-chip__mark" aria-hidden="true"></span>Stotra</label>
+              <label class="interaction-chip"><input type="radio" name="corpus" value="gita" checked /><span class="interaction-chip__mark" aria-hidden="true"></span>${copy[4]}</label>
+              <label class="interaction-chip"><input type="radio" name="corpus" value="upa" /><span class="interaction-chip__mark" aria-hidden="true"></span>${copy[5]}</label>
+              <label class="interaction-chip"><input type="radio" name="corpus" value="veda" /><span class="interaction-chip__mark" aria-hidden="true"></span>${copy[6]}</label>
+              <label class="interaction-chip"><input type="radio" name="corpus" value="stotra" /><span class="interaction-chip__mark" aria-hidden="true"></span>${copy[7]}</label>
             </div>
 
-            <p class="type-label" style="margin-block-start: var(--layout-space-6)">When are you most likely to look? <span class="type-compact">(multi)</span></p>
+            <p class="type-label" style="margin-block-start: var(--layout-space-6)">${copy[8]}<span class="type-compact">${copy[9]}</span></p>
             <div class="layout-row" style="margin-block-start: var(--layout-space-3)">
-              <label class="interaction-chip"><input type="checkbox" checked /><span class="interaction-chip__mark" aria-hidden="true"></span>Before dawn</label>
-              <label class="interaction-chip"><input type="checkbox" /><span class="interaction-chip__mark" aria-hidden="true"></span>Commute</label>
-              <label class="interaction-chip"><input type="checkbox" /><span class="interaction-chip__mark" aria-hidden="true"></span>Dusk</label>
-              <label class="interaction-chip"><input type="checkbox" /><span class="interaction-chip__mark" aria-hidden="true"></span>Before sleep</label>
+              <label class="interaction-chip"><input type="checkbox" checked /><span class="interaction-chip__mark" aria-hidden="true"></span>${copy[10]}</label>
+              <label class="interaction-chip"><input type="checkbox" /><span class="interaction-chip__mark" aria-hidden="true"></span>${copy[11]}</label>
+              <label class="interaction-chip"><input type="checkbox" /><span class="interaction-chip__mark" aria-hidden="true"></span>${copy[12]}</label>
+              <label class="interaction-chip"><input type="checkbox" /><span class="interaction-chip__mark" aria-hidden="true"></span>${copy[13]}</label>
             </div>
           </fieldset>
         </div>

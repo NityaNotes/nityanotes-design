@@ -1,5 +1,6 @@
 import { BaseElement, Component, HostListener } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designInteractionContent } from "@app/data/design-interaction-content.ts";
 
 /** How long a toast holds before natural expiry. */
 const TOAST_LIFE_MS = 4000;
@@ -58,26 +59,25 @@ export class InteractionTransientComponent extends BaseElement {
 
   /** Renders four triggers and the shared live-region toast they all coalesce into. */
   render() {
+    const copy = designInteractionContent.copy["interaction/interaction-transient/interaction-transient"];
     return html`
       <section id="transient" class="layout-page layout-section interaction-section">
-        <p class="type-eyebrow interaction-section__eyebrow">06 · Response</p>
-        <h2 class="type-section interaction-section__heading">Transient feedback</h2>
+        <p class="type-eyebrow interaction-section__eyebrow">${copy[7]}</p>
+        <h2 class="type-section interaction-section__heading">${copy[8]}</h2>
         <p class="interaction-section__note">
-          A toast passes on its own. Repeated work coalesces into one toast
-          rather than stacking — the queue is the responsibility of the code
-          that fires it, and the motion is the system's.
+          ${copy[9]}
         </p>
 
         <div class="layout-row interaction-section__content">
-          <app-button label="Fire a note" data-toast="Verse added to your window"></app-button>
-          <app-button label="Fire success" data-toast="Moved to Recalled"></app-button>
-          <app-button label="Fire error" tone="danger" data-toast="Could not reach the server" data-tone="failed"></app-button>
-          <app-button label="Fire four at once" data-toast="Verse added to your window"></app-button>
+          <app-button label="${copy[0]}" data-toast="Verse added to your window"></app-button>
+          <app-button label="${copy[1]}" data-toast="Moved to Recalled"></app-button>
+          <app-button label="${copy[2]}" tone="danger" data-toast="Could not reach the server" data-tone="failed"></app-button>
+          <app-button label="${copy[3]}" data-toast="Verse added to your window"></app-button>
         </div>
 
         <div class="interaction-toast" id="interaction-toast" data-shown="false" role="status" aria-live="polite">
           <span id="interaction-toast-text" class="type-compact"></span>
-          <app-button label="×" accessible-label="Dismiss" tone="quiet" size="sm" shape="icon" class="interaction-toast__dismiss" id="interaction-toast-dismiss"></app-button>
+          <app-button label="${copy[4]}" accessible-label="${copy[5]}" tone="quiet" size="sm" shape="icon" class="interaction-toast__dismiss" id="interaction-toast-dismiss"></app-button>
         </div>
       </section>
     `;

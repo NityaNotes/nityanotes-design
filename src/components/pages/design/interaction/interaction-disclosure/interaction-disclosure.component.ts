@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designInteractionContent } from "@app/data/design-interaction-content.ts";
 
 /**
  * Shows the product questions with the shared Dota UI accordion pattern.
@@ -13,15 +14,12 @@ export class InteractionDisclosureComponent extends BaseElement {
 
   /** Renders the product questions through the app-wide accordion component. */
   render() {
+    const copy = designInteractionContent.copy["interaction/interaction-disclosure/interaction-disclosure"];
     return html`
       <section id="disclosure" class="layout-page layout-section interaction-section">
-        <p class="type-eyebrow interaction-section__eyebrow">04 · Commitment</p>
-        <h2 class="type-section interaction-section__heading">Disclosure</h2>
-        <p class="interaction-section__note">
-          A panel opens to a real, measured ceiling — never to a guessed
-          max-height. Closed answers stay in the DOM, so they are indexed,
-          findable and visible to anyone who searches the page.
-        </p>
+        <p class="type-eyebrow interaction-section__eyebrow">${copy[0]}</p>
+        <h2 class="type-section interaction-section__heading">${copy[1]}</h2>
+        <p class="interaction-section__note">${copy[2]}</p>
 
         <div class="interaction-section__content" id="disclosure-list">
           <dota-accordion
