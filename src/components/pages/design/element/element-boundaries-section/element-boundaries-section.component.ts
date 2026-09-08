@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designElementPageContent } from "@app/data/design-element-page-content.ts";
 
 /**
  * Closes `/design/element` with the boundaries of the element grammar.
@@ -19,12 +20,13 @@ export class ElementBoundariesSectionComponent extends BaseElement {
 
   /** Renders the boundary statement and onward route links without side effects. */
   render() {
+    const copy = designElementPageContent.copy["element/element-boundaries-section/element-boundaries-section"];
     return html`
       <section class="layout-page layout-section-end design-section layout-stack layout-stack-lg" id="element-boundaries">
-        <p class="type-eyebrow">05 · Boundaries</p>
-        <h2 class="type-section">Elements compose; they do not invent.</h2>
-        <p class="type-lede">Elements take their colour, geometry, type, and behaviour from the grammars that own those decisions.</p>
-        <div class="layout-row"><a class="element-badge" href="/design/color">Colour</a><a class="element-badge" href="/design/layout">Layout</a><a class="element-badge" href="/design/english">Typography</a><a class="element-badge" href="/design/interaction">Interaction</a><a class="element-badge" href="/design/button">Buttons</a></div>
+        <p class="type-eyebrow">${copy[0]}</p>
+        <h2 class="type-section">${copy[1]}</h2>
+        <p class="type-lede">${copy[2]}</p>
+        <div class="layout-row"><a class="element-badge" href="/design/color">${copy[3]}</a><a class="element-badge" href="/design/layout">${copy[4]}</a><a class="element-badge" href="/design/english">${copy[5]}</a><a class="element-badge" href="/design/interaction">${copy[6]}</a><a class="element-badge" href="/design/button">${copy[7]}</a></div>
       </section>
     `;
   }

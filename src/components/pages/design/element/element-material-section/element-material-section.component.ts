@@ -1,5 +1,6 @@
 import { BaseElement, Component } from "@ayu-sh-kr/dota-wrap/core";
 import { html } from "@ayu-sh-kr/dota-wrap/rendering";
+import { designElementPageContent } from "@app/data/design-element-page-content.ts";
 
 /**
  * Introduces the element grammar contract on `/design/element`.
@@ -19,11 +20,12 @@ export class ElementMaterialSectionComponent extends BaseElement {
 
   /** Renders the material-system statement without changing application state. */
   render() {
+    const copy = designElementPageContent.copy["element/element-material-section/element-material-section"];
     return html`
       <section class="layout-page layout-section design-section layout-stack layout-stack-sm">
-        <p class="type-eyebrow">01 · Surface</p>
-        <h2 class="type-subsection">Elements belong to one material system.</h2>
-        <p>Cards, fields, badges, and callouts are composed from the same surface, border, and radius roles. Related specimens on this page cross-reference each other so a reader can follow one building block to the next.</p>
+        <p class="type-eyebrow">${copy[0]}</p>
+        <h2 class="type-subsection">${copy[1]}</h2>
+        <p>${copy[2]}</p>
       </section>
     `;
   }
