@@ -167,7 +167,7 @@
 }
 
 .interaction-row .interaction-row__nudge {
-  transition: transform 180ms ease;
+  transition: transform var(--motion-move) var(--ease-spatial);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -204,7 +204,9 @@
   font-size: var(--type-compact-size);
   font-weight: var(--type-card-title-weight);
   cursor: pointer;
-  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+  transition: background-color var(--motion-tint) ease,
+    border-color var(--motion-tint) ease,
+    color var(--motion-tint) ease;
 }
 
 .interaction-chip:active {
@@ -240,7 +242,7 @@
   border-radius: var(--layout-radius-pill);
   background: currentColor;
   opacity: 0;
-  transition: opacity 180ms ease;
+  transition: opacity var(--motion-tint) ease;
 }
 
 .interaction-chip:has(input:checked) .interaction-chip__mark {
@@ -276,7 +278,7 @@
   gap: var(--layout-space-2);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 160ms ease;
+  transition: opacity var(--motion-tint) ease;
 }
 
 .interaction-action[data-state="idle"] [data-face="idle"],
@@ -297,7 +299,9 @@
 }
 
 @keyframes interaction-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .interaction-draw {
@@ -307,11 +311,13 @@
 
 [data-state="done"] .interaction-draw,
 [data-state="failed"] .interaction-draw {
-  animation: interaction-draw 320ms ease forwards;
+  animation: interaction-draw var(--motion-mark) ease forwards;
 }
 
 @keyframes interaction-draw {
-  to { stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Toast — one at a time; repeats coalesce. */
@@ -331,7 +337,7 @@
   background: var(--contrast-background-color);
   color: var(--contrast-foreground-color);
   box-shadow: 0 8px 28px var(--shadow-color);
-  transition: transform 220ms ease, opacity 160ms ease;
+  transition: transform var(--motion-move) var(--ease-spatial), opacity var(--motion-tint) ease;
 }
 
 .interaction-toast[data-tone="failed"] {
@@ -357,13 +363,17 @@
 
 /* The native dialog — bottom sheet on a phone, centred from 700 up. */
 .interaction-dialog {
+  margin: auto auto 0;
   border: 1px solid var(--border-color);
-  border-radius: var(--layout-radius-lg);
+  border-radius: var(--layout-radius-lg) var(--layout-radius-lg) 0 0;
   background: var(--surface-color);
   color: var(--foreground-color);
   padding: var(--layout-space-6);
   max-inline-size: min(100% - 2 * var(--layout-space-5), 30rem);
   inline-size: 100%;
+  max-block-size: calc(100svh - var(--layout-space-5));
+  overflow-y: auto;
+  padding-block-end: max(var(--layout-space-6), env(safe-area-inset-bottom));
 }
 
 .interaction-dialog::backdrop {
@@ -379,6 +389,13 @@
   min-block-size: 2.75rem;
 }
 
+@media (min-width: 700px) {
+  .interaction-dialog {
+    margin: auto;
+    border-radius: var(--layout-radius-lg);
+  }
+}
+
 /* rise — the ladder rung grows and steps one rung colour up, once. */
 .interaction-ladder {
   display: flex;
@@ -392,13 +409,29 @@
   inline-size: 0.625rem;
   border-radius: 4px;
   background: var(--rung-1-color);
-  transition: block-size 480ms ease, background-color 480ms ease;
+  transition: block-size var(--motion-measure) var(--ease-spatial),
+    background-color var(--motion-measure) ease;
 }
 
-.interaction-ladder__rung[data-rung="1"] { block-size: 1.125rem; background: var(--rung-1-color); }
-.interaction-ladder__rung[data-rung="2"] { block-size: 2.125rem; background: var(--rung-2-color); }
-.interaction-ladder__rung[data-rung="3"] { block-size: 3.25rem;  background: var(--rung-3-color); }
-.interaction-ladder__rung[data-rung="4"] { block-size: 4.5rem;   background: var(--rung-4-color); }
+.interaction-ladder__rung[data-rung="1"] {
+  block-size: 1.125rem;
+  background: var(--rung-1-color);
+}
+
+.interaction-ladder__rung[data-rung="2"] {
+  block-size: 2.125rem;
+  background: var(--rung-2-color);
+}
+
+.interaction-ladder__rung[data-rung="3"] {
+  block-size: 3.25rem;
+  background: var(--rung-3-color);
+}
+
+.interaction-ladder__rung[data-rung="4"] {
+  block-size: 4.5rem;
+  background: var(--rung-4-color);
+}
 
 .interaction-ladder__label {
   display: grid;
@@ -444,8 +477,12 @@
 }
 
 @keyframes interaction-travel {
-  from { offset-distance: 0%; }
-  to { offset-distance: 100%; }
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
 }
 
 .interaction-verse {
@@ -454,7 +491,7 @@
 
 .interaction-verse .interaction-word {
   color: var(--muted-color);
-  transition: color 160ms ease;
+  transition: color var(--motion-tint) ease;
 }
 
 .interaction-verse .interaction-word.is-lit {
