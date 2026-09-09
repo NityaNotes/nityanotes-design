@@ -1,4 +1,11 @@
 /* Hindi typography hero: route-specific accent color. */
 .hindi-header__eyebrow {
+  font-family: var(--font-en);
   color: var(--primary-color-strong);
+}
+
+/* Karma's large Devanagari ascenders rise above the heading line box. Give the
+   hero eyebrow a full extra spacing step so the visible glyphs cannot collide. */
+.hindi-header > .type-eyebrow + h1 {
+  margin-block-start: var(--layout-space-6);
 }

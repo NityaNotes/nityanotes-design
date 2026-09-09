@@ -9,6 +9,9 @@
   --layout-section-md: clamp(3rem, 2.167rem + 3.704vw, 5.5rem);
   --layout-section-lg: clamp(4.5rem, 9vw, 8rem);
   --layout-section-hero: clamp(6rem, 4.667rem + 5.926vw, 10rem);
+  --layout-app-opening: clamp(3rem, 2.2rem + 3vw, 5.5rem);
+  --layout-reading-stack: clamp(1.5rem, 1.1rem + 1.5vw, 2.5rem);
+  --layout-journal-min-block-size: 12rem;
   --layout-space-1: 0.25rem;
   --layout-space-2: 0.5rem;
   --layout-space-3: 0.75rem;
@@ -38,7 +41,7 @@
   --layout-input-padding-sm: var(--layout-button-padding-sm);
   --layout-input-padding-md: var(--layout-button-padding-md);
   --layout-input-padding-lg: var(--layout-button-padding-lg);
-  --layout-nav-h: 57px;
+  --layout-nav-h: 5rem;
   --layout-stick: calc(var(--layout-nav-h) + var(--layout-space-4));
   --layout-z-under: -1;
   --layout-z-base: 1;
@@ -123,6 +126,21 @@ canvas {
 }
 .layout-stack-xl {
   --layout-stack-gap: var(--layout-space-6);
+}
+
+.layout-app-opening {
+  padding-block-start: calc(var(--layout-app-opening) + var(--layout-nav-h));
+}
+
+.layout-reading-stack {
+  display: grid;
+  gap: var(--layout-reading-stack);
+}
+
+/* Inner reading measure without a second set of page gutters. */
+.layout-reading-body {
+  max-inline-size: var(--layout-reading-max);
+  margin-inline: auto;
 }
 .layout-grid,
 .layout-grid-auto,

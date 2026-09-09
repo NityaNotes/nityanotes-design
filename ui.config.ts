@@ -8,7 +8,8 @@ export const uiConfig = {
   },
   typography: {
     fontFamily: {
-      sans: ["\"DM Sans\"", "\"Helvetica Neue\"", "Helvetica", "Arial", "sans-serif"],
+      sans: ["\"Space Grotesk\"", "sans-serif"],
+      hindi: ["\"Karma\"", "serif"],
       mono: ["\"Roboto Mono\"", "\"SFMono-Regular\"", "\"IBM Plex Mono\"", "\"Liberation Mono\"", "monospace"],
     },
     fontWeight: {

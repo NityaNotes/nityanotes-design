@@ -3,10 +3,9 @@ import { html } from "@ayu-sh-kr/dota-wrap/rendering";
 import { designTypographyContent } from "@app/data/design-typography-content.ts";
 
 /**
- * Shows the one-serif rule: Tiro carries every śloka, the interface stays sans.
+ * Shows the language-aware type families, with Karma carrying every śloka.
  *
- * The specimen names the family per register so a second serif is visibly
- * absent from the apparatus, in either language.
+ * The specimen names the English, Hindi/scripture, and data families.
  *
  * Selector: `typography-serif-section`.
  */

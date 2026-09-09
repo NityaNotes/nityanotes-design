@@ -2,9 +2,11 @@
    Iteration 1: one order of things — the śloka is the subject, every other
    role is apparatus. Three registers: scripture, interface, data. */
 :root {
-  --font-latin: var(--font-dm-sans);
-  --font-hindi: "Noto Sans Devanagari", "Nirmala UI", sans-serif;
-  --font-scripture: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", serif;
+  --font-en: "Space Grotesk", sans-serif;
+  --font-hi: "Karma", serif;
+  --font-latin: var(--font-en);
+  --font-hindi: var(--font-hi);
+  --font-scripture: var(--font-hi);
   --font-data: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --primary-font: var(--font-latin);
   --type-display-size: clamp(2.75rem, 1.33rem + 6.3vw, 7rem);
@@ -34,6 +36,15 @@
   --type-control-size: 0.9375rem;
   --type-control-weight: 600;
   --type-price-size: clamp(2rem, 1.77rem + 1.04vw, 2.7rem);
+  /* Product-facing roles keep reading screens quieter than reference pages. */
+  --type-app-title-size: clamp(1.75rem, 1.55rem + 0.9vw, 2.5rem);
+  --type-app-title-weight: 500;
+  --type-app-title-leading: 1.2;
+  --type-app-title-tracking: -0.015em;
+  --type-reflection-prompt-size: clamp(1.25rem, 1.12rem + 0.55vw, 1.5rem);
+  --type-reflection-prompt-leading: 1.5;
+  --type-journal-size: clamp(1.0625rem, 1.04rem + 0.1vw, 1.125rem);
+  --type-journal-leading: 1.75;
 }
 
 html {
@@ -53,11 +64,23 @@ body {
   letter-spacing: normal;
 }
 
+/* Karma is the Hindi family wherever a component declares its language.
+   These roles otherwise carry Latin tracking or leading from the shared scale. */
+:where([lang="hi"], [lang^="hi-"]) :is(.type-display, .type-section, .type-subsection, .type-lede, .type-prose, .type-card-title, .type-compact),
+:is(.type-display, .type-section, .type-subsection, .type-lede, .type-prose, .type-card-title, .type-compact):where([lang="hi"], [lang^="hi-"]) {
+  letter-spacing: normal;
+}
+
+:where([lang="hi"], [lang^="hi-"]) :is(.type-display, .type-section, .type-subsection, .type-app-title),
+:is(.type-display, .type-section, .type-subsection, .type-app-title):where([lang="hi"], [lang^="hi-"]) {
+  line-height: 1.3;
+}
+
 /* Devanagari has no case: the uppercase signals lose transform and tracking
    under Hindi and compensate with a size step and the muted colour role.
    Positive tracking severs the shirorekha — never re-apply it. */
-:where(.type-eyebrow, .type-label):where([lang="hi"], [lang^="hi-"]),
-:where([lang="hi"], [lang^="hi-"]) :where(.type-eyebrow, .type-label) {
+:is([lang="hi"], [lang^="hi-"]) :is(.type-eyebrow, .type-label),
+:is(.type-eyebrow, .type-label):is([lang="hi"], [lang^="hi-"]) {
   text-transform: none;
   letter-spacing: normal;
   font-size: var(--type-compact-size);
@@ -79,9 +102,12 @@ body {
   white-space: pre-line;
 }
 
+/* The focused reading role needs enough measure to preserve an authored
+   two-line śloka at wide viewports. Compact verse specimens retain 24rem. */
 .type-verse-display {
+  max-inline-size: var(--layout-reading-max);
   font-size: clamp(1.75rem, 1.375rem + 1.667vw, 2.875rem);
-  line-height: 1.66;
+  line-height: 1.55;
 }
 
 .type-verse {
@@ -89,11 +115,11 @@ body {
   line-height: 1.6;
 }
 
-/* IAST transliteration — the same verse in another script, so it keeps the
-   scripture family and takes Tiro's italic, the one real italic allowed. */
+/* IAST transliteration is the same verse in another script, so it keeps the
+   scripture family without a synthetic italic. */
 .type-iast {
   font-family: var(--font-scripture);
-  font-style: italic;
+  font-style: normal;
   font-size: clamp(0.9375rem, 0.906rem + 0.139vw, 1.031rem);
   letter-spacing: 0.005em;
   line-height: 1.45;
@@ -112,15 +138,16 @@ body {
 }
 
 .type-source [lang="hi"],
-.type-source[lang="hi"] {
+.type-source[lang="hi"],
+.type-source:lang(hi) {
   text-transform: none;
   letter-spacing: normal;
 }
 
-/* A Sanskrit term in running interface copy — the correct way to get a slope. */
+/* A Sanskrit term in running interface copy retains the scripture family. */
 .type-term {
   font-family: var(--font-scripture);
-  font-style: italic;
+  font-style: normal;
 }
 
 /* Long-form body that is denser than a lede but longer than a paragraph. */
@@ -186,18 +213,44 @@ body {
   text-wrap: balance;
 }
 .type-display {
+  font-family: var(--font-en);
   font-size: var(--type-display-size);
   font-weight: var(--type-display-weight);
   letter-spacing: var(--type-display-tracking);
   line-height: var(--type-display-leading);
 }
+
+.type-app-title {
+  font-family: var(--font-en);
+  font-size: var(--type-app-title-size);
+  font-weight: var(--type-app-title-weight);
+  letter-spacing: var(--type-app-title-tracking);
+  line-height: var(--type-app-title-leading);
+  text-wrap: balance;
+}
+
+.type-reflection-prompt {
+  font-size: var(--type-reflection-prompt-size);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: var(--type-reflection-prompt-leading);
+}
+
+.type-journal {
+  font-size: var(--type-journal-size);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: var(--type-journal-leading);
+}
 .type-section {
+  font-family: var(--font-en);
   font-size: var(--type-section-size);
   font-weight: var(--type-section-weight);
   letter-spacing: var(--type-section-tracking);
   line-height: var(--type-section-leading);
 }
 .type-subsection {
+  font-family: var(--font-en);
   font-size: var(--type-subsection-size);
   font-weight: var(--type-section-weight);
   letter-spacing: var(--type-section-tracking);
@@ -244,8 +297,19 @@ body {
   letter-spacing: var(--type-label-tracking);
 }
 
-:where(.type-display, .type-section, .type-subsection)[lang="hi"] {
+:where([lang="hi"], [lang^="hi-"]) :is(.type-display, .type-section, .type-subsection, .type-app-title),
+:is(.type-display, .type-section, .type-subsection, .type-app-title):where([lang="hi"], [lang^="hi-"]) {
+  font-family: var(--font-hi);
+  font-weight: 400;
+}
+
+/* New product roles also preserve Devanagari shaping outside the Hindi route. */
+:is(.type-app-title, .type-reflection-prompt, .type-journal):lang(hi) {
   letter-spacing: normal;
+}
+
+.type-app-title:lang(hi) {
+  line-height: 1.3;
 }
 .type-price,
 [data-count] {

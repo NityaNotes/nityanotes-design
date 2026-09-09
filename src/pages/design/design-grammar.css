@@ -89,6 +89,7 @@
 }
 
 .design-section code {
+  overflow-wrap: anywhere;
   padding-inline: var(--layout-space-1);
   background: var(--primary-color-subtle);
   border-radius: var(--layout-radius-xs);
@@ -120,14 +121,18 @@
   color: var(--primary-color-strong);
 }
 
-/* English sections keep the same separation as the design directory: the
-   heading explains the rule, then the specimen gets its own breathing room. */
-.english-section > :is(.layout-row, .design-specimen, .element-rule-list) {
+/* Typography reference sections keep the same separation as the design
+   directory: the heading explains the rule, then the specimen has room. */
+:is(.english-section, .hindi-section) > :is(.layout-row, .design-specimen, .element-rule-list) {
   margin-block-start: var(--layout-space-7);
 }
 
-.english-section > :is(.layout-row, .design-specimen) + p {
+:is(.english-section, .hindi-section) > :is(.layout-row, .design-specimen) + p {
   margin-block-start: var(--layout-space-5);
+}
+
+.hindi-section .design-specimen {
+  background: var(--surface-color);
 }
 
 .english-rules-section .element-specimen-note {
@@ -164,6 +169,10 @@
   display: grid;
   gap: var(--layout-space-1);
   min-inline-size: 0;
+}
+
+.design-specimen-scale .type-display {
+  overflow-wrap: anywhere;
 }
 
 .design-specimen-scale dd {

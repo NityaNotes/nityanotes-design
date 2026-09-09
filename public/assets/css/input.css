@@ -51,6 +51,16 @@ textarea:is(.input, .element-input) {
   resize: vertical;
 }
 
+/* Reflection writing keeps a paragraph measure and enough vertical room for a thought. */
+textarea.input-journal,
+textarea.element-input-journal {
+  min-block-size: var(--layout-journal-min-block-size);
+  padding-block: var(--layout-space-4);
+  border-radius: var(--layout-radius-md);
+  font-size: var(--type-journal-size);
+  line-height: var(--type-journal-leading);
+}
+
 select:is(.input, .element-input) {
   cursor: pointer;
 }

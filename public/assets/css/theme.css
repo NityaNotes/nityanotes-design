@@ -8,6 +8,8 @@
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --font-helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif;
   --font-dm-sans: "DM Sans", Arial, sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-karma: "Karma", serif;
   --font-dm: var(--font-dm-sans);
   --font-banana: "Banana", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
   --font-bevan: "Bevan", Georgia, serif;

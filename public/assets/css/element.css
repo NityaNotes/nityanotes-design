@@ -11,6 +11,24 @@
   margin-block-start: var(--layout-space-3);
 }
 
+/* Reading surfaces reduce visual chrome around scripture and reflection copy. */
+.element-reading {
+  padding-block: var(--layout-space-5);
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.element-reading > * + * {
+  margin-block-start: var(--layout-space-4);
+}
+
+.element-entry {
+  display: grid;
+  gap: var(--layout-space-2);
+  padding-block: var(--layout-space-4);
+  border-block-end: 1px solid var(--border-color);
+}
+
 .element-badge {
   display: inline-flex;
   align-items: center;

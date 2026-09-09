@@ -98,11 +98,11 @@ export const designPageContent = {
       iteration: "Iteration 1",
       title: "English typography",
       href: "/design/english",
-      settles: "Three registers, scripture first. Tiro carries every śloka; DM Sans carries the apparatus; monospace carries the data. Seventeen roles cover the whole product, and you never set a size.",
+      settles: "Two language-aware families: Space Grotesk for English and Karma for Hindi and scripture, plus monospace data. Shared roles cover reading and reference screens.",
       source: "public/assets/css/typography.css",
       stats: [
         { value: "3", label: "registers" },
-        { value: "17", label: "roles" },
+        { value: "3", label: "reading roles" },
         { value: "3", label: "weights" },
         { value: "1", label: "serif" },
       ],

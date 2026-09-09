@@ -9,6 +9,8 @@
 @import "/assets/css/input.css";
 @import "./components/app-button/app-button.component.css";
 @import "./components/app-footer/app-footer.component.css";
+@import "./components/app-header.component.css";
+@import "./components/app-logo/app-logo.component.css";
 @import "./pages/design/design-button.page.css";
 @import "./components/pages/design/button/button-header/button-header.component.css";
 @import "./components/pages/design/button/button-taxonomy/button-taxonomy.component.css";
@@ -21,10 +23,10 @@
 @import "./pages/design/design-color.page.css";
 @import "./pages/design/design-interaction.page.css";
 @import "./pages/design/design-grammar.css";
-@import "./pages/design/design-hindi.page.css";
 @import "./components/pages/design/directory/design-directory.component.css";
 @import "./components/pages/design/design-page-navigation/design-page-navigation.component.css";
 @import "./components/pages/design/typography/typography-header/typography-header.component.css";
+@import "./components/pages/design/typography/reading-specimen/reading-specimen.component.css";
 @import "./components/pages/design/english/english-header/english-header.component.css";
 @import "./components/pages/design/english/english-color-section/english-color-section.component.css";
 @import "./components/pages/design/english/english-layout-section/english-layout-section.component.css";

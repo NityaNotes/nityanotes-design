@@ -3,10 +3,10 @@ import { html } from "@ayu-sh-kr/dota-wrap/rendering";
 import { designHindiContent } from "@app/data/design-hindi-content.ts";
 
 /**
- * Shows the three Hindi registers: शास्त्र, इंटरफ़ेस, and डेटा.
+ * Shows Karma as the shared family for Hindi text and scripture.
  *
  * The specimen names which family carries which run of Devanagari text and why
- * the interface stays a sans face in both languages.
+ * Monospace remains separate for verse IDs and code.
  *
  * Selector: `hindi-programme-section`.
  */

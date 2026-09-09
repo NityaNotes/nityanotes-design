@@ -1,0 +1,47 @@
+/* Bilingual reading specimen in the typography references. It remains a card
+   here so the documentation example is visibly separate from the rule text. */
+reading-specimen {
+  display: block;
+  margin-block: var(--layout-space-7);
+}
+
+.reading-specimen__field {
+  margin-block-start: var(--layout-space-5);
+}
+
+.reading-specimen summary {
+  cursor: pointer;
+}
+
+.reading-specimen summary:focus-visible {
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 3px;
+}
+
+.reading-specimen__reflection > summary {
+  list-style: none;
+}
+
+.reading-specimen__reflection > summary::-webkit-details-marker {
+  display: none;
+}
+
+.reading-specimen__previous #header {
+  min-block-size: var(--layout-button-size-md);
+  color: var(--muted-strong-color);
+  padding: var(--layout-space-3) 0;
+}
+
+.reading-specimen__previous #header span {
+  font-size: var(--type-compact-size);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: var(--type-compact-leading);
+}
+
+.reading-specimen__previous #content {
+  padding: 0 0 var(--layout-space-4);
+  color: var(--foreground-color);
+  font-size: var(--type-journal-size);
+  line-height: var(--type-journal-leading);
+}

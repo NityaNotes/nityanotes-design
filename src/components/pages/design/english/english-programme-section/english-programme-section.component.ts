@@ -3,10 +3,10 @@ import { html } from "@ayu-sh-kr/dota-wrap/rendering";
 import { designEnglishContent } from "@app/data/design-english-content.ts";
 
 /**
- * Shows the three English registers: scripture, interface, and data.
+ * Shows the two reading families: Karma for scripture and Space Grotesk for English.
  *
  * The specimen names which family carries which run of text and why a second
- * serif would put the apparatus in argument with the scripture.
+ * The specimen keeps the English interface and scripture roles easy to recognise.
  *
  * Selector: `english-programme-section`.
  */

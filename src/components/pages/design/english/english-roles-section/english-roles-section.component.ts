@@ -26,7 +26,7 @@ export class EnglishRolesSectionComponent extends BaseElement {
           <h2 class="type-subsection">${copy[2]}</h2>
           <p class="type-lede">${copy[3]}</p>
           <dl class="design-specimen design-specimen-scale">
-            <div><dt class="type-micro">${copy[4]}</dt><dd class="type-display-sm">${copy[5]}</dd></div>
+            <div><dt class="type-micro">${copy[4]}</dt><dd class="type-display">${copy[5]}</dd></div>
             <div><dt class="type-micro">${copy[6]}</dt><dd class="type-section">${copy[7]}</dd></div>
             <div><dt class="type-micro">${copy[8]}</dt><dd class="type-subsection">${copy[9]}</dd></div>
             <div><dt class="type-micro">${copy[10]}</dt><dd class="type-lede">${copy[11]}</dd></div>

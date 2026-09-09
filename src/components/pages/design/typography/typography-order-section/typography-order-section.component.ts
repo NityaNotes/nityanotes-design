@@ -26,12 +26,7 @@ export class TypographyOrderSectionComponent extends BaseElement {
         <p class="type-eyebrow design-specimen-eyebrow">${order.eyebrow}</p>
         <h2 class="type-subsection">${order.title}</h2>
         <p class="type-lede">${order.lede}</p>
-        <div class="design-specimen">
-          <p class="type-verse">${order.verse[0]}<br />${order.verse[1]}</p>
-          <p class="type-iast">${order.transliteration}</p>
-          <p class="type-gloss">${order.gloss}</p>
-          <p class="type-source">${order.source}</p>
-        </div>
+        <reading-specimen language="en"></reading-specimen>
         <p>${order.conclusion}</p>
       </section>
     `;

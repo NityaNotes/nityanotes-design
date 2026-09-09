@@ -6,7 +6,8 @@
 }
 
 .english-layout-section__frame {
-  padding: var(--layout-space-6);
+  min-inline-size: 0;
+  padding: var(--layout-space-4);
   border: 1px solid var(--border-color);
   border-radius: var(--layout-radius-lg);
 }
@@ -39,4 +40,15 @@
 
 .english-layout-section__cell-note {
   color: var(--muted-color);
+}
+
+.english-layout-section__specimens {
+  padding: var(--layout-space-4);
+}
+
+@media (min-width: 700px) {
+  .english-layout-section__frame,
+  .english-layout-section__specimens {
+    padding: var(--layout-space-6);
+  }
 }

@@ -25,12 +25,7 @@ export class HindiSequenceSectionComponent extends BaseElement {
           <p class="type-eyebrow design-specimen-eyebrow">${copy[1]}</p>
           <h2 class="type-subsection">${copy[2]}</h2>
           <p class="type-lede">${copy[3]}</p>
-          <div class="design-specimen">
-            <p class="type-verse-display" lang="sa">${copy[4]}<br />${copy[5]}</p>
-            <p class="type-iast" lang="sa-Latn">${copy[6]}</p>
-            <p class="type-gloss">${copy[7]}</p>
-            <p class="type-source">${copy[8]}</p>
-          </div>
+          <reading-specimen language="hi"></reading-specimen>
           <p>${copy[9]}</p>
       </section>
     `;
