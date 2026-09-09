@@ -426,6 +426,39 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/app-logo/app-logo.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "AppLogoComponent",
+          "customElement": true,
+          "tagName": "app-logo",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [],
+          "attributes": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AppLogoComponent",
+          "declaration": {
+            "name": "AppLogoComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "app-logo",
+          "declaration": {
+            "name": "AppLogoComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/pages/design/button/button-destinations/button-destinations.component.js",
       "declarations": [
         {
@@ -2188,6 +2221,58 @@
           "name": "layout-spacing-section",
           "declaration": {
             "name": "LayoutSpacingSectionComponent"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/pages/design/typography/reading-specimen/reading-specimen.component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ReadingSpecimenComponent",
+          "customElement": true,
+          "tagName": "reading-specimen",
+          "superclass": {
+            "name": "BaseElement"
+          },
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "attribute": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "en"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "fieldName": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "en"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ReadingSpecimenComponent",
+          "declaration": {
+            "name": "ReadingSpecimenComponent"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "reading-specimen",
+          "declaration": {
+            "name": "ReadingSpecimenComponent"
           }
         }
       ]

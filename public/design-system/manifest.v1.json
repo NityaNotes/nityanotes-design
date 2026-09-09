@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "designVersion": "1.0.0",
   "name": "Nitya Notes",
-  "generatedAt": "2026-09-08T15:15:45.019Z",
+  "generatedAt": "2026-09-09T05:34:06.879Z",
   "sourceRevision": "webmcp-initial",
   "manifestUrl": "/design-system/manifest.v1.json",
   "categories": {
@@ -267,7 +267,7 @@
       ]
     },
     "typography": {
-      "summary": "Three registers — scripture (Tiro Devanagari Sanskrit), interface (DM Sans / Noto Sans Devanagari), and data (monospace) — with fluid roles that interpolate between 360px and 1440px and fixed roles that never change physical size.",
+      "summary": "Two language-aware families — Space Grotesk for English and Karma for Hindi and scripture — plus monospace data, with fluid and fixed roles.",
       "sources": [
         {
           "path": "public/assets/css/typography.css",
@@ -284,23 +284,37 @@
       ],
       "tokens": [
         {
+          "name": "--font-en",
+          "value": "\"Space Grotesk\", sans-serif",
+          "description": "Shared English family for headings, interface, and body text.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
+          "name": "--font-hi",
+          "value": "\"Karma\", serif",
+          "description": "Shared Hindi and scripture family.",
+          "sourcePath": "public/assets/css/typography.css",
+          "sourceSelector": ":root"
+        },
+        {
           "name": "--font-latin",
-          "value": "var(--font-dm-sans)",
-          "description": "Interface sans for Latin-script copy.",
+          "value": "var(--font-en)",
+          "description": "English family alias.",
           "sourcePath": "public/assets/css/typography.css",
           "sourceSelector": ":root"
         },
         {
           "name": "--font-hindi",
-          "value": "\"Noto Sans Devanagari\", \"Nirmala UI\", sans-serif",
-          "description": "Interface sans for Devanagari copy.",
+          "value": "var(--font-hi)",
+          "description": "Hindi family alias.",
           "sourcePath": "public/assets/css/typography.css",
           "sourceSelector": ":root"
         },
         {
           "name": "--font-scripture",
-          "value": "\"Tiro Devanagari Sanskrit\", \"Noto Serif Devanagari\", serif",
-          "description": "The only written-stroke face; reserved for the verse, transliteration, and Sanskrit terms.",
+          "value": "var(--font-hi)",
+          "description": "Karma alias for verse, transliteration, and Sanskrit terms.",
           "sourcePath": "public/assets/css/typography.css",
           "sourceSelector": ":root"
         },
@@ -386,6 +400,21 @@
         {
           "name": "type-display",
           "purpose": "Fluid display heading; balances wrapping.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-app-title",
+          "purpose": "Medium-weight 28–40px product heading with Hindi-safe tracking.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-reflection-prompt",
+          "purpose": "Quiet 20–24px question or writing label.",
+          "sourcePath": "public/assets/css/typography.css"
+        },
+        {
+          "name": "type-journal",
+          "purpose": "Paragraph text for reflection, with 1.75 leading.",
           "sourcePath": "public/assets/css/typography.css"
         },
         {
@@ -656,7 +685,7 @@
         },
         {
           "name": "--layout-nav-h",
-          "value": "57px",
+          "value": "5rem",
           "description": "Site chrome height feeding the sticky offset.",
           "sourcePath": "public/assets/css/layout.css",
           "sourceSelector": ":root"
@@ -705,6 +734,21 @@
         }
       ],
       "classes": [
+        {
+          "name": "layout-app-opening",
+          "purpose": "Compact product opening below the fixed header.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-reading-stack",
+          "purpose": "Vertical rhythm for verse and reflection content.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
+        {
+          "name": "layout-reading-body",
+          "purpose": "Inner reading measure without another set of gutters.",
+          "sourcePath": "public/assets/css/layout.css"
+        },
         {
           "name": "layout-page",
           "purpose": "80rem wide page container.",
@@ -913,42 +957,42 @@
           "name": "--motion-press",
           "value": "100ms",
           "description": "Contact duration — shorter than a tap is long.",
-          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourcePath": "public/assets/css/interaction.css",
           "sourceSelector": ":root"
         },
         {
           "name": "--motion-tint",
           "value": "160ms",
           "description": "Colour-only duration; never moves anything.",
-          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourcePath": "public/assets/css/interaction.css",
           "sourceSelector": ":root"
         },
         {
           "name": "--motion-move",
           "value": "220ms",
           "description": "Translation under 8px.",
-          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourcePath": "public/assets/css/interaction.css",
           "sourceSelector": ":root"
         },
         {
           "name": "--motion-mark",
           "value": "320ms",
           "description": "A glyph turning or a stroke drawing.",
-          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourcePath": "public/assets/css/interaction.css",
           "sourceSelector": ":root"
         },
         {
           "name": "--motion-measure",
           "value": "480ms",
           "description": "A height or a number that changed — the longest legal transition.",
-          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourcePath": "public/assets/css/interaction.css",
           "sourceSelector": ":root"
         },
         {
           "name": "--ease-spatial",
-          "value": "cubic-bezier(.2, 0, 0, 1)",
+          "value": "cubic-bezier(0.2, 0, 0, 1)",
           "description": "The one motion curve — fast out of the gate, long settle, no overshoot.",
-          "sourcePath": "src/data/design-interaction-content.ts",
+          "sourcePath": "public/assets/css/interaction.css",
           "sourceSelector": ":root"
         }
       ],
@@ -1020,7 +1064,7 @@
         "Five durations, one curve — anything longer than 480ms is not a transition, it is content.",
         "Never: transition: all, hover-only state, a sixth duration, a new verb for a composition, scroll-driven anything, autoplay.",
         "A native <dialog> owns the top layer, focus trap, Escape, and focus return — no parallel overlay.",
-        "Destructive confirmations open focused on Cancel.",
+        "Destructive confirmations open focused on Keep it.",
         "A control whose visible box is smaller than its 44px hit area rings the visible box, not the target."
       ],
       "examples": [
@@ -1099,6 +1143,14 @@
         }
       ],
       "classes": [
+        {
+          "name": "input-journal",
+          "purpose": "Multiline reflection field with reading-sized text and a 12rem minimum height.",
+          "sourcePath": "public/assets/css/input.css",
+          "requires": [
+            "input"
+          ]
+        },
         {
           "name": "input",
           "purpose": "The shared field class for text-like inputs, selects, and textareas.",
@@ -1190,6 +1242,16 @@
       ],
       "tokens": [],
       "classes": [
+        {
+          "name": "element-reading",
+          "purpose": "Unboxed reading surface using the neutral canvas.",
+          "sourcePath": "public/assets/css/element.css"
+        },
+        {
+          "name": "element-entry",
+          "purpose": "Quiet reflection row with a single divider.",
+          "sourcePath": "public/assets/css/element.css"
+        },
         {
           "name": "element-card",
           "purpose": "Surface card with shared border, radius, and shadow; direct children stack with one rhythm.",
