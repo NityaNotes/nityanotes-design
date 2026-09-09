@@ -6,10 +6,10 @@ import { designPageContent } from "@app/data/design-page-content.ts";
 /**
  * Entry route for the Nitya Notes design references.
  *
- * At `/` and `/design`, this page provides SEO and composes the directory component;
- * each iteration then owns its own route and dedicated set of sections.
+ * At `/design`, this page provides SEO and composes the directory component;
+ * the application also uses it as the default page at `/`.
  */
-@Route({ path: "/", ssr: true })
+@Route({ path: "/design", ssr: true })
 @Component({ selector: "design-page", shadow: false })
 export class DesignPage extends DotaPageElement {
   /** Creates the routed page before Dota resolves its SEO and rendered directory. */

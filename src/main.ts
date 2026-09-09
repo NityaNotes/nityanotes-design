@@ -19,7 +19,7 @@ let routerService!: RouterService<Router<HTMLElement>>;
 
 export const applicationReady = initializeApp({
   modules: components,
-  routes: [...routeConfig, { path: "/design", component: DesignPage }],
+  routes: routeConfig,
   externalComponents: [AccordionComponent, IconsComponent, OrbBackgroundComponent],
   errorRoute: { path: "/error", component: ErrorPage },
   defaultRoute: { path: "/", component: DesignPage },

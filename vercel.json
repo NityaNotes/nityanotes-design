@@ -30,6 +30,11 @@
   ],
   "redirects": [
     {
+      "source": "/design",
+      "destination": "/design/",
+      "permanent": true
+    },
+    {
       "source": "/design/button",
       "destination": "/design/button/",
       "permanent": true

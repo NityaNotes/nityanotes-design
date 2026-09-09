@@ -1,0 +1,6 @@
+/* Shared fixed header: keeps reading content legible beneath the navigation chrome. */
+.app-header {
+  min-block-size: var(--layout-nav-h);
+  padding-block: var(--layout-space-4);
+  background: var(--background-color);
+}
